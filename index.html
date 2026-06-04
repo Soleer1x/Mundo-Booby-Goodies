@@ -4,44 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Booby Goodies - Atividades Cristãs para Crianças | Oferta Especial</title>
-    <meta name="description" content="Atividades bíblicas divertidas para seus filhos crescerem na fé. 35 livros cristãos + Livro de Atividades. De R$114 por apenas R$19,90!">
+    <meta name="description" content="Atividades bíblicas divertidas para seus filhos crescerem na fé. 35 livros cristãos + Livro de Atividades. De R$97 por apenas R$9,90!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #5C3CFA;
-            --primary-dark: #4527D4;
-            --primary-light: #7C6FF7;
-            --primary-glow: #8B7CFA;
-            --secondary: #FF6B2C;
-            --secondary-light: #FF8F5C;
-            --accent: #00D68F;
-            --accent-light: #00F0A0;
-            --danger: #FF2D55;
-            --warning: #FFD60A;
-            --warning-light: #FFF3B0;
-            --gold: #F5A623;
-            --gold-light: #FFF8E7;
-            --bg: #FFFBFA;
+            --primary: #5C4EE5;
+            --primary-dark: #4537C9;
+            --primary-light: #7B6FF0;
+            --secondary: #FF8C00;
+            --secondary-light: #FFB347;
+            --accent: #00C897;
+            --accent-light: #00E6AC;
+            --danger: #FF3B5C;
+            --warning: #FFD93D;
+            --bg: #FFFBF5;
             --surface: #FFFFFF;
-            --text: #1A1A2E;
-            --text-muted: #6B7280;
-            --gradient-hero: linear-gradient(180deg, #F0ECFF 0%, #FFFBFA 40%, #FFF 100%);
-            --gradient-primary: linear-gradient(135deg, #5C3CFA 0%, #7C6FF7 100%);
-            --gradient-fire: linear-gradient(135deg, #FF6B2C 0%, #FF8F5C 100%);
-            --gradient-accent: linear-gradient(135deg, #00D68F 0%, #00F0A0 100%);
-            --gradient-gold: linear-gradient(135deg, #F5A623 0%, #FFD60A 50%, #F5A623 100%);
-            --gradient-royal: linear-gradient(135deg, #5C3CFA 0%, #A855F7 50%, #5C3CFA 100%);
-            --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
-            --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.10);
-            --shadow-glow-gold: 0 0 0 8px rgba(245, 166, 35, 0.12), 0 12px 40px rgba(245, 166, 35, 0.25);
-            --shadow-glow-primary: 0 0 0 8px rgba(92, 60, 250, 0.10), 0 12px 36px rgba(92, 60, 250, 0.20);
-            --radius-sm: 10px;
-            --radius-md: 16px;
-            --radius-lg: 22px;
-            --radius-xl: 28px;
-            --radius-full: 9999px;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --gold: #F59E0B;
+            --gold-light: #FEF3C7;
+            --gradient-hero: linear-gradient(180deg, #EEF2FF 0%, #FFFBF5 50%, #FFF 100%);
+            --gradient-primary: linear-gradient(135deg, #5C4EE5 0%, #7B6FF0 100%);
+            --gradient-secondary: linear-gradient(135deg, #FF8C00 0%, #FFB347 100%);
+            --gradient-accent: linear-gradient(135deg, #00C897 0%, #00E6AC 100%);
+            --gradient-gold: linear-gradient(135deg, #F59E0B 0%, #FCD34D 50%, #F59E0B 100%);
+            --gradient-danger: linear-gradient(135deg, #FF3B5C 0%, #FF6B81 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.16);
+            --shadow-glow: 0 0 0 6px rgba(245, 158, 11, 0.2);
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
         }
 
         * {
@@ -49,6 +47,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Nunito', sans-serif;
             background: var(--bg);
@@ -59,79 +58,73 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── TOP URGENCY BAR ── */
-        .urgency-bar {
-            background: #1A1A2E;
-            color: #FFF;
+        /* ============ URGENCY TOP BAR ============ */
+        .urgency-topbar {
+            background: var(--gradient-danger);
+            color: #fff;
             padding: 10px 16px;
             text-align: center;
             font-weight: 800;
-            font-size: 12.5px;
-            letter-spacing: 0.4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            font-size: 13px;
+            letter-spacing: 0.3px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid var(--warning);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            animation: pulseBg 2s ease-in-out infinite;
         }
-        .urgency-bar .live-dot {
-            width: 8px;
-            height: 8px;
-            background: #FF2D55;
-            border-radius: 50%;
-            animation: livePulse 1s infinite;
-        }
-        @keyframes livePulse {
+        @keyframes pulseBg {
             0%,
             100% {
-                box-shadow: 0 0 0 0 rgba(255, 45, 85, 0.7);
+                background: var(--gradient-danger);
             }
             50% {
-                box-shadow: 0 0 0 10px rgba(255, 45, 85, 0);
+                background: linear-gradient(135deg, #FF1a42 0%, #FF5277 100%);
             }
         }
-        .urgency-bar .timer-chip {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 5px 12px;
-            border-radius: var(--radius-full);
+        .urgency-topbar .flame {
+            display: inline-block;
+            animation: flicker 0.6s infinite alternate;
+            font-size: 16px;
+        }
+        @keyframes flicker {
+            0% {
+                transform: scale(1) rotate(-3deg);
+            }
+            100% {
+                transform: scale(1.15) rotate(3deg);
+            }
+        }
+        .urgency-topbar .countdown-inline {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
             font-family: 'Fredoka One', cursive;
             font-size: 14px;
-            letter-spacing: 1.5px;
-            color: #FFD60A;
-            min-width: 72px;
+            letter-spacing: 1px;
+            min-width: 70px;
             text-align: center;
         }
 
-        /* ── HERO ── */
+        /* ============ HERO ============ */
         .hero {
-            padding: 36px 20px 56px;
+            padding: 30px 20px 50px;
             text-align: center;
             background: var(--gradient-hero);
             position: relative;
             overflow: hidden;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            right: -60px;
-            width: 260px;
-            height: 260px;
-            background: radial-gradient(circle, rgba(92, 60, 250, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -30px;
             left: 50%;
             transform: translateX(-50%);
-            width: 130%;
-            height: 50px;
+            width: 120%;
+            height: 60px;
             background: var(--bg);
             border-radius: 50% 50% 0 0;
             z-index: 2;
@@ -139,326 +132,304 @@
         .hero-content {
             position: relative;
             z-index: 3;
-            max-width: 460px;
+            max-width: 480px;
             margin: 0 auto;
         }
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            background: #FFF;
-            border: 2px solid #E8E0FF;
-            color: var(--primary);
-            padding: 9px 18px;
-            border-radius: var(--radius-full);
+            gap: 6px;
+            background: var(--gold-light);
+            color: #B45309;
+            padding: 8px 16px;
+            border-radius: 50px;
             font-size: 12px;
             font-weight: 800;
-            letter-spacing: 0.6px;
-            margin-bottom: 18px;
-            box-shadow: var(--shadow-card);
-        }
-        .hero-badge .badge-icon {
-            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+            border: 1.5px solid var(--gold);
         }
         .hero h1 {
             font-family: 'Fredoka One', cursive;
-            font-size: clamp(38px, 10vw, 54px);
+            font-size: clamp(36px, 9vw, 52px);
             color: var(--primary);
-            margin-bottom: 6px;
-            line-height: 1.1;
-            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            line-height: 1.15;
+            text-shadow: 2px 2px 0 rgba(92, 78, 229, 0.08);
         }
-        .hero h1 .hl {
+        .hero h1 .highlight {
             color: var(--secondary);
             position: relative;
+            display: inline-block;
         }
-        .hero h1 .hl::after {
+        .hero h1 .highlight::after {
             content: '';
             position: absolute;
-            bottom: 4px;
-            left: -4px;
-            width: calc(100% + 8px);
-            height: 10px;
-            background: var(--warning-light);
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--warning);
             border-radius: 4px;
             z-index: -1;
-            opacity: 0.7;
+            opacity: 0.5;
         }
         .hero-subtitle {
-            font-size: 16px;
+            font-size: 17px;
             color: var(--text-muted);
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             font-weight: 600;
-            line-height: 1.55;
+            line-height: 1.5;
         }
-        /* SVG Illustration Hero */
-        .hero-illustration {
-            max-width: 360px;
-            margin: 0 auto 20px;
+        .hero-image-wrapper {
             position: relative;
+            max-width: 340px;
+            margin: 0 auto 24px;
             z-index: 3;
         }
-        .hero-illustration svg {
+        .hero-image-wrapper img {
             width: 100%;
-            height: auto;
-            filter: drop-shadow(0 16px 36px rgba(92, 60, 250, 0.15));
-            animation: gentleFloat 3.5s ease-in-out infinite;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl), 0 0 0 10px rgba(92, 78, 229, 0.06);
+            transition: transform 0.4s ease;
         }
-        @keyframes gentleFloat {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-12px);
-            }
+        .hero-image-wrapper:active img {
+            transform: scale(0.97);
         }
-        .floating-particles {
+        .hero-sparkle {
             position: absolute;
-            inset: 0;
+            font-size: 28px;
+            animation: sparkleFloat 2.5s ease-in-out infinite;
             pointer-events: none;
-            z-index: 4;
+            z-index: 5;
         }
-        .particle {
-            position: absolute;
-            animation: particleDrift 4s ease-in-out infinite;
-            font-size: 20px;
-        }
-        .particle:nth-child(1) {
-            top: 8%;
-            left: 8%;
+        .hero-sparkle:nth-child(2) {
+            top: -8px;
+            right: 10px;
             animation-delay: 0s;
         }
-        .particle:nth-child(2) {
-            top: 14%;
-            right: 6%;
-            animation-delay: 0.7s;
-            font-size: 26px;
-        }
-        .particle:nth-child(3) {
-            bottom: 18%;
-            left: 4%;
-            animation-delay: 1.4s;
-            font-size: 16px;
-        }
-        .particle:nth-child(4) {
-            bottom: 22%;
-            right: 8%;
-            animation-delay: 2.1s;
+        .hero-sparkle:nth-child(3) {
+            bottom: 20px;
+            left: -5px;
+            animation-delay: 0.8s;
             font-size: 22px;
         }
-        .particle:nth-child(5) {
-            top: 40%;
-            right: 2%;
-            animation-delay: 2.8s;
-            font-size: 14px;
+        .hero-sparkle:nth-child(4) {
+            top: 30%;
+            right: -12px;
+            animation-delay: 1.6s;
+            font-size: 20px;
         }
-        @keyframes particleDrift {
+        @keyframes sparkleFloat {
             0%,
             100% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0.7;
+                transform: translateY(0) scale(1);
             }
             50% {
-                transform: translateY(-18px) rotate(12deg);
-                opacity: 1;
+                transform: translateY(-14px) scale(1.2);
             }
         }
 
-        /* ── TRUST STRIP ── */
+        /* ============ TRUST STRIP ============ */
         .trust-strip {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
-            padding: 14px 16px;
-            background: #FFF;
-            border-bottom: 1px solid #F3F4F6;
+            padding: 16px 20px;
+            background: var(--surface);
+            border-top: 1px solid #F1F5F9;
+            border-bottom: 1px solid #F1F5F9;
             position: relative;
             z-index: 5;
         }
-        .trust-chip {
+        .trust-item {
             display: flex;
             align-items: center;
-            gap: 7px;
-            font-size: 12px;
+            gap: 8px;
+            font-size: 13px;
             font-weight: 700;
             color: var(--text-muted);
-            background: #F9FAFB;
-            padding: 8px 13px;
-            border-radius: var(--radius-full);
         }
-        .trust-chip .tc-icon {
-            width: 26px;
-            height: 26px;
+        .trust-item .icon-circle {
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
             flex-shrink: 0;
         }
-        .trust-chip .tc-icon.g {
+        .trust-item .icon-circle.green {
             background: #D1FAE5;
+            color: #059669;
         }
-        .trust-chip .tc-icon.p {
+        .trust-item .icon-circle.purple {
             background: #EDE9FE;
+            color: #6D28D9;
         }
-        .trust-chip .tc-icon.o {
+        .trust-item .icon-circle.orange {
             background: #FFF7ED;
+            color: #EA580C;
         }
 
-        /* ── OFFERS SECTION ── */
+        /* ============ OFFERS SECTION (TRÊS OFERTAS) ============ */
         .offers-section {
-            padding: 44px 20px 50px;
-            background: var(--bg);
+            padding: 40px 20px 50px;
             position: relative;
             z-index: 5;
+            background: var(--bg);
         }
-        .offers-section .sec-label {
+        .offers-section .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .offers-section .section-header .label {
             display: inline-block;
             background: var(--primary);
-            color: #FFF;
+            color: #fff;
             padding: 6px 16px;
-            border-radius: var(--radius-full);
+            border-radius: 50px;
             font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
+            letter-spacing: 1px;
             margin-bottom: 10px;
         }
-        .offers-section h2 {
+        .offers-section .section-header h2 {
             font-family: 'Fredoka One', cursive;
-            font-size: 27px;
+            font-size: 26px;
             color: var(--text);
-            margin-bottom: 4px;
-            text-align: center;
+            margin-bottom: 6px;
         }
-        .offers-section .sec-sub {
+        .offers-section .section-header p {
             font-size: 14px;
             color: var(--text-muted);
             font-weight: 600;
-            text-align: center;
-            margin-bottom: 26px;
         }
         .offers-grid {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            max-width: 460px;
+            gap: 16px;
+            max-width: 440px;
             margin: 0 auto;
         }
         .offer-card {
-            background: #FFF;
-            border-radius: var(--radius-xl);
-            padding: 26px 22px;
-            box-shadow: var(--shadow-card);
-            border: 2.5px solid transparent;
-            transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
-            cursor: pointer;
-            text-align: center;
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 24px 20px;
+            box-shadow: var(--shadow-md);
             position: relative;
+            border: 2px solid transparent;
+            transition: all 0.35s ease;
+            cursor: pointer;
             overflow: hidden;
+            text-align: center;
         }
         .offer-card:active {
-            transform: scale(0.98);
+            transform: scale(0.985);
         }
         .offer-card.recommended {
             border-color: var(--gold);
-            box-shadow: var(--shadow-glow-gold);
-            background: #FFFEFA;
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            background: #FFFDF7;
             order: -1;
-            z-index: 2;
         }
-        .offer-card.recommended .crown-badge {
+        .offer-card.recommended::before {
+            content: '🌟 MAIS POPULAR';
             position: absolute;
-            top: 16px;
-            right: -28px;
+            top: 14px;
+            right: -30px;
             background: var(--gradient-gold);
-            color: #1A1A2E;
+            color: #fff;
             font-size: 10px;
             font-weight: 800;
-            padding: 6px 38px;
-            transform: rotate(38deg);
-            letter-spacing: 0.6px;
-            box-shadow: 0 3px 12px rgba(245, 166, 35, 0.3);
-            z-index: 3;
+            padding: 5px 36px;
+            transform: rotate(35deg);
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+            z-index: 2;
         }
-        .offer-card .offer-icon-wrap {
-            width: 64px;
-            height: 64px;
+        .offer-card .offer-icon {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            margin: 0 auto 12px;
+            margin: 0 auto 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 30px;
         }
-        .offer-card .offer-icon-wrap.c1 {
-            background: #F0ECFF;
+        .offer-card .offer-icon.basic {
+            background: #EEF2FF;
         }
-        .offer-card .offer-icon-wrap.c2 {
-            background: #FFF4EC;
+        .offer-card .offer-icon.premium {
+            background: #FFF7ED;
         }
-        .offer-card .offer-icon-wrap.c3 {
+        .offer-card .offer-icon.combo {
             background: var(--gold-light);
+            font-size: 34px;
         }
         .offer-card h3 {
             font-family: 'Fredoka One', cursive;
             font-size: 20px;
             color: var(--text);
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
-        .offer-card .offer-desc {
-            font-size: 12.5px;
+        .offer-card .offer-subtitle {
+            font-size: 12px;
             color: var(--text-muted);
             font-weight: 600;
-            margin-bottom: 12px;
-            min-height: 28px;
+            margin-bottom: 14px;
+            min-height: 32px;
+        }
+        .offer-card .price-block {
+            margin-bottom: 14px;
         }
         .offer-card .old-price {
-            font-size: 14px;
-            color: #9CA3AF;
+            font-size: 15px;
+            color: #94A3B8;
             text-decoration: line-through;
-            font-weight: 700;
+            font-weight: 600;
         }
         .offer-card .new-price {
             font-family: 'Fredoka One', cursive;
-            font-size: 46px;
+            font-size: 44px;
             color: var(--accent);
             line-height: 1;
             margin: 2px 0;
         }
-        .offer-card .new-price sup {
-            font-size: 20px;
+        .offer-card .new-price small {
+            font-size: 22px;
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
+            vertical-align: super;
         }
         .offer-card .installments {
             font-size: 11px;
             color: var(--text-muted);
             font-weight: 600;
-            margin-bottom: 14px;
         }
-        .offer-card .feature-list {
+        .offer-card .offer-features {
             list-style: none;
             text-align: left;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             font-size: 13px;
-            font-weight: 600;
             color: var(--text);
+            font-weight: 600;
         }
-        .offer-card .feature-list li {
-            padding: 7px 0;
+        .offer-card .offer-features li {
+            padding: 6px 0;
             display: flex;
             align-items: center;
             gap: 8px;
-            border-bottom: 1px solid #F9FAFB;
+            border-bottom: 1px solid #F8FAFC;
         }
-        .offer-card .feature-list li:last-child {
+        .offer-card .offer-features li:last-child {
             border-bottom: none;
         }
-        .offer-card .feature-list .check-dot {
+        .offer-card .offer-features .check-icon {
             width: 20px;
             height: 20px;
             background: var(--accent);
@@ -468,413 +439,416 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        .offer-card .feature-list .check-dot svg {
+        .offer-card .offer-features .check-icon svg {
             width: 10px;
             height: 10px;
-            color: #FFF;
+            color: #fff;
         }
-        .btn-offer {
+        .offer-card .btn-offer {
             display: block;
             width: 100%;
-            padding: 17px 22px;
-            border-radius: var(--radius-full);
+            padding: 16px 20px;
+            border-radius: 50px;
             font-family: 'Nunito', sans-serif;
             font-size: 15px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.7px;
+            letter-spacing: 0.5px;
             text-decoration: none;
-            color: #FFF;
+            color: #fff;
             text-align: center;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
             position: relative;
             overflow: hidden;
+            border: none;
+            cursor: pointer;
         }
-        .btn-offer:active {
-            transform: scale(0.95);
-        }
-        .btn-offer.btn1 {
+        .offer-card .btn-offer.basic-btn {
             background: var(--gradient-primary);
-            box-shadow: 0 6px 22px rgba(92, 60, 250, 0.3);
+            box-shadow: 0 6px 20px rgba(92, 78, 229, 0.3);
         }
-        .btn-offer.btn2 {
-            background: var(--gradient-fire);
-            box-shadow: 0 6px 22px rgba(255, 107, 44, 0.3);
+        .offer-card .btn-offer.premium-btn {
+            background: var(--gradient-secondary);
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
         }
-        .btn-offer.btn3 {
+        .offer-card .btn-offer.combo-btn {
             background: var(--gradient-gold);
-            color: #1A1A2E;
-            box-shadow: 0 6px 22px rgba(245, 166, 35, 0.4);
-            animation: glowGold 2s ease-in-out infinite;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            animation: glowPulse 2s ease-in-out infinite;
             font-size: 16px;
-            padding: 19px 22px;
+            padding: 18px 20px;
         }
-        @keyframes glowGold {
+        @keyframes glowPulse {
             0%,
             100% {
-                box-shadow: 0 6px 22px rgba(245, 166, 35, 0.4);
+                box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
             }
             50% {
-                box-shadow: 0 10px 34px rgba(245, 166, 35, 0.65), 0 0 0 10px rgba(245, 166, 35, 0.08);
+                box-shadow: 0 8px 32px rgba(245, 158, 11, 0.65), 0 0 0 8px rgba(245, 158, 11, 0.1);
             }
         }
-        .btn-offer .btn-arrow {
-            display: inline-block;
-            margin-left: 5px;
-            transition: transform 0.3s;
+        .offer-card .btn-offer:active {
+            transform: scale(0.96);
         }
-        .btn-offer:active .btn-arrow {
-            transform: translateX(5px);
+        .offer-card .btn-offer .btn-arrow {
+            display: inline-block;
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+        }
+        .offer-card .btn-offer:active .btn-arrow {
+            transform: translateX(4px);
         }
 
-        /* ── COUNTDOWN STRIP ── */
-        .cd-strip {
-            background: #1A1A2E;
-            color: #FFF;
-            padding: 20px 16px;
+        /* ============ COUNTDOWN FULL WIDTH ============ */
+        .countdown-strip {
+            background: var(--gradient-danger);
+            color: #fff;
+            padding: 18px 20px;
             text-align: center;
             position: relative;
             z-index: 5;
         }
-        .cd-strip .cd-label {
-            font-size: 13px;
+        .countdown-strip .countdown-label {
+            font-size: 14px;
             font-weight: 700;
+            margin-bottom: 8px;
             letter-spacing: 0.5px;
-            margin-bottom: 10px;
-            opacity: 0.85;
         }
-        .cd-strip .cd-digits {
+        .countdown-strip .countdown-digits {
             display: flex;
             justify-content: center;
             gap: 10px;
         }
-        .cd-strip .cd-digit {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            border-radius: var(--radius-md);
-            padding: 14px 18px;
-            min-width: 62px;
+        .countdown-strip .countdown-digit {
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(4px);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            min-width: 56px;
+            text-align: center;
         }
-        .cd-strip .cd-digit .num {
+        .countdown-strip .countdown-digit .num {
             font-family: 'Fredoka One', cursive;
-            font-size: 36px;
+            font-size: 32px;
             line-height: 1;
-            color: #FFD60A;
             letter-spacing: 2px;
         }
-        .cd-strip .cd-digit .lbl {
+        .countdown-strip .countdown-digit .lbl {
             font-size: 10px;
             text-transform: uppercase;
             font-weight: 700;
-            opacity: 0.7;
-            letter-spacing: 1px;
+            opacity: 0.85;
         }
 
-        /* ── PREVIEW SCROLL ── */
+        /* ============ LIVE NOTIFICATION ============ */
+        .live-toast {
+            position: fixed;
+            bottom: 120px;
+            left: 16px;
+            right: 16px;
+            max-width: 380px;
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            box-shadow: var(--shadow-xl);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transform: translateX(-110%);
+            transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border-left: 4px solid var(--accent);
+        }
+        .live-toast.show {
+            transform: translateX(0);
+        }
+        .live-toast .pulse-dot {
+            width: 11px;
+            height: 11px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulseDot 1.2s infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulseDot {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 151, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(0, 200, 151, 0);
+            }
+        }
+        .live-toast .toast-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .live-toast .toast-name {
+            font-weight: 800;
+            font-size: 13px;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .live-toast .toast-action {
+            font-size: 11px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .live-toast .toast-time {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        /* ============ PREVIEW GALLERY ============ */
         .preview-scroll {
-            padding: 18px 16px 30px;
+            padding: 10px 20px 30px;
             display: flex;
             gap: 14px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            background: #FFF;
             position: relative;
             z-index: 5;
+            background: var(--bg);
         }
         .preview-scroll::-webkit-scrollbar {
             display: none;
         }
-        .preview-card {
+        .preview-scroll .preview-card {
             flex-shrink: 0;
-            width: 175px;
+            width: 180px;
             scroll-snap-align: start;
             text-align: center;
         }
-        .preview-card .pc-img {
+        .preview-scroll .preview-card img {
             width: 100%;
-            aspect-ratio: 1/1;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-elevated);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
             transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            aspect-ratio: 1/1;
         }
-        .preview-card:active .pc-img {
-            transform: scale(0.95);
+        .preview-scroll .preview-card:active img {
+            transform: scale(0.96);
         }
-        .preview-card .pc-img.pc1 {
-            background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
-        }
-        .preview-card .pc-img.pc2 {
-            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-        }
-        .preview-card .pc-img.pc3 {
-            background: linear-gradient(135deg, #EDE9FE 0%, #C4B5FD 100%);
-        }
-        .preview-card .pc-img.pc4 {
-            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
-        }
-        .preview-card .pc-tag {
+        .preview-scroll .preview-card .preview-tag {
             font-size: 11px;
             font-weight: 700;
             color: var(--text-muted);
             margin-top: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
         }
 
-        /* ── FEATURES ── */
+        /* ============ FEATURES ============ */
         .features-section {
-            padding: 44px 20px;
-            background: #FAFAFE;
+            padding: 40px 20px;
+            background: #fff;
             position: relative;
             z-index: 5;
         }
-        .features-section .ft-title {
+        .features-section .section-title {
             font-family: 'Fredoka One', cursive;
-            font-size: 25px;
+            font-size: 24px;
             text-align: center;
             color: var(--primary);
-            margin-bottom: 22px;
+            margin-bottom: 24px;
         }
-        .ft-grid {
+        .features-grid-2 {
             display: grid;
-            gap: 12px;
-            max-width: 460px;
+            gap: 14px;
+            max-width: 440px;
             margin: 0 auto;
         }
-        .ft-card {
-            background: #FFF;
-            border-radius: var(--radius-lg);
+        .feature-card-mini {
+            background: #F8FAFC;
+            border-radius: var(--radius-md);
             padding: 20px 18px;
             display: flex;
             gap: 14px;
             align-items: center;
-            box-shadow: var(--shadow-card);
-            border: 1.5px solid #F3F4F6;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
         }
-        .ft-card:active {
+        .feature-card-mini:active {
             border-color: var(--primary-light);
-            background: #F8F6FF;
+            background: #EEF2FF;
         }
-        .ft-card .ft-icon {
-            width: 52px;
-            height: 52px;
+        .feature-card-mini .feat-icon {
+            width: 50px;
+            height: 50px;
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            font-size: 26px;
+            font-size: 24px;
         }
-        .ft-card .ft-icon.i1 {
+        .feature-card-mini .feat-icon.f1 {
             background: #EDE9FE;
         }
-        .ft-card .ft-icon.i2 {
-            background: #FFF4EC;
+        .feature-card-mini .feat-icon.f2 {
+            background: #FFF7ED;
         }
-        .ft-card .ft-icon.i3 {
+        .feature-card-mini .feat-icon.f3 {
             background: #D1FAE5;
         }
-        .ft-card .ft-icon.i4 {
+        .feature-card-mini .feat-icon.f4 {
             background: #FEE2E2;
         }
-        .ft-card h4 {
+        .feature-card-mini h4 {
             font-size: 15px;
             font-weight: 800;
             color: var(--text);
             margin-bottom: 2px;
         }
-        .ft-card p {
-            font-size: 12.5px;
+        .feature-card-mini p {
+            font-size: 13px;
             color: var(--text-muted);
-            font-weight: 600;
         }
 
-        /* ── FAMILY ILLUSTRATION SECTION ── */
-        .family-section {
-            padding: 40px 20px;
-            text-align: center;
-            background: #FFF;
-            position: relative;
-            z-index: 5;
-        }
-        .family-section .fam-illust {
-            max-width: 300px;
-            margin: 0 auto 20px;
-        }
-        .family-section .fam-illust svg {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 10px 24px rgba(92, 60, 250, 0.10));
-        }
-        .family-section h3 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 23px;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-        .family-section p {
-            font-size: 15px;
-            color: var(--text-muted);
-            font-weight: 600;
-            max-width: 360px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* ── TESTIMONIALS ── */
+        /* ============ TESTIMONIALS ============ */
         .testimonials-section {
             padding: 40px 20px;
-            background: #FAFAFE;
+            background: #F8FAFC;
             position: relative;
             z-index: 5;
         }
-        .testimonials-section .tm-title {
+        .testimonials-section .section-title {
             font-family: 'Fredoka One', cursive;
-            font-size: 25px;
+            font-size: 24px;
             text-align: center;
             color: var(--primary);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
-        .tm-card {
-            background: #FFF;
-            border-radius: var(--radius-xl);
+        .testimonial-card-modern {
+            background: #fff;
+            border-radius: var(--radius-lg);
             padding: 22px 20px;
-            margin-bottom: 12px;
-            box-shadow: var(--shadow-card);
-            max-width: 460px;
+            margin-bottom: 14px;
+            box-shadow: var(--shadow-sm);
+            max-width: 440px;
             margin-left: auto;
             margin-right: auto;
-            border-left: 4px solid var(--primary-light);
         }
-        .tm-card .stars {
-            color: #F5A623;
-            font-size: 17px;
+        .testimonial-card-modern .stars-row {
+            color: var(--gold);
+            font-size: 18px;
             letter-spacing: 2px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
-        .tm-card .tm-text {
+        .testimonial-card-modern p {
             font-size: 14px;
             color: var(--text);
             font-weight: 600;
             line-height: 1.7;
             margin-bottom: 10px;
         }
-        .tm-card .tm-author {
+        .testimonial-card-modern .author-row {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .tm-card .tm-avatar {
-            width: 38px;
-            height: 38px;
+        .testimonial-card-modern .author-avatar {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            color: #FFF;
-            font-size: 15px;
+            color: #fff;
+            font-size: 16px;
             flex-shrink: 0;
         }
-        .tm-card .tm-avatar.av1 {
+        .testimonial-card-modern .author-avatar.av1 {
             background: var(--gradient-primary);
         }
-        .tm-card .tm-avatar.av2 {
-            background: var(--gradient-fire);
+        .testimonial-card-modern .author-avatar.av2 {
+            background: var(--gradient-secondary);
         }
-        .tm-card .tm-avatar.av3 {
+        .testimonial-card-modern .author-avatar.av3 {
             background: var(--gradient-accent);
         }
-        .tm-card .tm-name {
+        .testimonial-card-modern .author-name {
             font-weight: 800;
             font-size: 14px;
             color: var(--text);
         }
-        .tm-card .tm-role {
+        .testimonial-card-modern .author-role {
             font-size: 11px;
             color: var(--text-muted);
             font-weight: 600;
         }
 
-        /* ── GUARANTEE ── */
+        /* ============ GUARANTEE ============ */
         .guarantee-section {
             padding: 40px 20px;
-            background: #FFF;
+            background: #fff;
             position: relative;
             z-index: 5;
         }
-        .guarantee-card {
+        .guarantee-card-final {
             background: #F0FDF9;
             border-radius: var(--radius-xl);
             padding: 32px 22px;
             text-align: center;
-            border: 2.5px solid var(--accent);
-            max-width: 460px;
+            border: 2px solid var(--accent);
+            max-width: 440px;
             margin: 0 auto;
         }
-        .guarantee-card .shield {
-            width: 72px;
-            height: 72px;
+        .guarantee-card-final .shield-icon {
+            width: 70px;
+            height: 70px;
             background: var(--gradient-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 36px;
-            color: #FFF;
-            box-shadow: 0 8px 24px rgba(0, 214, 143, 0.25);
+            margin: 0 auto 18px;
+            font-size: 34px;
+            color: #fff;
         }
-        .guarantee-card h3 {
+        .guarantee-card-final h3 {
             font-family: 'Fredoka One', cursive;
             font-size: 22px;
             color: var(--accent);
             margin-bottom: 8px;
         }
-        .guarantee-card p {
+        .guarantee-card-final p {
             font-size: 14px;
             color: var(--text-muted);
             font-weight: 600;
             line-height: 1.7;
         }
 
-        /* ── FAQ ── */
+        /* ============ FAQ ============ */
         .faq-section {
             padding: 40px 20px;
-            background: #FAFAFE;
+            background: #F8FAFC;
             position: relative;
             z-index: 5;
         }
-        .faq-section .faq-title {
+        .faq-section .section-title {
             font-family: 'Fredoka One', cursive;
-            font-size: 25px;
+            font-size: 24px;
             text-align: center;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        .faq-list {
-            max-width: 460px;
+        .faq-accordion {
+            max-width: 440px;
             margin: 0 auto;
         }
-        .faq-item {
-            background: #FFF;
-            border-radius: var(--radius-lg);
+        .faq-item-f {
+            background: #fff;
+            border-radius: var(--radius-md);
             margin-bottom: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow-card);
+            box-shadow: var(--shadow-sm);
         }
-        .faq-item .faq-q {
+        .faq-item-f .faq-btn {
             width: 100%;
             padding: 18px 20px;
             background: none;
@@ -888,206 +862,157 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 12px;
         }
-        .faq-item .faq-q .chev {
-            transition: transform 0.3s;
+        .faq-item-f .faq-btn .chevron {
+            transition: transform 0.3s ease;
             flex-shrink: 0;
             color: var(--primary);
-            font-size: 18px;
         }
-        .faq-item.active .faq-q .chev {
+        .faq-item-f.active .faq-btn .chevron {
             transform: rotate(180deg);
         }
-        .faq-item .faq-a {
+        .faq-item-f .faq-panel {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.35s ease;
         }
-        .faq-item.active .faq-a {
+        .faq-item-f.active .faq-panel {
             max-height: 400px;
         }
-        .faq-item .faq-a p {
+        .faq-item-f .faq-panel p {
             padding: 0 20px 18px;
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-muted);
             font-weight: 600;
             line-height: 1.7;
         }
 
-        /* ── FINAL CTA ── */
-        .final-cta {
+        /* ============ FINAL CTA ============ */
+        .final-cta-section {
             padding: 50px 20px;
-            background: var(--gradient-royal);
+            background: var(--gradient-primary);
             text-align: center;
             position: relative;
             z-index: 5;
             overflow: hidden;
         }
-        .final-cta::before {
+        .final-cta-section::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 55%);
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
             pointer-events: none;
         }
-        .final-cta .fcta-content {
+        .final-cta-section .final-content {
             position: relative;
             z-index: 2;
             max-width: 440px;
             margin: 0 auto;
         }
-        .final-cta h2 {
+        .final-cta-section h2 {
             font-family: 'Fredoka One', cursive;
-            font-size: 29px;
-            color: #FFF;
-            margin-bottom: 6px;
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 8px;
         }
-        .final-cta p {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.82);
-            margin-bottom: 18px;
+        .final-cta-section p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 22px;
             font-weight: 600;
         }
-        .final-cta .f-price {
+        .final-cta-section .final-price {
             font-family: 'Fredoka One', cursive;
-            font-size: 54px;
-            color: #FFD60A;
-            margin-bottom: 2px;
-            text-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+            font-size: 52px;
+            color: #fff;
+            margin-bottom: 4px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        .final-cta .f-price small {
-            font-size: 24px;
+        .final-cta-section .final-price small {
+            font-size: 26px;
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
         }
-        .final-cta .f-old {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.5);
+        .final-cta-section .final-old {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: line-through;
             margin-bottom: 18px;
             font-weight: 600;
         }
-        .btn-final {
+        .final-cta-section .btn-final {
             display: inline-block;
-            background: #FFF;
+            background: #fff;
             color: var(--primary);
-            padding: 18px 34px;
-            border-radius: var(--radius-full);
-            font-size: 16px;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-size: 17px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.5px;
             text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-            transition: all 0.3s;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
-        .btn-final:active {
-            transform: scale(0.94);
+        .final-cta-section .btn-final:active {
+            transform: scale(0.95);
         }
 
-        /* ── STICKY BAR ── */
+        /* ============ STICKY FOOTER ============ */
         .sticky-bar {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: #FFF;
-            padding: 13px 16px;
-            box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.13);
+            background: var(--surface);
+            padding: 14px 16px;
+            box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.12);
             z-index: 998;
             display: flex;
             align-items: center;
             gap: 12px;
-            border-top: 2px solid #F3F4F6;
+            border-top: 2px solid #F1F5F9;
         }
-        .sticky-bar .st-price .st-old {
-            font-size: 10px;
-            color: #9CA3AF;
+        .sticky-bar .sticky-price-info .sticky-old {
+            font-size: 11px;
+            color: #94A3B8;
             text-decoration: line-through;
             font-weight: 600;
         }
-        .sticky-bar .st-price .st-new {
+        .sticky-bar .sticky-price-info .sticky-new {
             font-family: 'Fredoka One', cursive;
             font-size: 22px;
             color: var(--accent);
             line-height: 1;
         }
-        .btn-sticky {
+        .sticky-bar .btn-sticky {
             flex: 1;
             background: var(--gradient-gold);
-            color: #1A1A2E;
-            padding: 15px 18px;
-            border-radius: var(--radius-full);
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
             text-align: center;
             font-weight: 800;
             font-size: 14px;
             text-transform: uppercase;
             text-decoration: none;
             letter-spacing: 0.5px;
-            animation: glowGold 2s ease-in-out infinite;
+            animation: glowPulse 2s ease-in-out infinite;
             border: none;
             cursor: pointer;
         }
-        .btn-sticky:active {
-            transform: scale(0.95);
+        .sticky-bar .btn-sticky:active {
+            transform: scale(0.96);
         }
 
-        /* ── LIVE TOAST ── */
-        .live-toast {
-            position: fixed;
-            bottom: 110px;
-            left: 14px;
-            right: 14px;
-            max-width: 370px;
-            background: #FFF;
-            border-radius: var(--radius-lg);
-            padding: 14px 16px;
-            box-shadow: var(--shadow-elevated);
-            z-index: 997;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transform: translateX(-115%);
-            transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
-            border-left: 4px solid var(--accent);
-        }
-        .live-toast.show {
-            transform: translateX(0);
-        }
-        .live-toast .lt-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: livePulse 1.2s infinite;
-            flex-shrink: 0;
-        }
-        .live-toast .lt-name {
-            font-weight: 800;
-            font-size: 12.5px;
-            color: var(--text);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .live-toast .lt-act {
-            font-size: 10.5px;
-            color: var(--accent);
-            font-weight: 700;
-        }
-        .live-toast .lt-time {
-            font-size: 10px;
-            color: var(--text-muted);
-        }
-
-        /* ── FOOTER ── */
+        /* ============ FOOTER ============ */
         footer {
-            padding: 22px 20px 100px;
+            padding: 24px 20px 100px;
             text-align: center;
-            font-size: 11.5px;
+            font-size: 12px;
             color: var(--text-muted);
-            background: #FFF;
+            background: #fff;
             position: relative;
             z-index: 5;
         }
@@ -1097,44 +1022,44 @@
             font-weight: 700;
         }
 
-        /* ── RESPONSIVE ── */
-        @media (min-width: 520px) {
+        /* ============ RESPONSIVE ============ */
+        @media (min-width: 500px) {
             .offers-grid {
                 flex-direction: row;
-                max-width: 720px;
-                gap: 10px;
+                max-width: 700px;
+                gap: 12px;
                 align-items: stretch;
             }
             .offer-card {
                 flex: 1;
-                padding: 22px 14px;
+                padding: 20px 14px;
             }
             .offer-card.recommended {
                 order: 0;
-                transform: scale(1.05);
+                transform: scale(1.04);
                 z-index: 2;
             }
             .offer-card .new-price {
                 font-size: 34px;
             }
-            .offer-card .new-price sup {
-                font-size: 16px;
+            .offer-card .new-price small {
+                font-size: 18px;
             }
-            .btn-offer {
+            .offer-card .btn-offer {
                 font-size: 13px;
-                padding: 14px 10px;
+                padding: 14px 12px;
             }
-            .btn-offer.btn3 {
+            .offer-card .btn-offer.combo-btn {
                 font-size: 14px;
-                padding: 16px 10px;
+                padding: 16px 12px;
             }
         }
         @media (min-width: 768px) {
             .offers-grid {
-                max-width: 820px;
+                max-width: 800px;
             }
             .offer-card {
-                padding: 30px 20px;
+                padding: 28px 20px;
             }
             .offer-card .new-price {
                 font-size: 40px;
@@ -1167,307 +1092,282 @@
 </head>
 <body>
 
-    <!-- ══════ URGENCY TOP BAR ══════ -->
-    <div class="urgency-bar">
-        <span class="live-dot"></span> OFERTA RELÂMPAGO • RESTAM
-        <span class="timer-chip" id="topTimer">02:47:33</span>
-        • ÚLTIMAS UNIDADES 🔥
+    <!-- ============ URGENCY TOP BAR ============ -->
+    <div class="urgency-topbar">
+        <span class="flame">🔥</span>
+        OFERTA RELÂMPAGO • RESTAM
+        <span class="countdown-inline" id="countdownInline">02:47:33</span>
+        • ÚLTIMAS UNIDADES
+        <span class="flame">🔥</span>
     </div>
 
-    <!-- ══════ HERO ══════ -->
+    <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-icon">⭐</span> Mais de 2.000 Famílias Abençoadas
-            </div>
-            <h1>Booby <span class="hl">Goodies</span></h1>
+            <div class="hero-badge">⭐ Mais de 2.000 Famílias Abençoadas</div>
+            <h1>Booby <span class="highlight">Goodies</span></h1>
             <p class="hero-subtitle">Atividades bíblicas divertidas para seus filhos crescerem na fé com alegria e propósito!</p>
-            <div class="hero-illustration">
-                <!-- SVG Ilustração: Bíblia + Crianças + Estrelas -->
-                <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="glow1" cx="50%" cy="40%" r="50%">
-                            <stop offset="0%" stop-color="#EDE9FE" stop-opacity="0.8"/>
-                            <stop offset="100%" stop-color="#EDE9FE" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <rect x="60" y="50" width="280" height="180" rx="90" fill="url(#glow1)"/>
-                    <!-- Livro aberto -->
-                    <g transform="translate(155,95)">
-                        <path d="M0 10 Q45 -15 90 10 L90 110 Q45 85 0 110 Z" fill="#5C3CFA" rx="4"/>
-                        <path d="M0 10 Q45 -15 90 10" stroke="#7C6FF7" stroke-width="3" fill="none"/>
-                        <line x1="45" y1="-5" x2="45" y2="95" stroke="#FFF" stroke-width="2" opacity="0.4"/>
-                        <!-- Texto simulado -->
-                        <rect x="10" y="20" width="28" height="4" rx="2" fill="#FFF" opacity="0.6"/>
-                        <rect x="10" y="30" width="28" height="4" rx="2" fill="#FFF" opacity="0.4"/>
-                        <rect x="10" y="40" width="22" height="4" rx="2" fill="#FFF" opacity="0.5"/>
-                        <rect x="52" y="20" width="26" height="4" rx="2" fill="#FFF" opacity="0.6"/>
-                        <rect x="52" y="30" width="28" height="4" rx="2" fill="#FFF" opacity="0.4"/>
-                        <rect x="52" y="40" width="20" height="4" rx="2" fill="#FFF" opacity="0.5"/>
-                    </g>
-                    <!-- Cruz no centro -->
-                    <g transform="translate(200,125)">
-                        <rect x="14" y="0" width="8" height="26" rx="4" fill="#FFD60A"/>
-                        <rect x="3" y="8" width="30" height="8" rx="4" fill="#FFD60A"/>
-                    </g>
-                    <!-- Estrelas flutuantes -->
-                    <circle cx="110" cy="80" r="4" fill="#F5A623" opacity="0.8">
-                        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="290" cy="70" r="3" fill="#FFD60A" opacity="0.7">
-                        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="100" cy="170" r="3.5" fill="#5C3CFA" opacity="0.6">
-                        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="300" cy="160" r="4.5" fill="#F5A623" opacity="0.7">
-                        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
-                    </circle>
-                    <!-- Crianças (silhuetas estilizadas) -->
-                    <g transform="translate(75,175)" opacity="0.75">
-                        <circle cx="15" cy="15" r="14" fill="#5C3CFA"/>
-                        <rect x="5" y="28" width="20" height="20" rx="8" fill="#7C6FF7"/>
-                    </g>
-                    <g transform="translate(305,170)" opacity="0.75">
-                        <circle cx="15" cy="15" r="14" fill="#FF6B2C"/>
-                        <rect x="5" y="28" width="20" height="20" rx="8" fill="#FF8F5C"/>
-                    </g>
-                    <!-- Corações -->
-                    <g transform="translate(135,160)" opacity="0.6">
-                        <path d="M0 4 Q0 0 4 0 Q8 0 8 4 Q8 8 4 12 Q0 8 0 4Z" fill="#FF2D55" transform="scale(1.2)"/>
-                    </g>
-                    <g transform="translate(255,155)" opacity="0.5">
-                        <path d="M0 4 Q0 0 4 0 Q8 0 8 4 Q8 8 4 12 Q0 8 0 4Z" fill="#FF2D55" transform="scale(1)"/>
-                    </g>
-                </svg>
-                <div class="floating-particles">
-                    <span class="particle">✨</span>
-                    <span class="particle">🌟</span>
-                    <span class="particle">💫</span>
-                    <span class="particle">⭐</span>
-                    <span class="particle">🕊️</span>
-                </div>
+            <div class="hero-image-wrapper">
+                <span class="hero-sparkle">✨</span>
+                <span class="hero-sparkle">🌟</span>
+                <span class="hero-sparkle">💫</span>
+                <img src="images/booby-hero.png" alt="Booby Goodies - Atividades Cristãs" loading="eager">
             </div>
         </div>
     </section>
 
-    <!-- ══════ TRUST STRIP ══════ -->
+    <!-- ============ TRUST STRIP ============ -->
     <div class="trust-strip">
-        <div class="trust-chip"><span class="tc-icon g">🔒</span> Compra 100% Segura</div>
-        <div class="trust-chip"><span class="tc-icon p">⚡</span> Acesso Imediato</div>
-        <div class="trust-chip"><span class="tc-icon o">🛡️</span> Garantia de 7 Dias</div>
+        <div class="trust-item">
+            <span class="icon-circle green">🔒</span> Compra 100% Segura
+        </div>
+        <div class="trust-item">
+            <span class="icon-circle purple">⚡</span> Acesso Imediato
+        </div>
+        <div class="trust-item">
+            <span class="icon-circle orange">🛡️</span> Garantia de 7 Dias
+        </div>
     </div>
 
-    <!-- ══════ OFERTAS (3 OPÇÕES) ══════ -->
+    <!-- ============ OFERTAS (3 OPÇÕES) ============ -->
     <section class="offers-section" id="ofertas">
-        <div style="text-align:center;"><span class="sec-label">🎁 Escolha Sua Oferta</span></div>
-        <h2>Qual presente vai abençoar seu filho hoje?</h2>
-        <p class="sec-sub">Toque na melhor opção para sua família 👇</p>
+        <div class="section-header">
+            <span class="label">🎁 Escolha Sua Oferta</span>
+            <h2>Qual presente vai abençoar seu filho hoje?</h2>
+            <p>Toque na melhor opção para sua família 👇</p>
+        </div>
+
         <div class="offers-grid">
-            <!-- Oferta 1 -->
+            <!-- OFERTA 1: 35 Livros -->
             <div class="offer-card" id="offer1">
-                <div class="offer-icon-wrap c1">📚</div>
+                <div class="offer-icon basic">📚</div>
                 <h3>Booby Goodies Cristão</h3>
-                <p class="offer-desc">35 Livros Bíblicos Infantis</p>
-                <div class="old-price">De R$ 67,00</div>
-                <div class="new-price"><sup>R$</sup>9,90</div>
-                <div class="installments">ou em até 2x no cartão</div>
-                <ul class="feature-list">
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> 35 livros cristãos ilustrados</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> Histórias bíblicas completas</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> Acesso vitalício em PDF</li>
+                <p class="offer-subtitle">35 Livros Bíblicos Infantis</p>
+                <div class="price-block">
+                    <div class="old-price">De R$ 67,00</div>
+                    <div class="new-price"><small>R$</small>9,90</div>
+                    <div class="installments">ou em até 2x no cartão</div>
+                </div>
+                <ul class="offer-features">
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> 35 livros cristãos ilustrados</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> Histórias bíblicas completas</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> Acesso vitalício em PDF</li>
                 </ul>
-                <a href="https://pay.cakto.com.br/znuzn2x_909512" class="btn-offer btn1">QUERO ESSE! <span class="btn-arrow">→</span></a>
+                <a href="https://pay.cakto.com.br/znuzn2x_909512" class="btn-offer basic-btn">
+                    QUERO ESSE! <span class="btn-arrow">→</span>
+                </a>
             </div>
-            <!-- Oferta 2 -->
+
+            <!-- OFERTA 2: Livro de Atividades -->
             <div class="offer-card" id="offer2">
-                <div class="offer-icon-wrap c2">🎨</div>
+                <div class="offer-icon premium">🎨</div>
                 <h3>Livro de Atividades</h3>
-                <p class="offer-desc">50+ Páginas Interativas</p>
-                <div class="old-price">De R$ 47,00</div>
-                <div class="new-price"><sup>R$</sup>14,90</div>
-                <div class="installments">ou em até 2x no cartão</div>
-                <ul class="feature-list">
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> 50+ páginas de atividades</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> Labirintos, caça-palavras & mais</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> Imprima quantas vezes quiser</li>
+                <p class="offer-subtitle">50+ Páginas Interativas</p>
+                <div class="price-block">
+                    <div class="old-price">De R$ 47,00</div>
+                    <div class="new-price"><small>R$</small>14,90</div>
+                    <div class="installments">ou em até 2x no cartão</div>
+                </div>
+                <ul class="offer-features">
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> 50+ páginas de atividades</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> Labirintos, caça-palavras & mais</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> Imprima quantas vezes quiser</li>
                 </ul>
-                <a href="https://pay.cakto.com.br/36caw43_910833" class="btn-offer btn2">QUERO ESSE! <span class="btn-arrow">→</span></a>
+                <a href="https://pay.cakto.com.br/36caw43_910833" class="btn-offer premium-btn">
+                    QUERO ESSE! <span class="btn-arrow">→</span>
+                </a>
             </div>
-            <!-- Oferta 3 (Combo Recomendado) -->
+
+            <!-- OFERTA 3: COMBO (Recomendado) -->
             <div class="offer-card recommended" id="offer3">
-                <div class="crown-badge">👑 MAIS POPULAR</div>
-                <div class="offer-icon-wrap c3">👑</div>
+                <div class="offer-icon combo">👑</div>
                 <h3>COMBO COMPLETO</h3>
-                <p class="offer-desc">35 Livros + Livro de Atividades</p>
-                <div class="old-price">De R$ 114,00</div>
-                <div class="new-price"><sup>R$</sup>19,90</div>
-                <div class="installments">ou em até 3x no cartão</div>
-                <ul class="feature-list">
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> <strong>TUDO</strong> da Oferta 1 + Oferta 2</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> <strong>85+ conteúdos</strong> no total</li>
-                    <li><span class="check-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> <strong>Melhor custo-benefício!</strong></li>
+                <p class="offer-subtitle">35 Livros + Livro de Atividades</p>
+                <div class="price-block">
+                    <div class="old-price">De R$ 114,00</div>
+                    <div class="new-price"><small>R$</small>19,90</div>
+                    <div class="installments">ou em até 3x no cartão</div>
+                </div>
+                <ul class="offer-features">
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> <strong>TUDO</strong> da Oferta 1 + Oferta 2</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> <strong>85+ conteúdos</strong> no total</li>
+                    <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span> <strong>Melhor custo-benefício!</strong></li>
                 </ul>
-                <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-offer btn3">LEVAR COMBO! <span class="btn-arrow">→</span></a>
+                <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-offer combo-btn">
+                    LEVAR COMBO! <span class="btn-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ══════ COUNTDOWN STRIP ══════ -->
-    <div class="cd-strip">
-        <div class="cd-label">⏳ Essa oferta imperdível expira em:</div>
-        <div class="cd-digits">
-            <div class="cd-digit"><span class="num" id="cdH">02</span><span class="lbl">Horas</span></div>
-            <div class="cd-digit"><span class="num" id="cdM">47</span><span class="lbl">Min</span></div>
-            <div class="cd-digit"><span class="num" id="cdS">33</span><span class="lbl">Seg</span></div>
+    <!-- ============ COUNTDOWN STRIP ============ -->
+    <div class="countdown-strip">
+        <div class="countdown-label">⏳ Essa oferta imperdível expira em:</div>
+        <div class="countdown-digits">
+            <div class="countdown-digit"><span class="num" id="cdHours">02</span><span class="lbl">Horas</span></div>
+            <div class="countdown-digit"><span class="num" id="cdMinutes">47</span><span class="lbl">Min</span></div>
+            <div class="countdown-digit"><span class="num" id="cdSeconds">33</span><span class="lbl">Seg</span></div>
         </div>
     </div>
 
-    <!-- ══════ PREVIEW GALLERY (SVG ILLUSTRATIONS) ══════ -->
+    <!-- ============ LIVE TOAST ============ -->
+    <div class="live-toast" id="liveToast">
+        <div class="pulse-dot"></div>
+        <div class="toast-info">
+            <div class="toast-name" id="toastName">Maria S. de São Paulo</div>
+            <div class="toast-action">✅ Acabou de comprar o Combo!</div>
+            <div class="toast-time" id="toastTime">Agora mesmo</div>
+        </div>
+    </div>
+
+    <!-- ============ PREVIEW GALLERY ============ -->
     <div class="preview-scroll">
-        <div class="preview-card">
-            <div class="pc-img pc1">
-                <svg width="80" height="80" viewBox="0 0 80 80"><rect x="10" y="15" width="60" height="55" rx="8" fill="#3B82F6"/><rect x="18" y="25" width="20" height="20" rx="4" fill="#FFF" opacity="0.9"/><rect x="42" y="25" width="20" height="20" rx="4" fill="#FFF" opacity="0.7"/><rect x="18" y="50" width="44" height="10" rx="3" fill="#FFF" opacity="0.5"/></svg>
-            </div>
-            <span class="pc-tag">Arca de Noé 🕊️</span>
-        </div>
-        <div class="preview-card">
-            <div class="pc-img pc2">
-                <svg width="80" height="80" viewBox="0 0 80 80"><rect x="8" y="8" width="64" height="64" rx="10" fill="#FBBF24"/><text x="40" y="42" text-anchor="middle" font-size="28" fill="#FFF" font-weight="800">A B C</text><text x="40" y="58" text-anchor="middle" font-size="14" fill="#FFF" opacity="0.8">✝️</text></svg>
-            </div>
-            <span class="pc-tag">Caça-Palavras 🔍</span>
-        </div>
-        <div class="preview-card">
-            <div class="pc-img pc3">
-                <svg width="80" height="80" viewBox="0 0 80 80"><rect x="5" y="5" width="70" height="70" rx="12" fill="#8B5CF6"/><path d="M15 40 L30 20 L50 55 L65 15" stroke="#FFF" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="65" cy="15" r="6" fill="#FBBF24"/></svg>
-            </div>
-            <span class="pc-tag">Labirintos 🧩</span>
-        </div>
-        <div class="preview-card">
-            <div class="pc-img pc4">
-                <svg width="80" height="80" viewBox="0 0 80 80"><rect x="8" y="8" width="64" height="64" rx="14" fill="#10B981"/><circle cx="30" cy="35" r="16" fill="#FFF" opacity="0.8"/><circle cx="50" cy="50" r="10" fill="#FBBF24" opacity="0.8"/></svg>
-            </div>
-            <span class="pc-tag">Colorir 🎨</span>
-        </div>
+        <div class="preview-card"><img src="images/booby-preview1.png" alt="Arca de Noé"><span class="preview-tag">Arca de Noé</span></div>
+        <div class="preview-card"><img src="images/booby-preview2.png" alt="Caça Palavras"><span class="preview-tag">Caça-Palavras</span></div>
+        <div class="preview-card"><img src="images/booby-preview3.png" alt="Labirinto"><span class="preview-tag">Labirintos</span></div>
+        <div class="preview-card"><img src="images/booby-hero.png" alt="Atividades"><span class="preview-tag">Colorir</span></div>
     </div>
 
-    <!-- ══════ FEATURES ══════ -->
+    <!-- ============ FEATURES ============ -->
     <section class="features-section">
-        <h2 class="ft-title">💡 Por que os pais amam?</h2>
-        <div class="ft-grid">
-            <div class="ft-card"><div class="ft-icon i1">📖</div><div><h4>Histórias Bíblicas Ilustradas</h4><p>Contadas de forma simples para crianças de todas as idades.</p></div></div>
-            <div class="ft-card"><div class="ft-icon i2">❤️</div><div><h4>Ensina Valores Cristãos</h4><p>Amor, bondade e gratidão transmitidos ludicamente.</p></div></div>
-            <div class="ft-card"><div class="ft-icon i3">😊</div><div><h4>Diversão Garantida</h4><p>Atividades coloridas que entretêm por horas!</p></div></div>
-            <div class="ft-card"><div class="ft-icon i4">🖨️</div><div><h4>Imprima Sem Limites</h4><p>PDF de alta qualidade para todos os seus filhos.</p></div></div>
+        <h2 class="section-title">💡 Por que os pais amam?</h2>
+        <div class="features-grid-2">
+            <div class="feature-card-mini">
+                <div class="feat-icon f1">📖</div>
+                <div><h4>Histórias Bíblicas Ilustradas</h4><p>Contadas de forma simples para crianças de todas as idades.</p></div>
+            </div>
+            <div class="feature-card-mini">
+                <div class="feat-icon f2">❤️</div>
+                <div><h4>Ensina Valores Cristãos</h4><p>Amor, bondade e gratidão transmitidos ludicamente.</p></div>
+            </div>
+            <div class="feature-card-mini">
+                <div class="feat-icon f3">😊</div>
+                <div><h4>Diversão Garantida</h4><p>Atividades coloridas que entretêm por horas!</p></div>
+            </div>
+            <div class="feature-card-mini">
+                <div class="feat-icon f4">🖨️</div>
+                <div><h4>Imprima Sem Limites</h4><p>PDF de alta qualidade para todos os seus filhos.</p></div>
+            </div>
         </div>
     </section>
 
-    <!-- ══════ FAMILY ILLUSTRATION ══════ -->
-    <section class="family-section">
-        <div class="fam-illust">
-            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="60" y="20" width="180" height="160" rx="80" fill="#F0ECFF"/>
-                <!-- Família estilizada -->
-                <g transform="translate(120,90)">
-                    <circle cx="30" cy="10" r="18" fill="#5C3CFA"/>
-                    <rect x="15" y="28" width="30" height="40" rx="12" fill="#7C6FF7"/>
-                    <!-- Coração entre eles -->
-                    <path d="M-15 20 Q-15 12 -10 12 Q-5 12 -5 20 Q-5 28 -10 34 Q-15 28 -15 20Z" fill="#FF2D55" transform="scale(0.8)"/>
-                </g>
-                <g transform="translate(60,100)">
-                    <circle cx="15" cy="10" r="14" fill="#FF6B2C"/>
-                    <rect x="5" y="24" width="20" height="30" rx="8" fill="#FF8F5C"/>
-                </g>
-                <text x="150" y="175" text-anchor="middle" font-size="14" fill="#5C3CFA" font-weight="800">Família + Fé = ❤️</text>
-            </svg>
-        </div>
-        <h3>Momentos em Família</h3>
-        <p>Crie memórias inesquecíveis enquanto ensina valores cristãos aos seus filhos de forma divertida e educativa.</p>
-    </section>
-
-    <!-- ══════ TESTIMONIALS ══════ -->
+    <!-- ============ TESTIMONIALS ============ -->
     <section class="testimonials-section">
-        <h2 class="tm-title">👨‍👩‍👧‍👦 O que os pais dizem</h2>
-        <div class="tm-card"><div class="stars">★★★★★</div><p class="tm-text">"Meus filhos adoraram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando."</p><div class="tm-author"><div class="tm-avatar av1">A</div><div><div class="tm-name">Ana Paula M.</div><div class="tm-role">Mãe de 2 filhos</div></div></div></div>
-        <div class="tm-card"><div class="stars">★★★★★</div><p class="tm-text">"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento que fiz esse ano!"</p><div class="tm-author"><div class="tm-avatar av2">R</div><div><div class="tm-name">Roberto S.</div><div class="tm-role">Pai de 3 filhos</div></div></div></div>
-        <div class="tm-card"><div class="stars">★★★★★</div><p class="tm-text">"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que os R$19,90 do combo."</p><div class="tm-author"><div class="tm-avatar av3">J</div><div><div class="tm-name">Julia Costa</div><div class="tm-role">Mãe de 1 filho</div></div></div></div>
+        <h2 class="section-title">👨‍👩‍👧‍👦 O que os pais dizem</h2>
+        <div class="testimonial-card-modern">
+            <div class="stars-row">★★★★★</div>
+            <p>"Meus filhos adoraram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando."</p>
+            <div class="author-row">
+                <div class="author-avatar av1">A</div>
+                <div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos</div></div>
+            </div>
+        </div>
+        <div class="testimonial-card-modern">
+            <div class="stars-row">★★★★★</div>
+            <p>"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento que fiz esse ano!"</p>
+            <div class="author-row">
+                <div class="author-avatar av2">R</div>
+                <div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos</div></div>
+            </div>
+        </div>
+        <div class="testimonial-card-modern">
+            <div class="stars-row">★★★★★</div>
+            <p>"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que os R$19,90 do combo."</p>
+            <div class="author-row">
+                <div class="author-avatar av3">J</div>
+                <div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho</div></div>
+            </div>
+        </div>
     </section>
 
-    <!-- ══════ GUARANTEE ══════ -->
+    <!-- ============ GUARANTEE ============ -->
     <section class="guarantee-section">
-        <div class="guarantee-card">
-            <div class="shield">🛡️</div>
+        <div class="guarantee-card-final">
+            <div class="shield-icon">🛡️</div>
             <h3>Garantia Incondicional de 7 Dias</h3>
             <p>Se você não ficar 100% satisfeito com o material, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. Risco zero para você!</p>
         </div>
     </section>
 
-    <!-- ══════ FAQ ══════ -->
+    <!-- ============ FAQ ============ -->
     <section class="faq-section">
-        <h2 class="faq-title">❓ Perguntas Frequentes</h2>
-        <div class="faq-list">
-            <div class="faq-item"><button class="faq-q">Como recebo o material? <span class="chev">▼</span></button><div class="faq-a"><p>Após a confirmação do pagamento, você recebe imediatamente o acesso por e-mail. É um arquivo PDF pronto para baixar e imprimir!</p></div></div>
-            <div class="faq-item"><button class="faq-q">Para qual idade é indicado? <span class="chev">▼</span></button><div class="faq-a"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para atender todas as idades com diversão e aprendizado.</p></div></div>
-            <div class="faq-item"><button class="faq-q">Posso imprimir mais de uma vez? <span class="chev">▼</span></button><div class="faq-a"><p>Sim! Sem limites. Ideal para famílias com vários filhos ou para usar na igreja e escola dominical.</p></div></div>
-            <div class="faq-item"><button class="faq-q">O pagamento é seguro? <span class="chev">▼</span></button><div class="faq-a"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada. Seus dados estão protegidos.</p></div></div>
+        <h2 class="section-title">❓ Perguntas Frequentes</h2>
+        <div class="faq-accordion">
+            <div class="faq-item-f">
+                <button class="faq-btn">Como recebo o material? <span class="chevron">▼</span></button>
+                <div class="faq-panel"><p>Após a confirmação do pagamento, você recebe imediatamente o acesso por e-mail. É um arquivo PDF pronto para baixar e imprimir!</p></div>
+            </div>
+            <div class="faq-item-f">
+                <button class="faq-btn">Para qual idade é indicado? <span class="chevron">▼</span></button>
+                <div class="faq-panel"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para atender todas as idades com diversão e aprendizado.</p></div>
+            </div>
+            <div class="faq-item-f">
+                <button class="faq-btn">Posso imprimir mais de uma vez? <span class="chevron">▼</span></button>
+                <div class="faq-panel"><p>Sim! Sem limites. Ideal para famílias com vários filhos ou para usar na igreja e escola dominical.</p></div>
+            </div>
+            <div class="faq-item-f">
+                <button class="faq-btn">O pagamento é seguro? <span class="chevron">▼</span></button>
+                <div class="faq-panel"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada. Seus dados estão protegidos.</p></div>
+            </div>
         </div>
     </section>
 
-    <!-- ══════ FINAL CTA ══════ -->
-    <section class="final-cta">
-        <div class="fcta-content">
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta-section">
+        <div class="final-content">
             <h2>🔥 Não perca essa bênção!</h2>
             <p>Invista na educação cristã dos seus filhos agora mesmo</p>
-            <div class="f-old">De R$ 114,00</div>
-            <div class="f-price"><small>R$</small>19,90</div>
-            <p style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:18px;">no Combo Completo (35 Livros + Atividades)</p>
-            <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">🎁 GARANTIR COMBO AGORA!</a>
+            <div class="final-old">De R$ 114,00</div>
+            <div class="final-price"><small>R$</small>19,90</div>
+            <p style="font-size:13px;opacity:0.8;">no Combo Completo (35 Livros + Atividades)</p>
+            <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">
+                🎁 GARANTIR COMBO AGORA!
+            </a>
         </div>
     </section>
 
-    <!-- ══════ STICKY BAR ══════ -->
+    <!-- ============ STICKY BAR ============ -->
     <div class="sticky-bar" id="stickyBar">
-        <div class="st-price"><div class="st-old">R$ 114,00</div><div class="st-new">R$ 19,90</div></div>
-        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">👑 LEVAR COMBO →</a>
-    </div>
-
-    <!-- ══════ LIVE TOAST ══════ -->
-    <div class="live-toast" id="liveToast">
-        <div class="lt-dot"></div>
-        <div>
-            <div class="lt-name" id="ltName">Maria S. de São Paulo</div>
-            <div class="lt-act">✅ Acabou de comprar o Combo!</div>
-            <div class="lt-time" id="ltTime">Agora mesmo</div>
+        <div class="sticky-price-info">
+            <div class="sticky-old">R$ 114,00</div>
+            <div class="sticky-new">R$ 19,90</div>
         </div>
+        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">
+            👑 LEVAR COMBO →
+        </a>
     </div>
 
-    <!-- ══════ FOOTER ══════ -->
+    <!-- ============ FOOTER ============ -->
     <footer>
         <p>Booby Goodies © 2024 - Todos os direitos reservados</p>
         <p style="margin-top:6px;"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
     </footer>
 
     <script>
-        // ══════ COUNTDOWN ══════
-        let totalSec = 2 * 3600 + 47 * 60 + 33;
+        // ============ COUNTDOWN GLOBAL ============
+        let totalSeconds = 2 * 3600 + 47 * 60 + 33;
 
-        function tick() {
-            if (totalSec <= 0) totalSec = 2 * 3600 + 47 * 60 + 33;
-            const h = Math.floor(totalSec / 3600);
-            const m = Math.floor((totalSec % 3600) / 60);
-            const s = totalSec % 60;
+        function updateAllCountdowns() {
+            if (totalSeconds <= 0) {
+                totalSeconds = 2 * 3600 + 47 * 60 + 33;
+            }
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = totalSeconds % 60;
             const hh = String(h).padStart(2, '0');
             const mm = String(m).padStart(2, '0');
             const ss = String(s).padStart(2, '0');
-            document.getElementById('cdH').textContent = hh;
-            document.getElementById('cdM').textContent = mm;
-            document.getElementById('cdS').textContent = ss;
-            document.getElementById('topTimer').textContent = `${hh}:${mm}:${ss}`;
-            totalSec--;
-        }
-        setInterval(tick, 1000);
 
-        // ══════ LIVE TOAST ══════
+            document.getElementById('cdHours').textContent = hh;
+            document.getElementById('cdMinutes').textContent = mm;
+            document.getElementById('cdSeconds').textContent = ss;
+            document.getElementById('countdownInline').textContent = `${hh}:${mm}:${ss}`;
+
+            totalSeconds--;
+        }
+        setInterval(updateAllCountdowns, 1000);
+
+        // ============ LIVE TOAST ============
         const buyers = [
             { name: 'Maria S. de São Paulo', time: 'Agora mesmo' },
             { name: 'João P. do Rio de Janeiro', time: 'Há 2 min' },
@@ -1478,49 +1378,49 @@
             { name: 'Amanda C. de Fortaleza', time: 'Há 10 min' },
             { name: 'Lucas R. de Porto Alegre', time: 'Há 12 min' },
         ];
-        let bi = 0;
+        let buyerIdx = 0;
         const toast = document.getElementById('liveToast');
-        const ltName = document.getElementById('ltName');
-        const ltTime = document.getElementById('ltTime');
+        const toastName = document.getElementById('toastName');
+        const toastTime = document.getElementById('toastTime');
 
         function showToast() {
-            ltName.textContent = buyers[bi].name;
-            ltTime.textContent = buyers[bi].time;
+            toastName.textContent = buyers[buyerIdx].name;
+            toastTime.textContent = buyers[buyerIdx].time;
             toast.classList.add('show');
-            bi = (bi + 1) % buyers.length;
-            setTimeout(() => toast.classList.remove('show'), 3800);
+            buyerIdx = (buyerIdx + 1) % buyers.length;
+            setTimeout(() => toast.classList.remove('show'), 4000);
         }
-        setTimeout(showToast, 3500);
-        setInterval(showToast, 13000);
+        setTimeout(showToast, 4000);
+        setInterval(showToast, 14000);
 
-        // ══════ FAQ ══════
-        document.querySelectorAll('.faq-q').forEach(btn => {
+        // ============ FAQ ACCORDION ============
+        document.querySelectorAll('.faq-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
-                const wasActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item.active').forEach(el => el.classList.remove(
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item-f.active').forEach(el => el.classList.remove(
                     'active'));
-                if (!wasActive) item.classList.add('active');
+                if (!isActive) item.classList.add('active');
             });
         });
 
-        // ══════ STICKY BAR ══════
+        // ============ STICKY BAR SCROLL ============
         const stickyBar = document.getElementById('stickyBar');
-        const offersSec = document.getElementById('ofertas');
-        let stickyOn = false;
-        stickyBar.style.display = 'none';
+        const offersSection = document.getElementById('ofertas');
+        let stickyVisible = false;
         window.addEventListener('scroll', () => {
-            const rect = offersSec.getBoundingClientRect();
-            if (rect.bottom < 0 && !stickyOn) {
+            const offersBottom = offersSection.getBoundingClientRect().bottom;
+            if (offersBottom < 0 && !stickyVisible) {
                 stickyBar.style.display = 'flex';
-                stickyOn = true;
-            } else if (rect.bottom >= 0 && stickyOn) {
+                stickyVisible = true;
+            } else if (offersBottom >= 0 && stickyVisible) {
                 stickyBar.style.display = 'none';
-                stickyOn = false;
+                stickyVisible = false;
             }
         });
+        stickyBar.style.display = 'none';
 
-        // ══════ OFFER CARD CLICK ══════
+        // ============ OFFER CARD CLICK HIGHLIGHT ============
         document.querySelectorAll('.offer-card').forEach(card => {
             card.addEventListener('click', function(e) {
                 if (e.target.closest('a')) return;
