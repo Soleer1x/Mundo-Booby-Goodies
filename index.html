@@ -5,234 +5,289 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#C2410C">
+<meta name="theme-color" content="#92290A">
 <title>Booby Goodies - Atividades Cristãs para Crianças</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
 :root{
-  --amber:#F59E0B;--amber-d:#B45309;--amber-l:#FEF3C7;
-  --coral:#C2410C;--coral-l:#FFF7ED;--coral-m:#EA580C;
-  --green:#059669;--green-l:#D1FAE5;--green-d:#065F46;
-  --cream:#FFFBF4;--white:#FFFFFF;
-  --ink:#1C1204;--ink2:#44332A;--ink3:#7C5C48;
+  --amber:#F59E0B;--amber-d:#92400E;--amber-l:#FFFBEB;--amber-m:#D97706;
+  --coral:#92290A;--coral-m:#C2410C;--coral-bright:#EA580C;
+  --green:#047857;--green-l:#ECFDF5;--green-d:#064E3B;
+  --cream:#FFFBF4;--white:#FFFFFF;--offwhite:#FDF8F2;
+  --ink:#1A0F08;--ink2:#3D2B1F;--ink3:#7A5C4A;--ink4:#AE9080;
   --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-t:env(safe-area-inset-top,0px);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-overflow-scrolling:touch;min-height:100dvh}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-overflow-scrolling:touch}
 
-/* TOP BAR */
-.topbar{background:var(--coral);color:#fff;padding:9px 12px calc(9px + env(safe-area-inset-top,0px));text-align:center;font-size:11.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;position:sticky;top:0;z-index:900;letter-spacing:.2px}
-.topbar strong{font-weight:700}
-.cd-pill{background:rgba(255,255,255,.18);border-radius:20px;padding:3px 10px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;letter-spacing:.5px;white-space:nowrap}
+/* ─── TOP BAR ─── */
+.topbar{background:var(--coral);color:#fff;padding:calc(8px + var(--safe-t)) 12px 8px;text-align:center;font-size:11.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;position:sticky;top:0;z-index:900}
+.cd-pill{background:rgba(255,255,255,.2);border-radius:20px;padding:3px 10px;font-weight:800;font-size:12px;letter-spacing:.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
 
-/* HERO */
-.hero{padding:28px 16px 36px;text-align:center;background:linear-gradient(170deg,#FFF7ED 0%,#FFFBF4 60%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(245,158,11,.12) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-40px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(5,150,105,.08) 0%,transparent 70%);pointer-events:none}
-.badge-pill{display:inline-flex;align-items:center;gap:5px;background:var(--amber-l);color:var(--amber-d);border:1.5px solid var(--amber);border-radius:50px;padding:5px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,7.5vw,44px);font-weight:900;color:var(--ink);line-height:1.12;margin-bottom:8px}
-.hero h1 em{font-style:normal;color:var(--coral-m)}
-.hero-sub{font-size:14px;color:var(--ink3);font-weight:500;line-height:1.55;max-width:320px;margin:0 auto 20px}
-.hero-img-wrap{position:relative;max-width:260px;margin:0 auto 20px}
-.hero-img-wrap img{width:100%;border-radius:20px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 16px 40px rgba(194,65,12,.18),0 4px 12px rgba(0,0,0,.08)}
-.float-tag{position:absolute;background:var(--white);border-radius:12px;padding:6px 10px;box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:10px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap;border:1px solid rgba(0,0,0,.06)}
-.float-tag.tl{top:-10px;left:-10px;color:var(--coral)}
-.float-tag.br{bottom:10px;right:-12px;color:var(--green-d);font-size:9.5px}
-.float-tag svg{width:14px;height:14px;flex-shrink:0}
-.social-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--ink3);font-weight:600}
+/* ─── HERO ─── */
+.hero{padding:24px 16px 32px;text-align:center;background:linear-gradient(170deg,#FFF7ED 0%,var(--cream) 65%);position:relative;overflow:hidden}
+.hero-glow1{position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,.13) 0%,transparent 70%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-60px;left:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(4,120,87,.08) 0%,transparent 70%);pointer-events:none}
+.badge-pill{display:inline-flex;align-items:center;gap:5px;background:var(--amber-l);color:var(--amber-d);border:1.5px solid var(--amber);border-radius:50px;padding:5px 12px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,8vw,46px);font-weight:900;color:var(--ink);line-height:1.1;margin-bottom:8px}
+.hero h1 em{font-style:italic;color:var(--coral-bright)}
+.hero-sub{font-size:13.5px;color:var(--ink3);font-weight:500;line-height:1.6;max-width:300px;margin:0 auto 20px}
+.hero-img-wrap{position:relative;max-width:250px;margin:0 auto 18px}
+.hero-img-wrap img{width:100%;border-radius:22px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 20px 50px rgba(146,41,10,.2),0 4px 12px rgba(0,0,0,.07)}
+.float-tag{position:absolute;background:var(--white);border-radius:12px;padding:6px 10px;box-shadow:0 4px 18px rgba(0,0,0,.14);font-size:10px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap;border:1px solid rgba(0,0,0,.05)}
+.float-tag.tl{top:-8px;left:-12px;color:var(--coral-m)}
+.float-tag.br{bottom:10px;right:-14px;color:var(--green-d)}
+.float-tag svg{width:13px;height:13px;flex-shrink:0}
+.social-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11.5px;color:var(--ink3);font-weight:600}
 .faces{display:flex}
-.face{width:24px;height:24px;border-radius:50%;border:2px solid #fff;margin-left:-6px;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;color:#fff}
+.face{width:22px;height:22px;border-radius:50%;border:2px solid #fff;margin-left:-5px;font-size:8.5px;font-weight:800;display:flex;align-items:center;justify-content:center;color:#fff}
 .face:first-child{margin-left:0}
 
-/* TRUST */
-.trust{display:flex;justify-content:center;gap:0;background:var(--white);border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
-.trust-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 8px;font-size:10px;font-weight:700;color:var(--ink3);text-align:center;border-right:1px solid rgba(0,0,0,.06);line-height:1.3}
+/* ─── TRUST ─── */
+.trust{display:flex;justify-content:center;background:var(--white);border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
+.trust-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:11px 6px;font-size:9.5px;font-weight:700;color:var(--ink3);text-align:center;border-right:1px solid rgba(0,0,0,.06);line-height:1.3;text-transform:uppercase;letter-spacing:.3px}
 .trust-item:last-child{border-right:none}
-.trust-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.trust-icon.g{background:var(--green-l);color:var(--green-d)}
-.trust-icon.a{background:var(--amber-l);color:var(--amber-d)}
-.trust-icon.c{background:#EDE9FE;color:#5B21B6}
-.trust-icon svg{width:14px;height:14px}
+.trust-ico{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.trust-ico svg{width:13px;height:13px}
+.trust-ico.g{background:var(--green-l);color:var(--green-d)}
+.trust-ico.a{background:var(--amber-l);color:var(--amber-d)}
+.trust-ico.c{background:#EDE9FE;color:#5B21B6}
 
-/* OFFERS */
-.offers{padding:24px 14px 28px;background:var(--cream)}
-.sec-label{text-align:center;margin-bottom:18px}
-.sec-label span{display:inline-block;background:var(--coral);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:4px 12px;border-radius:50px;margin-bottom:6px}
-.sec-label h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ink);line-height:1.2}
-.sec-label p{font-size:12.5px;color:var(--ink3);margin-top:3px}
+/* ─── OFFERS SECTION ─── */
+.offers{padding:28px 14px 32px;background:var(--cream)}
+.sec-label{text-align:center;margin-bottom:22px}
+.sec-pill{display:inline-block;background:var(--coral);color:#fff;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:4px 12px;border-radius:50px;margin-bottom:8px}
+.sec-label h2{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:var(--ink);line-height:1.2;margin-bottom:4px}
+.sec-label p{font-size:12.5px;color:var(--ink3);font-weight:500}
 
-.offers-grid{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:0 auto}
-@media(min-width:560px){.offers-grid{flex-direction:row;max-width:700px;align-items:stretch;gap:8px}}
+/* ─── OFFER CARDS — new design ─── */
+.offers-list{display:flex;flex-direction:column;gap:12px;max-width:420px;margin:0 auto}
+@media(min-width:600px){.offers-list{flex-direction:row;max-width:780px;align-items:stretch;gap:10px}}
 
-.offer-card{background:var(--white);border-radius:16px;padding:16px 14px;border:1.5px solid rgba(0,0,0,.07);position:relative;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;-webkit-user-select:none;user-select:none}
-@media(min-width:560px){.offer-card{flex:1}}
-.offer-card:active{transform:scale(.98)}
-.offer-card.best{border-color:var(--amber);box-shadow:0 8px 28px rgba(245,158,11,.2)}
-.offer-card.best::before{content:'MAIS POPULAR';position:absolute;top:12px;right:-26px;background:var(--amber);color:#fff;font-size:8px;font-weight:800;padding:4px 28px;transform:rotate(35deg);letter-spacing:.4px;white-space:nowrap}
-.offer-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
-.offer-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.offer-ico svg{width:20px;height:20px}
-.offer-ico.b1{background:var(--amber-l);color:var(--amber-d)}
-.offer-ico.b2{background:var(--green-l);color:var(--green-d)}
-.offer-ico.b3{background:linear-gradient(135deg,#FEF3C7,#FFF7ED);color:var(--coral)}
-.offer-card h3{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:2px}
-.offer-card .offer-sub{font-size:10.5px;color:var(--ink3);font-weight:500}
-.price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:10px}
-.old-p{font-size:11px;color:#9CA3AF;text-decoration:line-through;font-weight:500}
-.new-p{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--green-d);line-height:1}
-.new-p sup{font-size:14px;font-family:'DM Sans',sans-serif;font-weight:700;vertical-align:super}
-.install{font-size:10px;color:var(--ink3);margin-bottom:10px;font-weight:500}
-.feats{list-style:none;margin-bottom:14px;display:flex;flex-direction:column;gap:5px}
-.feats li{font-size:11.5px;color:var(--ink2);font-weight:500;display:flex;align-items:flex-start;gap:6px;line-height:1.3}
-.ck{width:15px;height:15px;background:var(--green-l);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.5px}
-.ck svg{width:8px;height:8px;color:var(--green-d)}
-.btn-offer{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px;border-radius:50px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:#fff;border:none;cursor:pointer;text-decoration:none;min-height:42px;transition:opacity .2s,transform .15s}
-.btn-offer:active{transform:scale(.96)}
-.btn-b1{background:linear-gradient(135deg,#B45309,#D97706)}
-.btn-b2{background:linear-gradient(135deg,var(--green-d),#059669)}
-.btn-b3{background:linear-gradient(135deg,var(--coral),#EA580C);box-shadow:0 6px 20px rgba(194,65,12,.3);animation:glowBtn 2.2s ease-in-out infinite}
-@keyframes glowBtn{0%,100%{box-shadow:0 6px 20px rgba(194,65,12,.3)}50%{box-shadow:0 8px 30px rgba(194,65,12,.55),0 0 0 6px rgba(194,65,12,.08)}}
+/* BASE CARD */
+.ocard{border-radius:20px;overflow:hidden;position:relative;cursor:pointer;transition:transform .18s;-webkit-user-select:none;user-select:none;border:1.5px solid rgba(0,0,0,.09)}
+.ocard:active{transform:scale(.985)}
+@media(min-width:600px){.ocard{flex:1}}
 
-/* COUNTDOWN */
-.countdown-bar{background:linear-gradient(135deg,#991B1B,#C2410C);color:#fff;padding:14px;text-align:center}
-.cd-label{font-size:11.5px;font-weight:600;margin-bottom:8px;opacity:.9;display:flex;align-items:center;justify-content:center;gap:5px}
-.cd-label svg{width:14px;height:14px;color:#FCD34D;flex-shrink:0}
-.cd-digits{display:flex;justify-content:center;gap:6px}
-.cd-block{background:rgba(255,255,255,.15);border-radius:8px;padding:8px 10px;min-width:46px;text-align:center}
-.cd-num{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;line-height:1;letter-spacing:1px}
-.cd-lbl{font-size:8.5px;text-transform:uppercase;font-weight:700;opacity:.75;letter-spacing:.5px;margin-top:1px}
+/* INNER LAYOUT */
+.ocard-inner{padding:18px 16px 16px;background:var(--white)}
 
-/* PREVIEW */
-.preview-section{padding:20px 0 24px;background:var(--white)}
-.preview-title{text-align:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--ink);margin-bottom:14px;padding:0 14px}
-.preview-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 14px 2px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.preview-scroll::-webkit-scrollbar{display:none}
-.prev-card{flex-shrink:0;width:130px;scroll-snap-align:start}
-@media(min-width:400px){.prev-card{width:145px}}
-.prev-card img{width:100%;border-radius:12px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.1)}
-.prev-card span{display:block;font-size:10px;font-weight:700;color:var(--ink3);margin-top:6px;text-align:center;text-transform:uppercase;letter-spacing:.4px}
+/* TOP RIBBON */
+.ribbon{height:6px;width:100%}
+.ribbon-amber{background:linear-gradient(90deg,#D97706,#F59E0B,#FCD34D)}
+.ribbon-green{background:linear-gradient(90deg,var(--green-d),var(--green),#34D399)}
+.ribbon-coral{background:linear-gradient(90deg,var(--coral),var(--coral-m),var(--coral-bright),#FB923C)}
+
+/* POPULAR BADGE */
+.popular-wrap{position:absolute;top:14px;right:0;z-index:2}
+.popular-badge{background:linear-gradient(90deg,var(--amber-m),var(--amber));color:#fff;font-size:8.5px;font-weight:800;padding:4px 14px 4px 10px;text-transform:uppercase;letter-spacing:.5px;border-radius:4px 0 0 4px;display:flex;align-items:center;gap:4px;white-space:nowrap}
+.popular-badge svg{width:10px;height:10px}
+
+/* HEADER ROW */
+.ocard-header{display:flex;align-items:flex-start;gap:11px;margin-bottom:14px}
+.ocard-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ocard-ico svg{width:22px;height:22px}
+.ocard-ico.amber{background:var(--amber-l);color:var(--amber-d)}
+.ocard-ico.green{background:var(--green-l);color:var(--green-d)}
+.ocard-ico.coral{background:#FFF1EE;color:var(--coral)}
+.ocard h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:2px}
+.ocard-sub{font-size:10.5px;color:var(--ink3);font-weight:500}
+
+/* SAVINGS BADGE */
+.savings-badge{display:inline-flex;align-items:center;gap:4px;background:#FEF2F2;color:#B91C1C;border:1px solid #FECACA;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:700;margin-bottom:10px}
+.savings-badge svg{width:10px;height:10px;flex-shrink:0}
+
+/* PRICE BLOCK */
+.price-block{background:var(--offwhite);border-radius:14px;padding:14px 14px 10px;margin-bottom:14px;border:1px solid rgba(0,0,0,.05);position:relative}
+.price-from{font-size:10.5px;color:var(--ink4);font-weight:500;margin-bottom:1px}
+.price-was{font-size:13px;color:var(--ink4);text-decoration:line-through;font-weight:500;margin-bottom:4px}
+.price-now{display:flex;align-items:baseline;gap:3px;margin-bottom:3px}
+.price-currency{font-size:15px;font-weight:800;color:var(--green-d);line-height:1}
+.price-big{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--green-d);line-height:1}
+.price-cents{font-size:20px;font-weight:800;color:var(--green-d);line-height:1;align-self:flex-start;margin-top:6px}
+.price-install{font-size:10px;color:var(--ink4);font-weight:500}
+.price-tag-off{position:absolute;top:-10px;right:12px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 3px 10px rgba(220,38,38,.3)}
 
 /* FEATURES */
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.feat-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--ink2);font-weight:500;line-height:1.35}
+.feat-ck{width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.5px}
+.feat-ck svg{width:9px;height:9px}
+.feat-ck.green{background:var(--green-l);color:var(--green-d)}
+.feat-ck.amber{background:var(--amber-l);color:var(--amber-d)}
+.feat-ck.coral{background:#FFF1EE;color:var(--coral-m)}
+.feat-strong{font-weight:700;color:var(--ink)}
+
+/* CTA BUTTON */
+.ocard-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:14px 16px;border-radius:50px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:#fff;border:none;cursor:pointer;text-decoration:none;min-height:48px;transition:opacity .2s,transform .15s;position:relative;overflow:hidden}
+.ocard-btn:active{transform:scale(.96)}
+.ocard-btn .btn-icon{font-size:16px;flex-shrink:0}
+.ocard-btn .btn-arr{display:inline-block;transition:transform .25s;font-size:15px}
+.ocard-btn:active .btn-arr{transform:translateX(4px)}
+.btn-amber{background:linear-gradient(135deg,#B45309 0%,#D97706 50%,#F59E0B 100%);box-shadow:0 6px 20px rgba(180,83,9,.28)}
+.btn-green{background:linear-gradient(135deg,var(--green-d) 0%,var(--green) 100%);box-shadow:0 6px 20px rgba(4,120,87,.28)}
+.btn-coral{background:linear-gradient(135deg,var(--coral) 0%,var(--coral-m) 40%,var(--coral-bright) 100%);box-shadow:0 8px 28px rgba(146,41,10,.35);animation:coralpulse 2s ease-in-out infinite}
+@keyframes coralpulse{0%,100%{box-shadow:0 8px 28px rgba(146,41,10,.35)}50%{box-shadow:0 10px 36px rgba(146,41,10,.55),0 0 0 7px rgba(194,65,12,.09)}}
+
+/* COMBO SPECIAL FRAME */
+.ocard.combo{border-color:transparent;box-shadow:0 0 0 2px var(--amber-m),0 16px 40px rgba(146,41,10,.18)}
+.ocard.combo .ocard-inner{background:linear-gradient(180deg,#FFFDF7 0%,var(--white) 100%)}
+.combo-crown{display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(90deg,var(--amber-l),#FEF3C7);border:1px solid var(--amber);border-radius:8px;padding:5px 10px;margin-bottom:12px;font-size:11px;font-weight:700;color:var(--amber-d)}
+.combo-crown svg{width:13px;height:13px;flex-shrink:0}
+
+/* MINI GUARANTEE UNDER COMBO BTN */
+.mini-guar{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:8px;font-size:10.5px;color:var(--ink3);font-weight:600}
+.mini-guar svg{width:12px;height:12px;color:var(--green);flex-shrink:0}
+
+/* CONTENT GRID INSIDE CARD (new) */
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px}
+.content-item{background:var(--offwhite);border-radius:10px;padding:8px 9px;display:flex;align-items:center;gap:6px;border:1px solid rgba(0,0,0,.05)}
+.content-item .ci-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ink);line-height:1}
+.content-item .ci-lbl{font-size:9.5px;color:var(--ink3);font-weight:600;line-height:1.25}
+
+/* ─── COUNTDOWN ─── */
+.countdown-bar{background:linear-gradient(135deg,#7F1D1D,var(--coral),#C2410C);color:#fff;padding:16px 14px;text-align:center}
+.cd-label{font-size:11.5px;font-weight:600;margin-bottom:8px;opacity:.9;display:flex;align-items:center;justify-content:center;gap:5px}
+.cd-label svg{width:14px;height:14px;color:#FCD34D;flex-shrink:0}
+.cd-digits{display:flex;justify-content:center;gap:7px}
+.cd-block{background:rgba(255,255,255,.16);border-radius:10px;padding:8px 12px;min-width:48px;text-align:center;backdrop-filter:blur(4px)}
+.cd-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1;letter-spacing:1px;font-variant-numeric:tabular-nums}
+.cd-lbl{font-size:8.5px;text-transform:uppercase;font-weight:700;opacity:.7;letter-spacing:.5px;margin-top:1px}
+
+/* ─── LIVE BUYERS BAR ─── */
+.live-bar{background:var(--white);border-bottom:1px solid rgba(0,0,0,.07);padding:8px 14px;display:flex;align-items:center;gap:8px;overflow:hidden}
+.live-dot{width:8px;height:8px;background:var(--green);border-radius:50%;flex-shrink:0;animation:livepulse 1.4s infinite}
+@keyframes livepulse{0%,100%{box-shadow:0 0 0 0 rgba(4,120,87,.6)}50%{box-shadow:0 0 0 9px rgba(4,120,87,0)}}
+.live-bar-text{font-size:11.5px;color:var(--ink2);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.live-bar-text span{color:var(--coral-m);font-weight:800}
+
+/* ─── PREVIEW ─── */
+.preview-sec{padding:20px 0 24px;background:var(--white)}
+.preview-title{text-align:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:14px;padding:0 14px}
+.preview-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 14px 4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.preview-scroll::-webkit-scrollbar{display:none}
+.prev-card{flex-shrink:0;width:128px;scroll-snap-align:start}
+@media(min-width:400px){.prev-card{width:140px}}
+.prev-card img{width:100%;border-radius:12px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.prev-card span{display:block;font-size:9.5px;font-weight:700;color:var(--ink3);margin-top:6px;text-align:center;text-transform:uppercase;letter-spacing:.4px}
+
+/* ─── FEATURES ─── */
 .features{padding:24px 14px;background:var(--cream)}
 .feat-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:16px}
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:380px;margin:0 auto}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin:0 auto}
 .feat-card{background:var(--white);border-radius:14px;padding:14px 12px;border:1px solid rgba(0,0,0,.06)}
-.feat-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.feat-icon svg{width:18px;height:18px}
+.feat-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.feat-icon svg{width:17px;height:17px}
 .feat-icon.f1{background:#EDE9FE;color:#5B21B6}
-.feat-icon.f2{background:#FFF7ED;color:var(--coral)}
+.feat-icon.f2{background:#FFF1EE;color:var(--coral-m)}
 .feat-icon.f3{background:var(--green-l);color:var(--green-d)}
 .feat-icon.f4{background:var(--amber-l);color:var(--amber-d)}
-.feat-card h4{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.2}
-.feat-card p{font-size:11px;color:var(--ink3);line-height:1.4;font-weight:500}
+.feat-card h4{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.2}
+.feat-card p{font-size:10.5px;color:var(--ink3);line-height:1.4;font-weight:500}
 
-/* TESTIMONIALS */
+/* ─── TESTIMONIALS ─── */
 .testi{padding:24px 14px;background:var(--white)}
 .testi-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:14px}
-.testi-card{background:var(--cream);border-radius:14px;padding:14px 14px;margin-bottom:10px;max-width:380px;margin-left:auto;margin-right:auto;border:1px solid rgba(0,0,0,.05)}
+.testi-card{background:var(--cream);border-radius:14px;padding:14px;margin-bottom:10px;max-width:420px;margin-left:auto;margin-right:auto;border:1px solid rgba(0,0,0,.05)}
 .testi-card:last-of-type{margin-bottom:0}
-.stars{color:var(--amber);font-size:13px;letter-spacing:1.5px;margin-bottom:6px}
-.testi-text{font-size:12.5px;color:var(--ink2);font-weight:500;line-height:1.6;margin-bottom:10px;font-style:italic}
+.stars{color:var(--amber);font-size:12px;letter-spacing:2px;margin-bottom:6px}
+.testi-text{font-size:12.5px;color:var(--ink2);font-weight:500;line-height:1.65;margin-bottom:10px;font-style:italic}
 .testi-author{display:flex;align-items:center;gap:8px}
-.av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;flex-shrink:0}
+.av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#fff;flex-shrink:0}
 .av1{background:linear-gradient(135deg,#7C3AED,#5B21B6)}
 .av2{background:linear-gradient(135deg,var(--coral-m),var(--coral))}
 .av3{background:linear-gradient(135deg,var(--green),var(--green-d))}
-.author-name{font-size:12px;font-weight:700;color:var(--ink)}
-.author-role{font-size:10px;color:var(--ink3)}
+.author-name{font-size:11.5px;font-weight:700;color:var(--ink)}
+.author-role{font-size:9.5px;color:var(--ink3)}
 
-/* GUARANTEE */
+/* ─── GUARANTEE ─── */
 .guarantee{padding:24px 14px;background:var(--cream)}
-.guar-card{background:linear-gradient(135deg,#F0FDF4,#D1FAE5);border:2px solid var(--green);border-radius:18px;padding:22px 18px;text-align:center;max-width:380px;margin:0 auto}
-.guar-ico{width:54px;height:54px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#fff}
-.guar-ico svg{width:26px;height:26px}
-.guar-card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--green-d);margin-bottom:6px}
-.guar-card p{font-size:12.5px;color:var(--green-d);font-weight:500;line-height:1.6;opacity:.85}
+.guar-card{background:linear-gradient(135deg,#F0FDF4,#D1FAE5);border:2px solid var(--green);border-radius:18px;padding:20px 16px;text-align:center;max-width:420px;margin:0 auto}
+.guar-ico{width:50px;height:50px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff}
+.guar-ico svg{width:24px;height:24px}
+.guar-card h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--green-d);margin-bottom:5px}
+.guar-card p{font-size:12px;color:var(--green-d);font-weight:500;line-height:1.6;opacity:.85}
 
-/* FAQ */
+/* ─── FAQ ─── */
 .faq{padding:24px 14px 28px;background:var(--white)}
 .faq-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:14px}
-.faq-list{max-width:380px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
+.faq-list{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
 .faq-item{background:var(--cream);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,.06)}
-.faq-btn{width:100%;padding:13px 14px;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px}
-.faq-chevron{transition:transform .3s;color:var(--coral-m);flex-shrink:0;width:14px;height:14px}
-.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-btn{width:100%;padding:13px 14px;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px}
+.faq-chev{transition:transform .3s;color:var(--coral-m);flex-shrink:0;width:14px;height:14px}
+.faq-item.open .faq-chev{transform:rotate(180deg)}
 .faq-panel{max-height:0;overflow:hidden;transition:max-height .32s ease}
-.faq-item.open .faq-panel{max-height:220px}
-.faq-panel p{padding:0 14px 14px;font-size:12.5px;color:var(--ink3);font-weight:500;line-height:1.65}
+.faq-item.open .faq-panel{max-height:200px}
+.faq-panel p{padding:0 14px 14px;font-size:12px;color:var(--ink3);font-weight:500;line-height:1.65}
 
-/* FINAL CTA */
-.final-cta{padding:36px 16px;background:linear-gradient(150deg,#7C1D1D 0%,#C2410C 50%,#EA580C 100%);text-align:center;position:relative;overflow:hidden}
-.final-cta::before{content:'';position:absolute;top:-50px;left:-50px;width:200px;height:200px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
-.final-cta::after{content:'';position:absolute;bottom:-60px;right:-40px;width:180px;height:180px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
+/* ─── FINAL CTA ─── */
+.final-cta{padding:36px 16px;background:linear-gradient(150deg,#7C1D1D 0%,var(--coral) 40%,#C2410C 100%);text-align:center;position:relative;overflow:hidden}
+.final-cta::before,.final-cta::after{content:'';position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.04)}
+.final-cta::before{top:-60px;left:-50px;width:220px;height:220px}
+.final-cta::after{bottom:-70px;right:-40px;width:200px;height:200px}
 .final-inner{position:relative;z-index:1;max-width:340px;margin:0 auto}
-.final-cta h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:6px}
-.final-cta .sub{font-size:13px;color:rgba(255,255,255,.8);font-weight:500;margin-bottom:16px}
-.final-old{font-size:13px;color:rgba(255,255,255,.5);text-decoration:line-through;margin-bottom:2px}
-.final-price{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;color:#fff;line-height:1;margin-bottom:4px}
-.final-price sup{font-size:22px;vertical-align:super;font-family:'DM Sans',sans-serif;font-weight:700}
-.final-note{font-size:11.5px;color:rgba(255,255,255,.65);margin-bottom:18px}
-.btn-final{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--coral);padding:14px 26px;border-radius:50px;font-size:13.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,.25);transition:transform .2s;border:none;cursor:pointer}
+.final-cta h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:5px}
+.final-cta .sub{font-size:13px;color:rgba(255,255,255,.8);font-weight:500;margin-bottom:14px}
+.final-old{font-size:12.5px;color:rgba(255,255,255,.45);text-decoration:line-through;margin-bottom:2px}
+.final-price{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#fff;line-height:1;margin-bottom:3px}
+.final-price sup{font-size:22px;vertical-align:super;font-family:'DM Sans',sans-serif;font-weight:800}
+.final-note{font-size:11px;color:rgba(255,255,255,.6);margin-bottom:18px}
+.btn-final{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--coral);padding:14px 26px;border-radius:50px;font-size:13.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;text-decoration:none;box-shadow:0 10px 32px rgba(0,0,0,.25);transition:transform .2s;border:none;cursor:pointer;min-height:50px}
 .btn-final:active{transform:scale(.95)}
 
-/* STICKY */
+/* ─── STICKY ─── */
 .sticky{position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:10px 14px;padding-bottom:calc(10px + var(--safe-b));box-shadow:0 -4px 20px rgba(0,0,0,.12);z-index:800;display:none;align-items:center;gap:10px;border-top:1.5px solid rgba(0,0,0,.07)}
 .sticky.visible{display:flex}
-.sticky-prices .s-old{font-size:10px;color:#9CA3AF;text-decoration:line-through;font-weight:600}
+.sticky-prices .s-old{font-size:9.5px;color:#9CA3AF;text-decoration:line-through;font-weight:600}
 .sticky-prices .s-new{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:var(--green-d);line-height:1}
-.btn-sticky{flex:1;background:linear-gradient(135deg,var(--coral),var(--coral-m));color:#fff;padding:12px;border-radius:50px;text-align:center;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;text-decoration:none;border:none;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;gap:5px;animation:glowBtn 2.2s ease-in-out infinite}
+.btn-sticky{flex:1;background:linear-gradient(135deg,var(--coral),var(--coral-m));color:#fff;padding:12px;border-radius:50px;text-align:center;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;text-decoration:none;border:none;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;gap:5px;animation:coralpulse 2s ease-in-out infinite}
 .btn-sticky:active{transform:scale(.96)}
 
-/* TOAST */
-.toast{position:fixed;bottom:80px;left:12px;right:12px;max-width:340px;background:var(--white);border-radius:14px;padding:11px 13px;box-shadow:0 8px 28px rgba(0,0,0,.15);z-index:700;display:flex;align-items:center;gap:9px;transform:translateX(-120%);transition:transform .5s cubic-bezier(.22,.61,.36,1);border-left:3.5px solid var(--green)}
-@media(min-width:420px){.toast{right:auto;max-width:320px;bottom:84px}}
+/* ─── TOAST ─── */
+.toast{position:fixed;bottom:76px;left:12px;right:12px;max-width:330px;background:var(--white);border-radius:14px;padding:11px 12px;box-shadow:0 8px 28px rgba(0,0,0,.15);z-index:700;display:flex;align-items:center;gap:9px;transform:translateX(-120%);transition:transform .5s cubic-bezier(.22,.61,.36,1);border-left:3px solid var(--green)}
+@media(min-width:420px){.toast{right:auto;max-width:310px}}
 .toast.show{transform:translateX(0)}
-.pulse{width:9px;height:9px;background:var(--green);border-radius:50%;flex-shrink:0;animation:pulse 1.3s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(5,150,105,.6)}50%{box-shadow:0 0 0 10px rgba(5,150,105,0)}}
+.livepulse-dot{width:9px;height:9px;background:var(--green);border-radius:50%;flex-shrink:0;animation:livepulse 1.3s infinite}
 .toast-name{font-weight:700;font-size:11.5px;color:var(--ink)}
 .toast-act{font-size:10px;color:var(--green-d);font-weight:600}
 .toast-time{font-size:9.5px;color:var(--ink3)}
 
-footer{padding:18px 14px 90px;text-align:center;font-size:11px;color:var(--ink3);background:var(--cream)}
+footer{padding:18px 14px 88px;text-align:center;font-size:11px;color:var(--ink3);background:var(--cream)}
 footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
 </style>
-
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1866970273982797');fbq('track','PageView');
-</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1866970273982797');fbq('track','PageView');</script>
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div class="topbar">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color:#FCD34D;flex-shrink:0"><path d="M12 2c-3 5-6 8.5-6 13a6 6 0 0 0 12 0c0-4.5-3-8-6-13z"/></svg>
-  <strong>OFERTA RELÂMPAGO</strong> — Expira em
+  <strong>OFERTA RELÂMPAGO</strong> — expira em
   <span class="cd-pill" id="cd-inline">02:47:33</span>
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color:#FCD34D;flex-shrink:0"><path d="M12 2c-3 5-6 8.5-6 13a6 6 0 0 0 12 0c0-4.5-3-8-6-13z"/></svg>
 </div>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-glow1"></div><div class="hero-glow2"></div>
   <div class="badge-pill">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
     +2.000 famílias abençoadas
   </div>
   <h1>Booby <em>Goodies</em><br>Cristão</h1>
   <p class="hero-sub">Atividades bíblicas divertidas para seus filhos crescerem na fé com alegria!</p>
   <div class="hero-img-wrap">
     <div class="float-tag tl">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Garantia 7 dias
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantia 7 dias
     </div>
     <div class="float-tag br">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      Acesso imediato!
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Acesso imediato!
     </div>
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop&q=80" alt="Crianças com atividades bíblicas" loading="eager" width="300" height="300">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop&q=80" alt="Crianças com atividades bíblicas" loading="eager" width="280" height="280">
   </div>
   <div class="social-proof">
     <div class="faces">
@@ -241,114 +296,245 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
       <div class="face" style="background:#059669">J</div>
       <div class="face" style="background:#B45309">A</div>
     </div>
-    <span>Aprovado por milhares de famílias cristãs</span>
+    <span>Aprovado por milhares de famílias</span>
   </div>
 </section>
 
 <!-- TRUST -->
 <div class="trust">
   <div class="trust-item">
-    <div class="trust-icon g">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-    </div>
+    <div class="trust-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
     Compra<br>Segura
   </div>
   <div class="trust-item">
-    <div class="trust-icon a">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-    </div>
+    <div class="trust-ico a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
     Acesso<br>Imediato
   </div>
   <div class="trust-item">
-    <div class="trust-icon c">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    </div>
+    <div class="trust-ico c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
     7 Dias de<br>Garantia
   </div>
 </div>
 
-<!-- OFFERS -->
+<!-- LIVE BUYERS BAR -->
+<div class="live-bar">
+  <div class="live-dot"></div>
+  <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
+</div>
+
+<!-- ═══════════════════ OFFERS ═══════════════════ -->
 <section class="offers" id="ofertas">
   <div class="sec-label">
-    <span>Escolha seu pacote</span>
-    <h2>Qual bênção levar<br>para casa hoje?</h2>
-    <p>Toque na opção ideal para sua família 👇</p>
+    <div class="sec-pill">Escolha seu pacote</div>
+    <h2>Abençoe seus filhos<br>com a Palavra de Deus</h2>
+    <p>Selecione a melhor opção para sua família 👇</p>
   </div>
-  <div class="offers-grid">
 
-    <!-- Oferta 1 -->
-    <div class="offer-card" id="offer1" onclick="if(!event.target.closest('a'))document.querySelector('#offer1 a').click()">
-      <div class="offer-head">
-        <div class="offer-ico b1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+  <div class="offers-list">
+
+    <!-- ── OFERTA 1: 35 Livros ── -->
+    <div class="ocard" id="offer1">
+      <div class="ribbon ribbon-amber"></div>
+      <div class="ocard-inner">
+        <div class="ocard-header">
+          <div class="ocard-ico amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div>
+            <h3>35 Livros Bíblicos<br>Infantis</h3>
+            <div class="ocard-sub">Histórias cristãs ilustradas</div>
+          </div>
         </div>
-        <div>
-          <h3>Booby Goodies<br>Cristão</h3>
-          <div class="offer-sub">35 Livros Bíblicos Infantis</div>
+
+        <div class="content-grid">
+          <div class="content-item">
+            <div>
+              <div class="ci-num">35</div>
+              <div class="ci-lbl">Livros<br>cristãos</div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div>
+              <div class="ci-num">∞</div>
+              <div class="ci-lbl">Impressões<br>ilimitadas</div>
+            </div>
+          </div>
         </div>
+
+        <div class="savings-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Você economiza R$ 57,10!
+        </div>
+
+        <div class="price-block">
+          <div class="price-tag-off">-85% OFF</div>
+          <div class="price-from">Preço normal</div>
+          <div class="price-was">R$ 67,00</div>
+          <div class="price-now">
+            <span class="price-currency">R$</span>
+            <span class="price-big">9</span>
+            <span class="price-cents">,90</span>
+          </div>
+          <div class="price-install">ou 2x no cartão sem juros</div>
+        </div>
+
+        <ul class="feat-list">
+          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>35 livros cristãos com ilustrações coloridas</span></li>
+          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Histórias da Bíblia completas e adaptadas</span></li>
+          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>PDF de alta qualidade — imprima à vontade</span></li>
+          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
+        </ul>
+
+        <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-amber">
+          <span class="btn-icon">📚</span> QUERO ESTE <span class="btn-arr">→</span>
+        </a>
       </div>
-      <div class="price-row"><span class="old-p">R$ 67,00</span></div>
-      <div class="new-p"><sup>R$</sup>9<span style="font-size:18px;vertical-align:baseline">,90</span></div>
-      <div class="install">ou 2x no cartão</div>
-      <ul class="feats">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>35 livros cristãos ilustrados</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Histórias bíblicas completas</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso vitalício em PDF</li>
-      </ul>
-      <a href="https://pay.cakto.com.br/znuzn2x_909512" class="btn-offer btn-b1">QUERO ESSE →</a>
     </div>
 
-    <!-- Oferta 2 -->
-    <div class="offer-card" id="offer2" onclick="if(!event.target.closest('a'))document.querySelector('#offer2 a').click()">
-      <div class="offer-head">
-        <div class="offer-ico b2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4M9 15h2"/></svg>
+    <!-- ── OFERTA 2: Atividades ── -->
+    <div class="ocard" id="offer2">
+      <div class="ribbon ribbon-green"></div>
+      <div class="ocard-inner">
+        <div class="ocard-header">
+          <div class="ocard-ico green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4M9 15h2"/></svg>
+          </div>
+          <div>
+            <h3>Livro de<br>Atividades</h3>
+            <div class="ocard-sub">50+ páginas interativas</div>
+          </div>
         </div>
-        <div>
-          <h3>Livro de<br>Atividades</h3>
-          <div class="offer-sub">50+ Páginas Interativas</div>
+
+        <div class="content-grid">
+          <div class="content-item">
+            <div>
+              <div class="ci-num">50+</div>
+              <div class="ci-lbl">Páginas de<br>atividades</div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div>
+              <div class="ci-num">3+</div>
+              <div class="ci-lbl">Tipos de<br>atividade</div>
+            </div>
+          </div>
         </div>
+
+        <div class="savings-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Você economiza R$ 32,10!
+        </div>
+
+        <div class="price-block">
+          <div class="price-tag-off">-68% OFF</div>
+          <div class="price-from">Preço normal</div>
+          <div class="price-was">R$ 47,00</div>
+          <div class="price-now">
+            <span class="price-currency">R$</span>
+            <span class="price-big">14</span>
+            <span class="price-cents">,90</span>
+          </div>
+          <div class="price-install">ou 2x no cartão sem juros</div>
+        </div>
+
+        <ul class="feat-list">
+          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Labirintos, caça-palavras e colorir</span></li>
+          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Atividades para crianças de 3 a 10 anos</span></li>
+          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Imprima quantas vezes quiser — sem limite</span></li>
+          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Perfeito</span> para escola dominical e EBD</span></li>
+        </ul>
+
+        <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">
+          <span class="btn-icon">✏️</span> QUERO ESTE <span class="btn-arr">→</span>
+        </a>
       </div>
-      <div class="price-row"><span class="old-p">R$ 47,00</span></div>
-      <div class="new-p"><sup>R$</sup>14<span style="font-size:18px;vertical-align:baseline">,90</span></div>
-      <div class="install">ou 2x no cartão</div>
-      <ul class="feats">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>50+ páginas de atividades</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Labirintos, caça-palavras & mais</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Imprima quantas vezes quiser</li>
-      </ul>
-      <a href="https://pay.cakto.com.br/36caw43_910833" class="btn-offer btn-b2">QUERO ESSE →</a>
     </div>
 
-    <!-- Oferta 3 COMBO -->
-    <div class="offer-card best" id="offer3" onclick="if(!event.target.closest('a'))document.querySelector('#offer3 a').click()">
-      <div class="offer-head">
-        <div class="offer-ico b3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 3.5 2 6L12 14l-5 3.5 2-6L4 8h6z"/></svg>
-        </div>
-        <div>
-          <h3>COMBO<br>COMPLETO</h3>
-          <div class="offer-sub">35 Livros + Atividades</div>
+    <!-- ── OFERTA 3: COMBO (DESTAQUE) ── -->
+    <div class="ocard combo" id="offer3">
+      <div class="ribbon ribbon-coral"></div>
+      <div class="popular-wrap">
+        <div class="popular-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
+          MAIS POPULAR
         </div>
       </div>
-      <div class="price-row"><span class="old-p">R$ 114,00</span></div>
-      <div class="new-p"><sup>R$</sup>19<span style="font-size:18px;vertical-align:baseline">,90</span></div>
-      <div class="install">ou 3x no cartão</div>
-      <ul class="feats">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><strong>TUDO</strong> dos pacotes 1 e 2</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><strong>85+ conteúdos</strong> no total</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Melhor custo-benefício!</strong></li>
-      </ul>
-      <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-offer btn-b3">🎁 LEVAR COMBO →</a>
+      <div class="ocard-inner">
+
+        <div class="combo-crown">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1h18v1z"/></svg>
+          COMBO COMPLETO — A escolha das famílias
+        </div>
+
+        <div class="ocard-header">
+          <div class="ocard-ico coral">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 3.5 2 6L12 14l-5 3.5 2-6L4 8h6z"/></svg>
+          </div>
+          <div>
+            <h3>35 Livros +<br>Livro de Atividades</h3>
+            <div class="ocard-sub">Tudo que sua família precisa</div>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div class="content-item">
+            <div>
+              <div class="ci-num">85+</div>
+              <div class="ci-lbl">Conteúdos<br>no total</div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div>
+              <div class="ci-num">🏆</div>
+              <div class="ci-lbl">Melhor<br>custo-benefício</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings-badge" style="background:#FEF2F2;color:#B91C1C;border-color:#FECACA">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Você economiza R$ 94,10 hoje!
+        </div>
+
+        <div class="price-block" style="background:#FFF8F6;border-color:rgba(194,65,12,.1)">
+          <div class="price-tag-off" style="background:linear-gradient(135deg,var(--coral),var(--coral-m))">-82% OFF</div>
+          <div class="price-from">Separado custaria</div>
+          <div class="price-was">R$ 114,00</div>
+          <div class="price-now">
+            <span class="price-currency" style="color:var(--coral-m)">R$</span>
+            <span class="price-big" style="color:var(--coral)">19</span>
+            <span class="price-cents" style="color:var(--coral-m)">,90</span>
+          </div>
+          <div class="price-install">ou 3x de R$ 6,63 no cartão</div>
+        </div>
+
+        <ul class="feat-list">
+          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 1: 35 livros bíblicos</span></li>
+          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 2: 50+ páginas de atividades</span></li>
+          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>85+ conteúdos — diversão para meses!</span></li>
+          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
+          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Ideal para <span class="feat-strong">escola dominical</span> e múltiplos filhos</span></li>
+        </ul>
+
+        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-coral">
+          <span class="btn-icon">🎁</span> SIM, QUERO O COMBO! <span class="btn-arr">→</span>
+        </a>
+
+        <div class="mini-guar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          7 dias de garantia — sem risco nenhum
+        </div>
+      </div>
     </div>
-  </div>
+
+  </div><!-- /offers-list -->
 </section>
 
 <!-- COUNTDOWN -->
 <div class="countdown-bar">
   <div class="cd-label">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    Esta oferta especial expira em:
+    Oferta especial expira em:
   </div>
   <div class="cd-digits">
     <div class="cd-block"><div class="cd-num" id="cdH">02</div><div class="cd-lbl">Horas</div></div>
@@ -358,23 +544,23 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
 </div>
 
 <!-- PREVIEW -->
-<div class="preview-section">
+<div class="preview-sec">
   <h2 class="preview-title">📖 Veja o que está incluído</h2>
   <div class="preview-scroll">
     <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80" alt="Arca de Noé" loading="lazy" width="145" height="145">
+      <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80" alt="Arca de Noé" loading="lazy" width="140" height="140">
       <span>Arca de Noé</span>
     </div>
     <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80" alt="Caça-Palavras" loading="lazy" width="145" height="145">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80" alt="Caça-Palavras" loading="lazy" width="140" height="140">
       <span>Caça-Palavras</span>
     </div>
     <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80" alt="Labirintos" loading="lazy" width="145" height="145">
+      <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80" alt="Labirintos" loading="lazy" width="140" height="140">
       <span>Labirintos</span>
     </div>
     <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80" alt="Colorir" loading="lazy" width="145" height="145">
+      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80" alt="Colorir" loading="lazy" width="140" height="140">
       <span>Colorir</span>
     </div>
   </div>
@@ -385,30 +571,22 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
   <h2 class="feat-title">✨ Por que os pais amam?</h2>
   <div class="feat-grid">
     <div class="feat-card">
-      <div class="feat-icon f1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      </div>
+      <div class="feat-icon f1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
       <h4>Histórias Bíblicas Ilustradas</h4>
       <p>Simples e cativantes para todas as idades.</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon f2">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </div>
+      <div class="feat-icon f2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
       <h4>Valores Cristãos</h4>
       <p>Amor, bondade e gratidão de forma lúdica.</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon f3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-      </div>
+      <div class="feat-icon f3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
       <h4>Diversão Garantida</h4>
-      <p>Atividades coloridas que entretêm por horas!</p>
+      <p>Atividades que entretêm por horas!</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon f4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-      </div>
+      <div class="feat-icon f4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
       <h4>Imprima Sem Limites</h4>
       <p>PDF de alta qualidade para todos os filhos.</p>
     </div>
@@ -421,37 +599,26 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
   <div class="testi-card">
     <div class="stars">★★★★★</div>
     <p class="testi-text">"Meus filhos adoraram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando."</p>
-    <div class="testi-author">
-      <div class="av av1">A</div>
-      <div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos</div></div>
-    </div>
+    <div class="testi-author"><div class="av av1">A</div><div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos</div></div></div>
   </div>
   <div class="testi-card">
     <div class="stars">★★★★★</div>
     <p class="testi-text">"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento do ano!"</p>
-    <div class="testi-author">
-      <div class="av av2">R</div>
-      <div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos</div></div>
-    </div>
+    <div class="testi-author"><div class="av av2">R</div><div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos</div></div></div>
   </div>
   <div class="testi-card">
     <div class="stars">★★★★★</div>
-    <p class="testi-text">"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que os R$19,90 do combo."</p>
-    <div class="testi-author">
-      <div class="av av3">J</div>
-      <div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho</div></div>
-    </div>
+    <p class="testi-text">"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que R$19,90 do combo."</p>
+    <div class="testi-author"><div class="av av3">J</div><div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho</div></div></div>
   </div>
 </section>
 
 <!-- GUARANTEE -->
 <section class="guarantee">
   <div class="guar-card">
-    <div class="guar-ico">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    </div>
+    <div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
     <h3>Garantia Incondicional de 7 Dias</h3>
-    <p>Se você não ficar 100% satisfeito com o material, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. Risco zero!</p>
+    <p>Se você não ficar 100% satisfeito, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. Risco zero para você!</p>
   </div>
 </section>
 
@@ -460,20 +627,20 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
   <h2 class="faq-title">Perguntas Frequentes</h2>
   <div class="faq-list">
     <div class="faq-item">
-      <button class="faq-btn">Como recebo o material? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <button class="faq-btn">Como recebo o material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
       <div class="faq-panel"><p>Após confirmar o pagamento, você recebe o acesso por e-mail imediatamente. É um PDF pronto para baixar e imprimir!</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn">Para qual idade é indicado? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para todas as idades com diversão e aprendizado.</p></div>
+      <button class="faq-btn">Para qual idade é indicado? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-panel"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para todas as idades.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn">Posso imprimir mais de uma vez? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <button class="faq-btn">Posso imprimir mais de uma vez? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
       <div class="faq-panel"><p>Sim! Sem limites. Ideal para famílias numerosas ou para usar na igreja e escola dominical.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn">O pagamento é seguro? <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada. Seus dados estão protegidos.</p></div>
+      <button class="faq-btn">O pagamento é seguro? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="faq-panel"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada.</p></div>
     </div>
   </div>
 </section>
@@ -501,7 +668,7 @@ footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
 
 <!-- TOAST -->
 <div class="toast" id="toast">
-  <div class="pulse"></div>
+  <div class="livepulse-dot"></div>
   <div>
     <div class="toast-name" id="tName">Maria S. de São Paulo</div>
     <div class="toast-act">✓ Acabou de comprar o Combo!</div>
@@ -530,15 +697,18 @@ tick();setInterval(tick,1000);
 
 // STICKY
 const sticky=document.getElementById('stickyBar'),offers=document.getElementById('ofertas');
-let ticking=false;
+let tick2=false;
 window.addEventListener('scroll',()=>{
-  if(!ticking){requestAnimationFrame(()=>{
-    const ob=offers.getBoundingClientRect().bottom;
-    if(ob<-20)sticky.classList.add('visible');
-    else sticky.classList.remove('visible');
-    ticking=false;
-  });ticking=true;}
+  if(!tick2){requestAnimationFrame(()=>{
+    sticky.classList.toggle('visible',offers.getBoundingClientRect().bottom<-20);
+    tick2=false;
+  });tick2=true;}
 },{passive:true});
+
+// OFFER CARD CLICK
+document.querySelectorAll('.ocard').forEach(c=>{
+  c.addEventListener('click',e=>{if(!e.target.closest('a')){const a=c.querySelector('a');if(a)a.click();}});
+});
 
 // TOAST
 const buyers=[
@@ -546,17 +716,28 @@ const buyers=[
   {n:'João P. do Rio de Janeiro',t:'Há 2 min'},
   {n:'Fernanda L. de Belo Horizonte',t:'Há 4 min'},
   {n:'Carlos A. de Curitiba',t:'Há 6 min'},
-  {n:'Patrícia M. de Salvador',t:'Há 8 min'},
+  {n:'Patrícia M. de Salvador',t:'Há 9 min'},
   {n:'Amanda C. de Fortaleza',t:'Há 11 min'},
-  {n:'Lucas R. de Porto Alegre',t:'Há 13 min'},
+  {n:'Lucas R. de Porto Alegre',t:'Há 14 min'},
 ];
-let bi=0;const toast=document.getElementById('toast'),tName=document.getElementById('tName'),tTime=document.getElementById('tTime');
+let bi=0;const toast=document.getElementById('toast'),tN=document.getElementById('tName'),tT=document.getElementById('tTime');
 function showToast(){
-  tName.textContent=buyers[bi].n;tTime.textContent=buyers[bi].t;
+  tN.textContent=buyers[bi].n;tT.textContent=buyers[bi].t;
   toast.classList.add('show');bi=(bi+1)%buyers.length;
   setTimeout(()=>toast.classList.remove('show'),4200);
 }
 setTimeout(showToast,3500);setInterval(showToast,14000);
+
+// LIVE BAR ROTATION
+const liveTexts=[
+  '<span>37 pessoas</span> estão vendo esta oferta agora',
+  '<span>12 famílias</span> compraram nas últimas 2 horas',
+  '<span>89%</span> dos compradores escolhem o Combo',
+  '<span>Apenas hoje</span> com 82% de desconto',
+];
+let li=0;const lb=document.getElementById('liveBarText');
+setInterval(()=>{li=(li+1)%liveTexts.length;lb.style.opacity='0';setTimeout(()=>{lb.innerHTML=liveTexts[li];lb.style.opacity='1';},300);},5000);
+lb.style.transition='opacity .3s';
 
 // FAQ
 document.querySelectorAll('.faq-btn').forEach(btn=>{
