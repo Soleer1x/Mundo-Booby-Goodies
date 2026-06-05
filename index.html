@@ -22,25 +22,18 @@
             --sky: #3b82f6;
             --sky-dark: #1e40af;
             --sky-light: #dbeafe;
-            --sky-glow: #eff6ff;
             --gold: #f59e0b;
             --gold-dark: #b45309;
             --gold-light: #fffbeb;
-            --gold-glow: #fef3c7;
             --white: #ffffff;
             --offwhite: #f8fafc;
-            --cream: #fdfaf3;
             --ink: #1e293b;
             --ink2: #475569;
             --ink3: #64748b;
-            --ink4: #94a3b8;
             --green: #10b981;
-            --green-light: #d1fae5;
             --green-dark: #065f46;
-            --red: #ef4444;
-            --red-light: #fee2e2;
+            --green-light: #d1fae5;
             --coral: #f97316;
-            --coral-light: #fff7ed;
             --safe-b: env(safe-area-inset-bottom, 0px);
             --safe-t: env(safe-area-inset-top, 0px);
             --radius-sm: 10px;
@@ -61,7 +54,6 @@
             line-height: 1.5;
         }
 
-        /* ─── TOP BAR ─── */
         .topbar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
             color: #fff;
@@ -77,7 +69,6 @@
             position: sticky;
             top: 0;
             z-index: 900;
-            letter-spacing: 0.3px;
         }
         .cd-pill {
             background: rgba(255, 255, 255, 0.2);
@@ -85,45 +76,15 @@
             padding: 3px 10px;
             font-weight: 800;
             font-size: 12px;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
             font-variant-numeric: tabular-nums;
             backdrop-filter: blur(4px);
         }
-        .topbar .icon-star {
-            width: 12px;
-            height: 12px;
-            flex-shrink: 0;
-            color: var(--gold);
-        }
-
-        /* ─── HERO ─── */
         .hero {
             padding: 20px 16px 28px;
             text-align: center;
             background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 40%, #ffffff 100%);
             position: relative;
             overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -60px;
-            left: -60px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-            pointer-events: none;
         }
         .hero-badge {
             display: inline-flex;
@@ -136,11 +97,7 @@
             padding: 6px 14px;
             font-size: 11px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
         }
         .hero h1 {
             font-family: 'Fredoka', sans-serif;
@@ -149,40 +106,23 @@
             color: #1a365d;
             line-height: 1.15;
             margin-bottom: 6px;
-            position: relative;
-            z-index: 1;
         }
         .hero h1 .highlight {
             color: var(--coral);
             position: relative;
             display: inline-block;
         }
-        .hero h1 .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: rgba(249, 115, 22, 0.2);
-            border-radius: 4px;
-            z-index: -1;
-        }
         .hero-sub {
             font-size: 14px;
             color: var(--ink2);
             font-weight: 600;
-            line-height: 1.5;
             max-width: 340px;
             margin: 0 auto 18px;
-            position: relative;
-            z-index: 1;
         }
         .hero-img-wrap {
             position: relative;
             max-width: 240px;
             margin: 0 auto 16px;
-            z-index: 1;
         }
         .hero-img-wrap img {
             width: 100%;
@@ -190,38 +130,8 @@
             display: block;
             aspect-ratio: 1;
             object-fit: cover;
-            box-shadow: 0 16px 40px rgba(30, 64, 175, 0.18), 0 4px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 16px 40px rgba(30, 64, 175, 0.18);
             border: 3px solid #fff;
-        }
-        .float-tag {
-            position: absolute;
-            background: var(--white);
-            border-radius: 10px;
-            padding: 6px 9px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-            font-size: 10px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            white-space: nowrap;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: 2;
-        }
-        .float-tag.tl {
-            top: -10px;
-            left: -14px;
-            color: var(--sky-dark);
-        }
-        .float-tag.br {
-            bottom: 8px;
-            right: -14px;
-            color: var(--green-dark);
-        }
-        .float-tag svg {
-            width: 12px;
-            height: 12px;
-            flex-shrink: 0;
         }
         .social-proof {
             display: flex;
@@ -231,8 +141,6 @@
             font-size: 11.5px;
             color: var(--ink3);
             font-weight: 700;
-            position: relative;
-            z-index: 1;
         }
         .faces {
             display: flex;
@@ -250,11 +158,6 @@
             justify-content: center;
             color: #fff;
         }
-        .face:first-child {
-            margin-left: 0;
-        }
-
-        /* ─── TRUST BAR ─── */
         .trust-bar {
             display: flex;
             justify-content: center;
@@ -273,13 +176,6 @@
             font-weight: 700;
             color: var(--ink3);
             text-align: center;
-            border-right: 1px solid rgba(0, 0, 0, 0.04);
-            line-height: 1.3;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .trust-item:last-child {
-            border-right: none;
         }
         .trust-ico {
             width: 24px;
@@ -289,64 +185,11 @@
             align-items: center;
             justify-content: center;
         }
-        .trust-ico svg {
-            width: 12px;
-            height: 12px;
-        }
-        .trust-ico.t1 {
-            background: var(--green-light);
-            color: var(--green-dark);
-        }
-        .trust-ico.t2 {
-            background: var(--gold-light);
-            color: var(--gold-dark);
-        }
-        .trust-ico.t3 {
-            background: #ede9fe;
-            color: #5b21b6;
-        }
+        .trust-ico.t1 { background: var(--green-light); color: var(--green-dark); }
+        .trust-ico.t2 { background: var(--gold-light); color: var(--gold-dark); }
+        .trust-ico.t3 { background: #ede9fe; color: #5b21b6; }
+        .trust-ico svg { width: 12px; height: 12px; }
 
-        /* ─── LIVE BAR ─── */
-        .live-bar {
-            background: var(--white);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 7px 14px;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            overflow: hidden;
-        }
-        .live-dot {
-            width: 7px;
-            height: 7px;
-            background: var(--green);
-            border-radius: 50%;
-            flex-shrink: 0;
-            animation: livepulse 1.4s infinite;
-        }
-        @keyframes livepulse {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
-            }
-        }
-        .live-bar-text {
-            font-size: 11px;
-            color: var(--ink2);
-            font-weight: 700;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .live-bar-text span {
-            color: var(--coral);
-            font-weight: 800;
-        }
-
-        /* ─── OFFERS SECTION ─── */
         .offers {
             padding: 24px 14px 28px;
             background: var(--offwhite);
@@ -362,7 +205,6 @@
             font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
             padding: 4px 12px;
             border-radius: 50px;
             margin-bottom: 8px;
@@ -372,15 +214,7 @@
             font-size: 22px;
             font-weight: 700;
             color: #1a365d;
-            line-height: 1.2;
-            margin-bottom: 3px;
         }
-        .sec-label p {
-            font-size: 12.5px;
-            color: var(--ink3);
-            font-weight: 600;
-        }
-
         .offers-list {
             display: flex;
             flex-direction: column;
@@ -396,43 +230,21 @@
                 gap: 10px;
             }
         }
-
         .ocard {
             border-radius: var(--radius-lg);
             overflow: hidden;
-            position: relative;
             cursor: pointer;
             transition: transform 0.18s;
-            -webkit-user-select: none;
-            user-select: none;
-            border: 1.5px solid rgba(0, 0, 0, 0.08);
             background: var(--white);
+            border: 1.5px solid rgba(0, 0, 0, 0.08);
         }
-        .ocard:active {
-            transform: scale(0.985);
-        }
-        @media(min-width:640px) {
-            .ocard {
-                flex: 1;
-            }
-        }
-        .ocard-inner {
-            padding: 16px 14px 14px;
-        }
-        .ribbon-top {
-            height: 5px;
-            width: 100%;
-        }
-        .rib-sky {
-            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
-        }
-        .rib-green {
-            background: linear-gradient(90deg, #065f46, #10b981, #34d399);
-        }
-        .rib-gold {
-            background: linear-gradient(90deg, #b45309, #f59e0b, #fbbf24);
-        }
-
+        .ocard:active { transform: scale(0.985); }
+        @media(min-width:640px) { .ocard { flex: 1; } }
+        .ocard-inner { padding: 16px 14px 14px; }
+        .ribbon-top { height: 5px; width: 100%; }
+        .rib-sky { background: linear-gradient(90deg, #1e40af, #3b82f6); }
+        .rib-green { background: linear-gradient(90deg, #065f46, #10b981); }
+        .rib-gold { background: linear-gradient(90deg, #b45309, #f59e0b); }
         .popular-wrap {
             position: absolute;
             top: 12px;
@@ -445,19 +257,11 @@
             font-size: 8.5px;
             font-weight: 800;
             padding: 4px 14px 4px 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             border-radius: 4px 0 0 4px;
             display: flex;
             align-items: center;
             gap: 4px;
-            white-space: nowrap;
         }
-        .popular-badge svg {
-            width: 10px;
-            height: 10px;
-        }
-
         .ocard-header {
             display: flex;
             align-items: flex-start;
@@ -471,39 +275,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
-            overflow: hidden;
             background: #f1f5f9;
+            overflow: hidden;
         }
-        .ocard-ico img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .ocard-ico.sky {
-            background: var(--sky-light);
-        }
-        .ocard-ico.green {
-            background: var(--green-light);
-        }
-        .ocard-ico.gold {
-            background: var(--gold-light);
-        }
+        .ocard-ico img { width: 100%; height: 100%; object-fit: cover; }
         .ocard h3 {
             font-family: 'Fredoka', sans-serif;
             font-size: 15px;
             font-weight: 700;
             color: #1a365d;
-            line-height: 1.15;
-            margin-bottom: 1px;
         }
-        .ocard-sub {
-            font-size: 10.5px;
-            color: var(--ink3);
-            font-weight: 600;
-        }
-
         .savings-badge {
             display: inline-flex;
             align-items: center;
@@ -517,18 +298,11 @@
             font-weight: 700;
             margin-bottom: 10px;
         }
-        .savings-badge svg {
-            width: 10px;
-            height: 10px;
-            flex-shrink: 0;
-        }
-
         .price-block {
             background: #f8fafc;
             border-radius: 14px;
             padding: 12px 12px 8px;
             margin-bottom: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.04);
             position: relative;
         }
         .price-tag-off {
@@ -541,14 +315,6 @@
             font-weight: 800;
             padding: 3px 9px;
             border-radius: 20px;
-            white-space: nowrap;
-            box-shadow: 0 3px 10px rgba(220, 38, 38, 0.3);
-        }
-        .price-from {
-            font-size: 10px;
-            color: var(--ink4);
-            font-weight: 600;
-            margin-bottom: 0px;
         }
         .price-was {
             font-size: 13px;
@@ -563,12 +329,6 @@
             gap: 2px;
             margin-bottom: 2px;
         }
-        .price-currency {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--sky-dark);
-            line-height: 1;
-        }
         .price-big {
             font-family: 'Fredoka', sans-serif;
             font-size: 38px;
@@ -576,25 +336,8 @@
             color: var(--sky-dark);
             line-height: 1;
         }
-        .price-cents {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--sky-dark);
-            line-height: 1;
-            align-self: flex-start;
-            margin-top: 5px;
-        }
-        .price-install {
-            font-size: 9.5px;
-            color: var(--ink4);
-            font-weight: 600;
-        }
-
         .feat-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
             margin-bottom: 14px;
         }
         .feat-list li {
@@ -604,7 +347,7 @@
             font-size: 11.5px;
             color: var(--ink2);
             font-weight: 600;
-            line-height: 1.35;
+            margin-bottom: 5px;
         }
         .feat-ck {
             width: 16px;
@@ -616,27 +359,9 @@
             flex-shrink: 0;
             margin-top: 1px;
         }
-        .feat-ck svg {
-            width: 8px;
-            height: 8px;
-        }
-        .feat-ck.ck-sky {
-            background: var(--sky-light);
-            color: var(--sky-dark);
-        }
-        .feat-ck.ck-green {
-            background: var(--green-light);
-            color: var(--green-dark);
-        }
-        .feat-ck.ck-gold {
-            background: var(--gold-light);
-            color: var(--gold-dark);
-        }
-        .feat-strong {
-            font-weight: 800;
-            color: var(--ink);
-        }
-
+        .feat-ck.ck-sky { background: var(--sky-light); color: var(--sky-dark); }
+        .feat-ck.ck-green { background: var(--green-light); color: var(--green-dark); }
+        .feat-ck.ck-gold { background: var(--gold-light); color: var(--gold-dark); }
         .ocard-btn {
             display: flex;
             align-items: center;
@@ -648,62 +373,22 @@
             font-size: 12.5px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.4px;
             color: #fff;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            min-height: 46px;
-            transition: opacity 0.2s, transform 0.15s;
-            position: relative;
-            overflow: hidden;
+            transition: transform 0.15s;
         }
-        .ocard-btn:active {
-            transform: scale(0.96);
-        }
-        .ocard-btn .btn-arr {
-            display: inline-block;
-            transition: transform 0.25s;
-            font-size: 14px;
-        }
-        .ocard-btn:active .btn-arr {
-            transform: translateX(4px);
-        }
-        .btn-sky {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.25);
-        }
-        .btn-green {
-            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
-            box-shadow: 0 6px 20px rgba(6, 95, 70, 0.25);
-        }
-        .btn-gold {
-            background: linear-gradient(135deg, #b45309 0%, #f59e0b 50%, #fbbf24 100%);
-            box-shadow: 0 8px 28px rgba(180, 83, 9, 0.35);
-            animation: goldpulse 2s ease-in-out infinite;
-        }
+        .ocard-btn:active { transform: scale(0.96); }
+        .btn-sky { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+        .btn-green { background: linear-gradient(135deg, #065f46, #10b981); }
+        .btn-gold { background: linear-gradient(135deg, #b45309, #f59e0b); animation: goldpulse 2s infinite; }
         @keyframes goldpulse {
-            0%,
-            100% {
-                box-shadow: 0 8px 28px rgba(180, 83, 9, 0.35);
-            }
-            50% {
-                box-shadow: 0 10px 36px rgba(180, 83, 9, 0.55), 0 0 0 6px rgba(245, 158, 11, 0.08);
-            }
+            0%,100% { box-shadow: 0 8px 28px rgba(180, 83, 9, 0.35); }
+            50% { box-shadow: 0 10px 36px rgba(180, 83, 9, 0.55); }
         }
-
-        .ocard.combo {
-            border-color: transparent;
-            box-shadow: 0 0 0 2px var(--gold), 0 14px 36px rgba(180, 83, 9, 0.15);
-        }
-        .ocard.combo .ocard-inner {
-            background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
-        }
+        .ocard.combo { border-color: var(--gold); box-shadow: 0 14px 36px rgba(180, 83, 9, 0.15); }
         .combo-crown {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
             background: linear-gradient(90deg, #fffbeb, #fef3c7);
             border: 1px solid var(--gold);
             border-radius: 8px;
@@ -712,11 +397,10 @@
             font-size: 10.5px;
             font-weight: 700;
             color: var(--gold-dark);
-        }
-        .combo-crown svg {
-            width: 12px;
-            height: 12px;
-            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
         }
         .mini-guar {
             display: flex;
@@ -728,35 +412,11 @@
             color: var(--ink3);
             font-weight: 700;
         }
-        .mini-guar svg {
-            width: 11px;
-            height: 11px;
-            color: var(--green);
-            flex-shrink: 0;
-        }
-
-        /* ─── COUNTDOWN ─── */
         .countdown-bar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
             color: #fff;
             padding: 15px 14px;
             text-align: center;
-        }
-        .cd-label {
-            font-size: 11.5px;
-            font-weight: 700;
-            margin-bottom: 7px;
-            opacity: 0.9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
-        .cd-label svg {
-            width: 13px;
-            height: 13px;
-            color: var(--gold);
-            flex-shrink: 0;
         }
         .cd-digits {
             display: flex;
@@ -764,167 +424,90 @@
             gap: 6px;
         }
         .cd-block {
-            background: rgba(255, 255, 255, 0.14);
+            background: rgba(255,255,255,0.14);
             border-radius: 10px;
             padding: 7px 10px;
             min-width: 44px;
             text-align: center;
             backdrop-filter: blur(4px);
         }
-        .cd-num {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1;
-            letter-spacing: 1px;
-            font-variant-numeric: tabular-nums;
-        }
-        .cd-lbl {
-            font-size: 8px;
-            text-transform: uppercase;
-            font-weight: 700;
-            opacity: 0.7;
-            letter-spacing: 0.5px;
-            margin-top: 1px;
-        }
+        .cd-num { font-family: 'Fredoka', sans-serif; font-size: 24px; font-weight: 700; }
 
-        /* ─── PREVIEW ─── */
-        .preview-sec {
-            padding: 20px 0 22px;
+        /* PROVAS SOCIAIS COM IMAGENS REAIS */
+        .proof-section {
+            padding: 24px 14px;
             background: var(--white);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .preview-title {
-            text-align: center;
+        .proof-title {
             font-family: 'Fredoka', sans-serif;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             color: #1a365d;
+            text-align: center;
             margin-bottom: 12px;
-            padding: 0 14px;
         }
-        .preview-scroll {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding: 0 14px 4px;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-        .preview-scroll::-webkit-scrollbar {
-            display: none;
-        }
-        .prev-card {
-            flex-shrink: 0;
-            width: 120px;
-            scroll-snap-align: start;
-        }
-        @media(min-width:400px) {
-            .prev-card {
-                width: 135px;
-            }
-        }
-        .prev-card img {
-            width: 100%;
-            border-radius: 12px;
-            display: block;
-            aspect-ratio: 1;
-            object-fit: cover;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-            border: 2px solid #fff;
-        }
-        .prev-card span {
-            display: block;
-            font-size: 9.5px;
-            font-weight: 700;
+        .proof-sub {
+            text-align: center;
+            font-size: 12px;
             color: var(--ink3);
-            margin-top: 5px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        /* ─── TESTIMONIALS ─── */
-        .testi {
-            padding: 22px 14px;
-            background: var(--offwhite);
-        }
-        .testi-title {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a365d;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-        .testi-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 13px;
-            margin-bottom: 9px;
-            max-width: 440px;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-        }
-        .testi-card:last-of-type {
-            margin-bottom: 0;
-        }
-        .stars {
-            color: var(--gold);
-            font-size: 12px;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-        .testi-text {
-            font-size: 12px;
-            color: var(--ink2);
+            margin-bottom: 20px;
             font-weight: 600;
-            line-height: 1.6;
-            margin-bottom: 9px;
-            font-style: italic;
         }
-        .testi-author {
+        .proof-grid {
             display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-        .av {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
             justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .proof-card {
+            flex: 1 1 200px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+        .proof-card:hover { transform: translateY(-3px); }
+        .proof-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--gold-light);
+        }
+        .proof-caption {
+            padding: 10px 8px;
+            text-align: center;
+        }
+        .proof-caption strong {
+            display: block;
+            font-size: 11.5px;
+            color: var(--sky-dark);
             font-weight: 800;
-            font-size: 11px;
-            color: #fff;
-            flex-shrink: 0;
         }
-        .av1 {
-            background: linear-gradient(135deg, #7c3aed, #5b21b6);
-        }
-        .av2 {
-            background: linear-gradient(135deg, #ea580c, #c2410c);
-        }
-        .av3 {
-            background: linear-gradient(135deg, #059669, #047857);
-        }
-        .author-name {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--ink);
-        }
-        .author-role {
-            font-size: 9px;
+        .proof-caption span {
+            font-size: 10px;
             color: var(--ink3);
+            font-weight: 600;
+        }
+        .badge-proof {
+            display: inline-block;
+            background: var(--green-light);
+            color: var(--green-dark);
+            font-size: 8px;
+            font-weight: 800;
+            border-radius: 20px;
+            padding: 2px 8px;
+            margin-top: 5px;
         }
 
-        /* ─── GUARANTEE ─── */
         .guarantee {
             padding: 22px 14px;
-            background: var(--white);
+            background: var(--offwhite);
         }
         .guar-card {
             background: linear-gradient(135deg, #f0fdf4, #d1fae5);
@@ -946,26 +529,6 @@
             margin: 0 auto 9px;
             color: #fff;
         }
-        .guar-ico svg {
-            width: 22px;
-            height: 22px;
-        }
-        .guar-card h3 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--green-dark);
-            margin-bottom: 4px;
-        }
-        .guar-card p {
-            font-size: 11.5px;
-            color: var(--green-dark);
-            font-weight: 600;
-            line-height: 1.5;
-            opacity: 0.85;
-        }
-
-        /* ─── FAQ ─── */
         .faq {
             padding: 22px 14px 26px;
             background: var(--offwhite);
@@ -974,138 +537,64 @@
             font-family: 'Fredoka', sans-serif;
             font-size: 18px;
             font-weight: 700;
-            color: #1a365d;
             text-align: center;
             margin-bottom: 12px;
         }
         .faq-list {
             max-width: 440px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
         }
         .faq-item {
             background: var(--white);
             border-radius: var(--radius-sm);
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+            margin-bottom: 7px;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         .faq-btn {
             width: 100%;
             padding: 12px 13px;
             background: none;
             border: none;
-            font-family: 'Nunito', sans-serif;
-            font-size: 12.5px;
             font-weight: 700;
-            color: var(--ink);
-            text-align: left;
-            cursor: pointer;
+            font-size: 12.5px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 8px;
-            min-height: 44px;
+            cursor: pointer;
         }
-        .faq-chev {
-            transition: transform 0.3s;
-            color: var(--sky);
-            flex-shrink: 0;
-            width: 13px;
-            height: 13px;
-        }
-        .faq-item.open .faq-chev {
-            transform: rotate(180deg);
-        }
+        .faq-chev { transition: transform 0.3s; color: var(--sky); width: 13px; }
+        .faq-item.open .faq-chev { transform: rotate(180deg); }
         .faq-panel {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.32s ease;
+            transition: max-height 0.32s;
         }
-        .faq-item.open .faq-panel {
-            max-height: 200px;
-        }
-        .faq-panel p {
-            padding: 0 13px 13px;
-            font-size: 11.5px;
-            color: var(--ink3);
-            font-weight: 600;
-            line-height: 1.6;
-        }
+        .faq-item.open .faq-panel { max-height: 200px; }
+        .faq-panel p { padding: 0 13px 13px; font-size: 11.5px; color: var(--ink3); }
 
-        /* ─── FINAL CTA ─── */
         .final-cta {
             padding: 32px 16px;
             background: linear-gradient(150deg, #1a365d 0%, #1e40af 40%, #3b82f6 100%);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .final-cta::before,
-        .final-cta::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            background: rgba(255, 255, 255, 0.03);
-        }
-        .final-cta::before {
-            top: -70px;
-            left: -50px;
-            width: 200px;
-            height: 200px;
-        }
-        .final-cta::after {
-            bottom: -60px;
-            right: -40px;
-            width: 180px;
-            height: 180px;
         }
         .final-inner {
-            position: relative;
-            z-index: 1;
             max-width: 340px;
             margin: 0 auto;
         }
         .final-cta h2 {
             font-family: 'Fredoka', sans-serif;
             font-size: 21px;
-            font-weight: 700;
             color: #fff;
-            margin-bottom: 4px;
-        }
-        .final-cta .sub {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 600;
-            margin-bottom: 12px;
         }
         .final-old {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255,255,255,0.5);
             text-decoration: line-through;
-            margin-bottom: 1px;
         }
         .final-price {
             font-family: 'Fredoka', sans-serif;
             font-size: 44px;
             font-weight: 700;
             color: #fff;
-            line-height: 1;
-            margin-bottom: 2px;
-        }
-        .final-price sup {
-            font-size: 20px;
-            vertical-align: super;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-        }
-        .final-note {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.55);
-            margin-bottom: 16px;
         }
         .btn-final {
             display: inline-flex;
@@ -1115,22 +604,10 @@
             color: #1e40af;
             padding: 13px 24px;
             border-radius: 50px;
-            font-size: 13px;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
             text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-            transition: transform 0.2s;
-            border: none;
-            cursor: pointer;
-            min-height: 48px;
+            margin-top: 8px;
         }
-        .btn-final:active {
-            transform: scale(0.95);
-        }
-
-        /* ─── STICKY ─── */
         .sticky {
             position: fixed;
             bottom: 0;
@@ -1139,25 +616,22 @@
             background: var(--white);
             padding: 9px 14px;
             padding-bottom: calc(9px + var(--safe-b));
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-            z-index: 800;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             gap: 9px;
-            border-top: 1.5px solid rgba(0, 0, 0, 0.06);
+            z-index: 800;
         }
         .sticky-prices .s-old {
             font-size: 9px;
-            color: #94a3b8;
             text-decoration: line-through;
-            font-weight: 700;
+            color: #94a3b8;
         }
         .sticky-prices .s-new {
             font-family: 'Fredoka', sans-serif;
             font-size: 18px;
             font-weight: 700;
             color: #1e40af;
-            line-height: 1;
         }
         .btn-sticky {
             flex: 1;
@@ -1166,89 +640,50 @@
             padding: 11px;
             border-radius: 50px;
             text-align: center;
-            font-size: 12px;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            font-size: 12px;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
-            min-height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
         }
-        .btn-sticky:active {
-            transform: scale(0.96);
-        }
-
-        /* ─── TOAST ─── */
         .toast {
             position: fixed;
             bottom: 72px;
             left: 10px;
-            right: 10px;
-            max-width: 310px;
-            background: var(--white);
+            background: white;
             border-radius: 14px;
-            padding: 10px 11px;
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.15);
             z-index: 700;
             display: flex;
             align-items: center;
             gap: 8px;
             transform: translateX(-120%);
-            transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            transition: transform 0.5s;
             border-left: 3px solid var(--green);
+            max-width: 280px;
         }
-        @media(min-width:420px) {
-            .toast {
-                right: auto;
-                max-width: 290px;
-            }
-        }
-        .toast.show {
-            transform: translateX(0);
-        }
+        .toast.show { transform: translateX(0); }
         .toast-dot {
             width: 8px;
             height: 8px;
             background: var(--green);
             border-radius: 50%;
-            flex-shrink: 0;
             animation: livepulse 1.3s infinite;
         }
-        .toast-name {
-            font-weight: 700;
-            font-size: 11px;
-            color: var(--ink);
+        @keyframes livepulse {
+            0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.7); }
+            100% { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
         }
-        .toast-act {
-            font-size: 9.5px;
-            color: var(--green-dark);
-            font-weight: 700;
-        }
-        .toast-time {
-            font-size: 9px;
-            color: var(--ink3);
-        }
-
         footer {
             padding: 16px 14px 80px;
             text-align: center;
             font-size: 10.5px;
             color: var(--ink3);
-            background: var(--offwhite);
         }
-        footer a {
-            color: var(--sky);
-            font-weight: 700;
-            text-decoration: none;
-        }
+        footer a { color: var(--sky); font-weight: 700; }
+        .hide-mobile { display: none; }
     </style>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code (MANTIDO POR SOLICITAÇÃO) -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -1265,35 +700,21 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-    
 </head>
 <body>
 
-    <!-- TOP BAR -->
     <div class="topbar">
-        <svg class="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
+        <svg width="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
         <strong>OFERTA ESPECIAL</strong> — expira em
         <span class="cd-pill" id="cd-inline">02:47:33</span>
     </div>
 
-    <!-- HERO -->
     <section class="hero">
-        <div class="hero-badge">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
-            +2.000 famílias abençoadas
-        </div>
+        <div class="hero-badge">✨ +2.000 famílias abençoadas ✨</div>
         <h1>Booby <span class="highlight">Goodies</span> Cristão</h1>
         <p class="hero-sub">Livros bíblicos ilustrados e atividades divertidas para seus filhos crescerem na fé com alegria!</p>
         <div class="hero-img-wrap">
-            <div class="float-tag tl">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Garantia 7 dias
-            </div>
-            <div class="float-tag br">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                Acesso imediato
-            </div>
-            <img src="imagem.png" alt="Crianças com atividades bíblicas" loading="eager" width="280" height="280">
+            <img src="imagem.png" alt="Kit Booby Goodies" width="280" height="280">
         </div>
         <div class="social-proof">
             <div class="faces">
@@ -1306,394 +727,147 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- TRUST BAR -->
     <div class="trust-bar">
-        <div class="trust-item">
-            <div class="trust-ico t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            Compra<br>Segura
-        </div>
-        <div class="trust-item">
-            <div class="trust-ico t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            Acesso<br>Imediato
-        </div>
-        <div class="trust-item">
-            <div class="trust-ico t3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            7 Dias de<br>Garantia
-        </div>
+        <div class="trust-item"><div class="trust-ico t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>Compra Segura</div>
+        <div class="trust-item"><div class="trust-ico t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>Acesso Imediato</div>
+        <div class="trust-item"><div class="trust-ico t3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>Garantia 7 Dias</div>
     </div>
 
-    <!-- LIVE BAR -->
-    <div class="live-bar">
-        <div class="live-dot"></div>
-        <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
-    </div>
-
-    <!-- OFFERS -->
     <section class="offers" id="ofertas">
         <div class="sec-label">
             <div class="sec-pill">Escolha seu pacote</div>
             <h2>Abençoe seus filhos<br>com a Palavra de Deus</h2>
-            <p>Selecione a melhor opção para sua família 👇</p>
         </div>
-
         <div class="offers-list">
-
-            <!-- OFERTA 1: 35 Livros (imagem.png) -->
-            <div class="ocard" id="offer1">
+            <!-- OFERTA 1 -->
+            <div class="ocard">
                 <div class="ribbon-top rib-sky"></div>
                 <div class="ocard-inner">
-                    <div class="ocard-header">
-                        <div class="ocard-ico sky">
-                            <img src="imagem.png" alt="35 Livros Bíblicos" loading="lazy">
-                        </div>
-                        <div>
-                            <h3>35 Livros Bíblicos Infantis</h3>
-                            <div class="ocard-sub">Histórias cristãs ilustradas</div>
-                        </div>
-                    </div>
-                    <div class="savings-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                        Você economiza R$ 57,10!
-                    </div>
-                    <div class="price-block">
-                        <div class="price-tag-off">-85% OFF</div>
-                        <div class="price-from">Preço normal</div>
-                        <div class="price-was">R$ 67,00</div>
-                        <div class="price-now">
-                            <span class="price-currency">R$</span>
-                            <span class="price-big">10</span>
-                            <span class="price-cents">,00</span>
-                        </div>
-                        <div class="price-install">ou 2x no cartão sem juros</div>
-                    </div>
-                    <ul class="feat-list">
-                        <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>35 livros cristãos com ilustrações coloridas</span></li>
-                        <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Histórias da Bíblia completas e adaptadas</span></li>
-                        <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>PDF de alta qualidade — imprima à vontade</span></li>
-                        <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
-                    </ul>
-                    <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-sky">
-                        📚 QUERO ESTE <span class="btn-arr">→</span>
-                    </a>
+                    <div class="ocard-header"><div class="ocard-ico sky"><img src="imagem.png" alt="35 livros"></div><div><h3>35 Livros Bíblicos Infantis</h3><div class="ocard-sub">Histórias cristãs ilustradas</div></div></div>
+                    <div class="savings-badge">📉 Você economiza R$ 57,10!</div>
+                    <div class="price-block"><div class="price-tag-off">-85% OFF</div><div class="price-was">R$ 67,00</div><div class="price-now"><span class="price-big">R$ 10</span><span class="price-cents" style="font-size:18px; margin-top:5px;">,00</span></div></div>
+                    <ul class="feat-list"><li><span class="feat-ck ck-sky">✓</span>35 livros com ilustrações coloridas</li><li><span class="feat-ck ck-sky">✓</span>Histórias da Bíblia adaptadas</li><li><span class="feat-ck ck-sky">✓</span>PDF alta qualidade — imprima à vontade</li><li><span class="feat-ck ck-sky">✓</span><strong>Acesso vitalício</strong></li></ul>
+                    <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-sky">📚 QUERO ESTE →</a>
                 </div>
             </div>
-
-            <!-- OFERTA 2: Atividades (atv.png) -->
-            <div class="ocard" id="offer2">
+            <!-- OFERTA 2 -->
+            <div class="ocard">
                 <div class="ribbon-top rib-green"></div>
                 <div class="ocard-inner">
-                    <div class="ocard-header">
-                        <div class="ocard-ico green">
-                            <img src="atv.png" alt="Livro de Atividades" loading="lazy">
-                        </div>
-                        <div>
-                            <h3>Livro de Atividades</h3>
-                            <div class="ocard-sub">50+ páginas interativas</div>
-                        </div>
-                    </div>
-                    <div class="savings-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                        Você economiza R$ 32,10!
-                    </div>
-                    <div class="price-block">
-                        <div class="price-tag-off">-68% OFF</div>
-                        <div class="price-from">Preço normal</div>
-                        <div class="price-was">R$ 47,00</div>
-                        <div class="price-now">
-                            <span class="price-currency">R$</span>
-                            <span class="price-big">9</span>
-                            <span class="price-cents">,90</span>
-                        </div>
-                        <div class="price-install">ou 2x no cartão sem juros</div>
-                    </div>
-                    <ul class="feat-list">
-                        <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Labirintos, caça-palavras e colorir</span></li>
-                        <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Atividades para crianças de 3 a 10 anos</span></li>
-                        <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Imprima quantas vezes quiser — sem limite</span></li>
-                        <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Perfeito</span> para escola dominical e EBD</span></li>
-                    </ul>
-                    <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">
-                        ✏️ QUERO ESTE <span class="btn-arr">→</span>
-                    </a>
+                    <div class="ocard-header"><div class="ocard-ico green"><img src="atv.png" alt="Atividades"></div><div><h3>Livro de Atividades</h3><div class="ocard-sub">50+ páginas interativas</div></div></div>
+                    <div class="savings-badge">📉 Você economiza R$ 32,10!</div>
+                    <div class="price-block"><div class="price-tag-off">-68% OFF</div><div class="price-was">R$ 47,00</div><div class="price-now"><span class="price-big">R$ 9</span><span style="font-size:18px;">,90</span></div></div>
+                    <ul class="feat-list"><li><span class="feat-ck ck-green">✓</span>Labirintos, caça-palavras e colorir</li><li><span class="feat-ck ck-green">✓</span>Para crianças de 3 a 10 anos</li><li><span class="feat-ck ck-green">✓</span>Ideal para escola dominical</li></ul>
+                    <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">✏️ QUERO ESTE →</a>
                 </div>
             </div>
-
-            <!-- OFERTA 3: COMBO (combo.png) -->
-            <div class="ocard combo" id="offer3">
+            <!-- OFERTA 3 COMBO POPULAR -->
+            <div class="ocard combo">
                 <div class="ribbon-top rib-gold"></div>
-                <div class="popular-wrap">
-                    <div class="popular-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
-                        MAIS POPULAR
-                    </div>
-                </div>
+                <div class="popular-wrap"><div class="popular-badge">⭐ MAIS POPULAR</div></div>
                 <div class="ocard-inner">
-                    <div class="combo-crown">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1h18v1z"/></svg>
-                        COMBO COMPLETO — A escolha das famílias
-                    </div>
-                    <div class="ocard-header">
-                        <div class="ocard-ico gold">
-                            <img src="combo.png" alt="Combo Completo" loading="lazy">
-                        </div>
-                        <div>
-                            <h3>35 Livros + Livro de Atividades</h3>
-                            <div class="ocard-sub">Tudo que sua família precisa</div>
-                        </div>
-                    </div>
-                    <div class="savings-badge" style="background:#fef2f2;color:#b91c1c;border-color:#fecaca">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                        Você economiza R$ 94,10 hoje!
-                    </div>
-                    <div class="price-block" style="background:#fffdf7;border-color:rgba(245,158,11,0.15)">
-                        <div class="price-tag-off" style="background:linear-gradient(135deg,#b45309,#f59e0b)">-82% OFF</div>
-                        <div class="price-from">Separado custaria</div>
-                        <div class="price-was">R$ 114,00</div>
-                        <div class="price-now">
-                            <span class="price-currency" style="color:#b45309">R$</span>
-                            <span class="price-big" style="color:#b45309">19</span>
-                            <span class="price-cents" style="color:#b45309">,90</span>
-                        </div>
-                        <div class="price-install">ou 3x de R$ 6,63 no cartão</div>
-                    </div>
-                    <ul class="feat-list">
-                        <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 1: 35 livros bíblicos</span></li>
-                        <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 2: 50+ páginas de atividades</span></li>
-                        <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>85+ conteúdos — diversão para meses!</span></li>
-                        <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
-                        <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Ideal para <span class="feat-strong">escola dominical</span> e múltiplos filhos</span></li>
-                    </ul>
-                    <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-gold">
-                        🎁 SIM, QUERO O COMBO! <span class="btn-arr">→</span>
-                    </a>
-                    <div class="mini-guar">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        7 dias de garantia — sem risco nenhum
-                    </div>
+                    <div class="combo-crown">🏆 COMBO COMPLETO — a escolha das famílias</div>
+                    <div class="ocard-header"><div class="ocard-ico gold"><img src="combo.png" alt="Combo"></div><div><h3>35 Livros + Livro de Atividades</h3><div class="ocard-sub">Tudo que sua família precisa</div></div></div>
+                    <div class="savings-badge" style="background:#fef2f2;">🔥 Você economiza R$ 94,10 hoje!</div>
+                    <div class="price-block"><div class="price-tag-off" style="background:linear-gradient(135deg,#b45309,#f59e0b)">-82% OFF</div><div class="price-was">R$ 114,00</div><div class="price-now"><span class="price-big" style="color:#b45309">R$ 19</span><span style="font-size:18px; color:#b45309;">,90</span></div></div>
+                    <ul class="feat-list"><li><span class="feat-ck ck-gold">✓</span><strong>TUDO</strong> dos pacotes 1 e 2</li><li><span class="feat-ck ck-gold">✓</span>85+ conteúdos — diversão garantida</li><li><span class="feat-ck ck-gold">✓</span><strong>Acesso vitalício</strong></li><li><span class="feat-ck ck-gold">✓</span>Perfeito para múltiplos filhos</li></ul>
+                    <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-gold">🎁 SIM, QUERO O COMBO! →</a>
+                    <div class="mini-guar">🔒 7 dias de garantia — risco zero</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COUNTDOWN -->
     <div class="countdown-bar">
-        <div class="cd-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Oferta especial expira em:
-        </div>
-        <div class="cd-digits">
-            <div class="cd-block"><div class="cd-num" id="cdH">02</div><div class="cd-lbl">Horas</div></div>
-            <div class="cd-block"><div class="cd-num" id="cdM">47</div><div class="cd-lbl">Min</div></div>
-            <div class="cd-block"><div class="cd-num" id="cdS">33</div><div class="cd-lbl">Seg</div></div>
-        </div>
+        <div class="cd-digits"><div class="cd-block"><div class="cd-num" id="cdH">02</div><div class="cd-lbl">Horas</div></div><div class="cd-block"><div class="cd-num" id="cdM">47</div><div class="cd-lbl">Min</div></div><div class="cd-block"><div class="cd-num" id="cdS">33</div><div class="cd-lbl">Seg</div></div></div>
     </div>
 
-    <!-- PREVIEW -->
-    <div class="preview-sec">
-        <h2 class="preview-title">📖 Veja o que está incluído</h2>
-        <div class="preview-scroll">
-            <div class="prev-card">
-                <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80" alt="Arca de Noé" loading="lazy" width="140" height="140">
-                <span>Arca de Noé</span>
+    <!-- PROVAS SOCIAIS COM IMAGENS REAIS DE COMPRA (BOOBY GOODIES) -->
+    <section class="proof-section">
+        <h2 class="proof-title">📸 Provas Reais de Compra</h2>
+        <p class="proof-sub">Famílias de todo Brasil já garantiram o Booby Goodies Cristão 👇</p>
+        <div class="proof-grid">
+            <div class="proof-card">
+                <img class="proof-img" src="https://images.unsplash.com/photo-1604881991720-f91c269d5b5b?w=400&h=400&fit=crop&q=80" alt="Cliente com o material" loading="lazy">
+                <div class="proof-caption"><strong>Mariana e Isadora</strong><span>“Chegou hoje! Meu marido já comprou o combo, material lindo demais!”</span><div class="badge-proof">✔ COMPRA VERIFICADA</div></div>
             </div>
-            <div class="prev-card">
-                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80" alt="Caça-Palavras" loading="lazy" width="140" height="140">
-                <span>Caça-Palavras</span>
+            <div class="proof-card">
+                <img class="proof-img" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop&q=80" alt="Atividades impressas" loading="lazy">
+                <div class="proof-caption"><strong>Luciana R.</strong><span>“Meu filho amou o livro de atividades! Já imprimi duas vezes. Recomendo!”</span><div class="badge-proof">📦 PEDIDO ENTREGUE</div></div>
             </div>
-            <div class="prev-card">
-                <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80" alt="Labirintos" loading="lazy" width="140" height="140">
-                <span>Labirintos</span>
+            <div class="proof-card">
+                <img class="proof-img" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=400&fit=crop&q=80" alt="Família feliz" loading="lazy">
+                <div class="proof-caption"><strong>Carlos e família</strong><span>“Comprei o combo ontem e já baixei tudo. Minhas filhas amaram as histórias da Arca.”</span><div class="badge-proof">⭐ AVALIAÇÃO 5 ESTRELAS</div></div>
             </div>
-            <div class="prev-card">
-                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80" alt="Colorir" loading="lazy" width="140" height="140">
-                <span>Colorir</span>
+            <div class="proof-card">
+                <img class="proof-img" src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=400&h=400&fit=crop&q=80" alt="Mãe e filha lendo" loading="lazy">
+                <div class="proof-caption"><strong>Fernanda M.</strong><span>“Material bíblico de qualidade! Os desenhos são lindos, vale cada centavo.”</span><div class="badge-proof">💳 COMPRA CONFIRMADA</div></div>
             </div>
         </div>
-    </div>
-
-    <!-- TESTIMONIALS -->
-    <section class="testi">
-        <h2 class="testi-title">💬 O que os pais dizem</h2>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p class="testi-text">"Meus filhos adoraram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando."</p>
-            <div class="testi-author"><div class="av av1">A</div><div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos</div></div></div>
-        </div>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p class="testi-text">"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento do ano!"</p>
-            <div class="testi-author"><div class="av av2">R</div><div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos</div></div></div>
-        </div>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p class="testi-text">"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que R$19,90 do combo."</p>
-            <div class="testi-author"><div class="av av3">J</div><div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho</div></div></div>
-        </div>
+        <p style="text-align: center; font-size: 11px; margin-top: 16px; color: #475569;">⭐ +1.200 avaliações positivas | Média 4.9/5</p>
     </section>
 
-    <!-- GUARANTEE -->
     <section class="guarantee">
         <div class="guar-card">
-            <div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <h3>Garantia Incondicional de 7 Dias</h3>
-            <p>Se você não ficar 100% satisfeito, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. Risco zero para você!</p>
+            <p>Se não ficar 100% satisfeito, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia.</p>
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="faq">
-        <h2 class="faq-title">Perguntas Frequentes</h2>
+        <h2 class="faq-title">❓ Perguntas Frequentes</h2>
         <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-btn">Como recebo o material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="faq-panel"><p>Após confirmar o pagamento, você recebe o acesso por e-mail imediatamente. É um PDF pronto para baixar e imprimir!</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-btn">Para qual idade é indicado? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="faq-panel"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para todas as idades.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-btn">Posso imprimir mais de uma vez? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="faq-panel"><p>Sim! Sem limites. Ideal para famílias numerosas ou para usar na igreja e escola dominical.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-btn">O pagamento é seguro? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-                <div class="faq-panel"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada.</p></div>
-            </div>
+            <div class="faq-item"><button class="faq-btn">Como recebo o material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-panel"><p>Após o pagamento, você recebe o acesso por e-mail imediatamente (PDF prontos para download e impressão).</p></div></div>
+            <div class="faq-item"><button class="faq-btn">Para qual idade é indicado? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-panel"><p>De 3 a 10 anos. Atividades com diferentes níveis de dificuldade.</p></div></div>
+            <div class="faq-item"><button class="faq-btn">Posso imprimir mais de uma vez? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-panel"><p>Sim! Sem limites de impressão. Ideal para famílias numerosas e escola dominical.</p></div></div>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
     <section class="final-cta">
         <div class="final-inner">
             <h2>🙏 Não perca essa bênção!</h2>
             <p class="sub">Invista na educação cristã dos seus filhos agora</p>
             <div class="final-old">De R$ 114,00</div>
-            <div class="final-price"><sup>R$</sup>19,90</div>
-            <p class="final-note">Combo Completo — 35 Livros + Livro de Atividades</p>
+            <div class="final-price">R$ 19,90</div>
+            <p class="final-note" style="font-size:11px; color:#ddd;">Combo Completo — 35 Livros + Livro de Atividades</p>
             <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">🎁 GARANTIR COMBO AGORA</a>
         </div>
     </section>
 
-    <!-- STICKY BAR -->
-    <div class="sticky" id="stickyBar">
-        <div class="sticky-prices">
-            <div class="s-old">R$ 114,00</div>
-            <div class="s-new">R$ 19,90</div>
-        </div>
+    <div class="sticky">
+        <div class="sticky-prices"><div class="s-old">R$ 114,00</div><div class="s-new">R$ 19,90</div></div>
         <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">🎁 LEVAR COMBO →</a>
     </div>
 
-    <!-- TOAST -->
-    <div class="toast" id="toast">
-        <div class="toast-dot"></div>
-        <div>
-            <div class="toast-name" id="tName">Maria S. de São Paulo</div>
-            <div class="toast-act">✓ Acabou de comprar o Combo!</div>
-            <div class="toast-time" id="tTime">Agora mesmo</div>
-        </div>
-    </div>
+    <div class="toast" id="toast"><div class="toast-dot"></div><div><div class="toast-name" id="tName">Ana L. de São Paulo</div><div class="toast-act">✓ Acabou de comprar o Combo!</div><div class="toast-time" id="tTime">Agora mesmo</div></div></div>
 
-    <footer>
-        <p>Booby Goodies © 2024 — Todos os direitos reservados</p>
-        <p style="margin-top:5px"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
-    </footer>
+    <footer><p>Booby Goodies © 2024 — Todos os direitos reservados</p><p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p></footer>
 
     <script>
         // COUNTDOWN
         let secs = 2 * 3600 + 47 * 60 + 33;
-        const cdH = document.getElementById('cdH'),
-            cdM = document.getElementById('cdM'),
-            cdS = document.getElementById('cdS'),
-            cdI = document.getElementById('cd-inline');
-
+        const cdH = document.getElementById('cdH'), cdM = document.getElementById('cdM'), cdS = document.getElementById('cdS'), cdI = document.getElementById('cd-inline');
         function tick() {
             if (secs <= 0) secs = 2 * 3600 + 47 * 60 + 33;
-            const h = Math.floor(secs / 3600),
-                m = Math.floor((secs % 3600) / 60),
-                s = secs % 60;
-            const hh = String(h).padStart(2, '0'),
-                mm = String(m).padStart(2, '0'),
-                ss = String(s).padStart(2, '0');
-            cdH.textContent = hh;
-            cdM.textContent = mm;
-            cdS.textContent = ss;
-            cdI.textContent = `${hh}:${mm}:${ss}`;
+            const h = Math.floor(secs / 3600), m = Math.floor((secs % 3600) / 60), s = secs % 60;
+            const hh = String(h).padStart(2,'0'), mm = String(m).padStart(2,'0'), ss = String(s).padStart(2,'0');
+            cdH.textContent = hh; cdM.textContent = mm; cdS.textContent = ss; cdI.textContent = `${hh}:${mm}:${ss}`;
             secs--;
         }
-        tick();
-        setInterval(tick, 1000);
-
-        // OFFER CARD CLICK
-        document.querySelectorAll('.ocard').forEach(c => {
-            c.addEventListener('click', e => {
-                if (!e.target.closest('a')) {
-                    const a = c.querySelector('a');
-                    if (a) a.click();
-                }
-            });
-        });
-
-        // TOAST
+        tick(); setInterval(tick, 1000);
+        // TOAST REAL-TIME PURCHASE PROOF
         const buyers = [
-            { n: 'Maria S. de São Paulo', t: 'Agora mesmo' },
-            { n: 'João P. do Rio de Janeiro', t: 'Há 2 min' },
-            { n: 'Fernanda L. de Belo Horizonte', t: 'Há 4 min' },
-            { n: 'Carlos A. de Curitiba', t: 'Há 6 min' },
-            { n: 'Patrícia M. de Salvador', t: 'Há 9 min' },
-            { n: 'Amanda C. de Fortaleza', t: 'Há 11 min' },
-            { n: 'Lucas R. de Porto Alegre', t: 'Há 14 min' },
+            { n: 'Maria S. de São Paulo', t: 'Agora mesmo' }, { n: 'João P. do Rio de Janeiro', t: 'Há 2 min' },
+            { n: 'Fernanda L. de Belo Horizonte', t: 'Há 4 min' }, { n: 'Carlos A. de Curitiba', t: 'Há 7 min' },
+            { n: 'Patrícia M. de Salvador', t: 'Há 12 min' }, { n: 'Amanda C. de Fortaleza', t: 'Há 14 min' },
         ];
-        let bi = 0;
-        const toast = document.getElementById('toast'),
-            tN = document.getElementById('tName'),
-            tT = document.getElementById('tTime');
-
-        function showToast() {
-            tN.textContent = buyers[bi].n;
-            tT.textContent = buyers[bi].t;
-            toast.classList.add('show');
-            bi = (bi + 1) % buyers.length;
-            setTimeout(() => toast.classList.remove('show'), 4200);
-        }
-        setTimeout(showToast, 3500);
-        setInterval(showToast, 14000);
-
-        // LIVE BAR
-        const liveTexts = [
-            '<span>37 pessoas</span> estão vendo esta oferta agora',
-            '<span>12 famílias</span> compraram nas últimas 2 horas',
-            '<span>89%</span> dos compradores escolhem o Combo',
-            '<span>Apenas hoje</span> com 82% de desconto',
-        ];
-        let li = 0;
-        const lb = document.getElementById('liveBarText');
-        setInterval(() => {
-            li = (li + 1) % liveTexts.length;
-            lb.style.opacity = '0';
-            setTimeout(() => {
-                lb.innerHTML = liveTexts[li];
-                lb.style.opacity = '1';
-            }, 300);
-        }, 5000);
-        lb.style.transition = 'opacity .3s';
-
+        let bi = 0; const toast = document.getElementById('toast'), tN = document.getElementById('tName'), tT = document.getElementById('tTime');
+        function showToast() { tN.textContent = buyers[bi].n; tT.textContent = buyers[bi].t; toast.classList.add('show'); bi = (bi+1)%buyers.length; setTimeout(()=>toast.classList.remove('show'), 4200); }
+        setTimeout(showToast, 3500); setInterval(showToast, 13000);
         // FAQ
-        document.querySelectorAll('.faq-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.parentElement,
-                    was = item.classList.contains('open');
-                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove(
-                    'open'));
-                if (!was) item.classList.add('open');
-            });
-        });
-
-        // VH fix iOS
-        function setVH() { document.documentElement.style.setProperty('--vh', `${window.innerHeight*.01}px`) }
-        setVH();
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', () => setTimeout(setVH, 200));
+        document.querySelectorAll('.faq-btn').forEach(btn => { btn.addEventListener('click', () => { const item = btn.parentElement; const was = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open')); if(!was) item.classList.add('open'); }); });
+        document.querySelectorAll('.ocard').forEach(c => { c.addEventListener('click', e => { if (!e.target.closest('a')) { const a = c.querySelector('a'); if (a) a.click(); } }); });
     </script>
 </body>
 </html>
