@@ -465,29 +465,30 @@
             margin-bottom: 12px;
         }
         .ocard-ico {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            overflow: hidden;
+            background: #f1f5f9;
         }
-        .ocard-ico svg {
-            width: 20px;
-            height: 20px;
+        .ocard-ico img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         .ocard-ico.sky {
             background: var(--sky-light);
-            color: var(--sky-dark);
         }
         .ocard-ico.green {
             background: var(--green-light);
-            color: var(--green-dark);
         }
         .ocard-ico.gold {
             background: var(--gold-light);
-            color: var(--gold-dark);
         }
         .ocard h3 {
             font-family: 'Fredoka', sans-serif;
@@ -1274,6 +1275,7 @@
                 Acesso imediato
             </div>
             <img src="imagem.png" alt="Crianças com atividades bíblicas" loading="eager" width="280" height="280">
+        </div>
         <div class="social-proof">
             <div class="faces">
                 <div class="face" style="background:#7c3aed">M</div>
@@ -1317,13 +1319,13 @@
 
         <div class="offers-list">
 
-            <!-- OFERTA 1: 35 Livros -->
+            <!-- OFERTA 1: 35 Livros (imagem.png) -->
             <div class="ocard" id="offer1">
                 <div class="ribbon-top rib-sky"></div>
                 <div class="ocard-inner">
                     <div class="ocard-header">
                         <div class="ocard-ico sky">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            <img src="imagem.png" alt="35 Livros Bíblicos" loading="lazy">
                         </div>
                         <div>
                             <h3>35 Livros Bíblicos Infantis</h3>
@@ -1357,13 +1359,13 @@
                 </div>
             </div>
 
-            <!-- OFERTA 2: Livro de Atividades -->
+            <!-- OFERTA 2: Atividades (atv.png) -->
             <div class="ocard" id="offer2">
                 <div class="ribbon-top rib-green"></div>
                 <div class="ocard-inner">
                     <div class="ocard-header">
                         <div class="ocard-ico green">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4M9 15h2"/></svg>
+                            <img src="atv.png" alt="Livro de Atividades" loading="lazy">
                         </div>
                         <div>
                             <h3>Livro de Atividades</h3>
@@ -1397,7 +1399,7 @@
                 </div>
             </div>
 
-            <!-- OFERTA 3: COMBO -->
+            <!-- OFERTA 3: COMBO (combo.png) -->
             <div class="ocard combo" id="offer3">
                 <div class="ribbon-top rib-gold"></div>
                 <div class="popular-wrap">
@@ -1413,7 +1415,7 @@
                     </div>
                     <div class="ocard-header">
                         <div class="ocard-ico gold">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 3.5 2 6L12 14l-5 3.5 2-6L4 8h6z"/></svg>
+                            <img src="combo.png" alt="Combo Completo" loading="lazy">
                         </div>
                         <div>
                             <h3>35 Livros + Livro de Atividades</h3>
@@ -1451,7 +1453,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
