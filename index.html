@@ -1,687 +1,2046 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#92290A">
-<title>Booby Goodies - Atividades Cristãs para Crianças</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
-:root{
-  --amber:#F59E0B;--amber-d:#92400E;--amber-l:#FFFBEB;--amber-m:#D97706;
-  --coral:#92290A;--coral-m:#C2410C;--coral-bright:#EA580C;
-  --green:#047857;--green-l:#ECFDF5;--green-d:#064E3B;
-  --cream:#FFFBF4;--white:#FFFFFF;--offwhite:#FDF8F2;
-  --ink:#1A0F08;--ink2:#3D2B1F;--ink3:#7A5C4A;--ink4:#AE9080;
-  --safe-b:env(safe-area-inset-bottom,0px);
-  --safe-t:env(safe-area-inset-top,0px);
-}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-overflow-scrolling:touch}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#6D2812">
+    <title>Booby Goodies - Atividades Cristãs para Crianças</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=DM+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+        :root {
+            --amber: #F59E0B;
+            --amber-d: #92400E;
+            --amber-l: #FFFBEB;
+            --amber-m: #D97706;
+            --coral: #8B2E0F;
+            --coral-m: #B8431A;
+            --coral-bright: #E05D2C;
+            --coral-l: #FFF1EE;
+            --green: #047857;
+            --green-l: #ECFDF5;
+            --green-d: #064E3B;
+            --cream: #FFFBF4;
+            --white: #FFFFFF;
+            --offwhite: #FDF8F2;
+            --ink: #1A0F08;
+            --ink2: #3D2B1F;
+            --ink3: #7A5C4A;
+            --ink4: #AE9080;
+            --gold: #D4A853;
+            --gold-l: #FFF8E7;
+            --safe-b: env(safe-area-inset-bottom, 0px);
+            --safe-t: env(safe-area-inset-top, 0px);
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            line-height: 1.5;
+        }
 
-/* ─── TOP BAR ─── */
-.topbar{background:var(--coral);color:#fff;padding:calc(8px + var(--safe-t)) 12px 8px;text-align:center;font-size:11.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;position:sticky;top:0;z-index:900}
-.cd-pill{background:rgba(255,255,255,.2);border-radius:20px;padding:3px 10px;font-weight:800;font-size:12px;letter-spacing:.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+        /* ─── TOP BAR ─── */
+        .topbar {
+            background: linear-gradient(135deg, #5C1A0A, var(--coral), #B8431A);
+            color: #fff;
+            padding: calc(8px + var(--safe-t)) 12px 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            letter-spacing: .3px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
+        }
+        .topbar .icon-fire {
+            font-size: 15px;
+            animation: flicker 1.2s ease-in-out infinite;
+        }
+        @keyframes flicker {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.25);
+                opacity: .7;
+            }
+        }
+        .cd-pill {
+            background: rgba(255, 255, 255, .22);
+            border-radius: 20px;
+            padding: 4px 11px;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .5px;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, .25);
+        }
 
-/* ─── HERO ─── */
-.hero{padding:24px 16px 32px;text-align:center;background:linear-gradient(170deg,#FFF7ED 0%,var(--cream) 65%);position:relative;overflow:hidden}
-.hero-glow1{position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,.13) 0%,transparent 70%);pointer-events:none}
-.hero-glow2{position:absolute;bottom:-60px;left:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(4,120,87,.08) 0%,transparent 70%);pointer-events:none}
-.badge-pill{display:inline-flex;align-items:center;gap:5px;background:var(--amber-l);color:var(--amber-d);border:1.5px solid var(--amber);border-radius:50px;padding:5px 12px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,8vw,46px);font-weight:900;color:var(--ink);line-height:1.1;margin-bottom:8px}
-.hero h1 em{font-style:italic;color:var(--coral-bright)}
-.hero-sub{font-size:13.5px;color:var(--ink3);font-weight:500;line-height:1.6;max-width:300px;margin:0 auto 20px}
-.hero-img-wrap{position:relative;max-width:250px;margin:0 auto 18px}
-.hero-img-wrap img{width:100%;border-radius:22px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 20px 50px rgba(146,41,10,.2),0 4px 12px rgba(0,0,0,.07)}
-.float-tag{position:absolute;background:var(--white);border-radius:12px;padding:6px 10px;box-shadow:0 4px 18px rgba(0,0,0,.14);font-size:10px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap;border:1px solid rgba(0,0,0,.05)}
-.float-tag.tl{top:-8px;left:-12px;color:var(--coral-m)}
-.float-tag.br{bottom:10px;right:-14px;color:var(--green-d)}
-.float-tag svg{width:13px;height:13px;flex-shrink:0}
-.social-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11.5px;color:var(--ink3);font-weight:600}
-.faces{display:flex}
-.face{width:22px;height:22px;border-radius:50%;border:2px solid #fff;margin-left:-5px;font-size:8.5px;font-weight:800;display:flex;align-items:center;justify-content:center;color:#fff}
-.face:first-child{margin-left:0}
+        /* ─── HERO ─── */
+        .hero {
+            padding: 0 0 28px;
+            text-align: center;
+            background: linear-gradient(175deg, #FFF7ED 0%, var(--cream) 50%, #FFFDF7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-top-visual {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto 6px;
+            border-radius: 0 0 28px 28px;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(107, 33, 11, .28), 0 4px 16px rgba(0, 0, 0, .1);
+            aspect-ratio: 4/3;
+            background: #f5e6d8;
+        }
+        .hero-top-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay-badge {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, .94);
+            backdrop-filter: blur(6px);
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--coral);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, .14);
+            white-space: nowrap;
+            letter-spacing: .2px;
+            border: 1.5px solid rgba(255, 255, 255, .8);
+            z-index: 2;
+        }
+        .hero-overlay-badge .hb-dot {
+            width: 9px;
+            height: 9px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: livepulse 1.4s infinite;
+            flex-shrink: 0;
+        }
+        @keyframes livepulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, .7);
+            }
+            50% {
+                box-shadow: 0 0 0 11px rgba(34, 197, 94, 0);
+            }
+        }
+        .hero-glow1 {
+            position: absolute;
+            top: -40px;
+            right: -60px;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(245, 158, 11, .16) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-glow2 {
+            position: absolute;
+            bottom: -40px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(4, 120, 87, .1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-content {
+            padding: 18px 16px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--amber-l);
+            color: var(--amber-d);
+            border: 1.5px solid var(--amber);
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            margin-bottom: 14px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 7.5vw, 44px);
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.08;
+            margin-bottom: 6px;
+            letter-spacing: -.3px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--coral-bright);
+            position: relative;
+            display: inline-block;
+        }
+        .hero h1 em::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgba(245, 158, 11, .35);
+            border-radius: 3px;
+            z-index: -1;
+        }
+        .hero-sub {
+            font-size: 14px;
+            color: var(--ink3);
+            font-weight: 500;
+            line-height: 1.6;
+            max-width: 340px;
+            margin: 0 auto 16px;
+        }
+        .hero-emotion-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFF;
+            border: 1.5px solid rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            padding: 10px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--ink2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+            margin-bottom: 16px;
+        }
+        .hero-emotion-tag .het-icon {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 11.5px;
+            color: var(--ink3);
+            font-weight: 600;
+        }
+        .faces {
+            display: flex;
+        }
+        .face {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2.5px solid #fff;
+            margin-left: -6px;
+            font-size: 9px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+        }
+        .face:first-child {
+            margin-left: 0;
+        }
 
-/* ─── TRUST ─── */
-.trust{display:flex;justify-content:center;background:var(--white);border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
-.trust-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:11px 6px;font-size:9.5px;font-weight:700;color:var(--ink3);text-align:center;border-right:1px solid rgba(0,0,0,.06);line-height:1.3;text-transform:uppercase;letter-spacing:.3px}
-.trust-item:last-child{border-right:none}
-.trust-ico{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.trust-ico svg{width:13px;height:13px}
-.trust-ico.g{background:var(--green-l);color:var(--green-d)}
-.trust-ico.a{background:var(--amber-l);color:var(--amber-d)}
-.trust-ico.c{background:#EDE9FE;color:#5B21B6}
+        /* ─── TRUST ─── */
+        .trust {
+            display: flex;
+            justify-content: center;
+            background: var(--white);
+            border-top: 1px solid rgba(0, 0, 0, .06);
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+        }
+        .trust-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 11px 6px;
+            font-size: 9.5px;
+            font-weight: 700;
+            color: var(--ink3);
+            text-align: center;
+            border-right: 1px solid rgba(0, 0, 0, .06);
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+        }
+        .trust-item:last-child {
+            border-right: none;
+        }
+        .trust-ico {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trust-ico svg {
+            width: 14px;
+            height: 14px;
+        }
+        .trust-ico.g {
+            background: var(--green-l);
+            color: var(--green-d);
+        }
+        .trust-ico.a {
+            background: var(--amber-l);
+            color: var(--amber-d);
+        }
+        .trust-ico.c {
+            background: #EDE9FE;
+            color: #5B21B6;
+        }
 
-/* ─── OFFERS SECTION ─── */
-.offers{padding:28px 14px 32px;background:var(--cream)}
-.sec-label{text-align:center;margin-bottom:22px}
-.sec-pill{display:inline-block;background:var(--coral);color:#fff;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:4px 12px;border-radius:50px;margin-bottom:8px}
-.sec-label h2{font-family:'Playfair Display',serif;font-size:21px;font-weight:900;color:var(--ink);line-height:1.2;margin-bottom:4px}
-.sec-label p{font-size:12.5px;color:var(--ink3);font-weight:500}
+        /* ─── EMOTIONAL BRIDGE ─── */
+        .emotional-bridge {
+            padding: 22px 16px 10px;
+            text-align: center;
+            background: var(--cream);
+        }
+        .emotional-bridge .eb-inner {
+            max-width: 380px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #FFFBEB, #FFF7ED);
+            border-radius: 18px;
+            padding: 18px 16px;
+            border: 1.5px solid rgba(245, 158, 11, .25);
+            position: relative;
+        }
+        .emotional-bridge .eb-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .emotional-bridge .eb-sub {
+            font-size: 12px;
+            color: var(--ink3);
+            font-weight: 500;
+        }
+        .emotional-bridge .eb-emoji {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 6px;
+        }
 
-/* ─── OFFER CARDS ─── */
-.offers-list{display:flex;flex-direction:column;gap:12px;max-width:420px;margin:0 auto}
-@media(min-width:600px){.offers-list{flex-direction:row;max-width:780px;align-items:stretch;gap:10px}}
+        /* ─── OFFERS SECTION ─── */
+        .offers {
+            padding: 24px 14px 32px;
+            background: var(--cream);
+        }
+        .sec-label {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sec-pill {
+            display: inline-block;
+            background: var(--coral);
+            color: #fff;
+            font-size: 9.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .9px;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 8px;
+        }
+        .sec-label h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+        .sec-label p {
+            font-size: 13px;
+            color: var(--ink3);
+            font-weight: 500;
+        }
 
-.ocard{border-radius:20px;overflow:hidden;position:relative;cursor:pointer;transition:transform .18s;-webkit-user-select:none;user-select:none;border:1.5px solid rgba(0,0,0,.09)}
-.ocard:active{transform:scale(.985)}
-@media(min-width:600px){.ocard{flex:1}}
+        /* ─── OFFER CARDS ─── */
+        .offers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        @media(min-width:600px) {
+            .offers-list {
+                flex-direction: row;
+                max-width: 820px;
+                align-items: stretch;
+                gap: 12px;
+            }
+        }
 
-.ocard-inner{padding:18px 16px 16px;background:var(--white)}
+        .ocard {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+            -webkit-user-select: none;
+            user-select: none;
+            border: 1.5px solid rgba(0, 0, 0, .09);
+            background: var(--white);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+        }
+        .ocard:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+        }
+        .ocard:active {
+            transform: scale(.985);
+        }
+        @media(min-width:600px) {
+            .ocard {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
 
-.ribbon{height:6px;width:100%}
-.ribbon-amber{background:linear-gradient(90deg,#D97706,#F59E0B,#FCD34D)}
-.ribbon-green{background:linear-gradient(90deg,var(--green-d),var(--green),#34D399)}
-.ribbon-coral{background:linear-gradient(90deg,var(--coral),var(--coral-m),var(--coral-bright),#FB923C)}
+        /* CARD IMAGE */
+        .ocard-img {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+            position: relative;
+            background: #f5ece3;
+            flex-shrink: 0;
+        }
+        @media(min-width:600px) {
+            .ocard-img {
+                height: 130px;
+            }
+        }
+        .ocard-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s;
+        }
+        .ocard:hover .ocard-img img {
+            transform: scale(1.04);
+        }
+        .ocard-img .ocard-img-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, .55);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 4px 9px;
+            border-radius: 20px;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+        }
 
-.popular-wrap{position:absolute;top:14px;right:0;z-index:2}
-.popular-badge{background:linear-gradient(90deg,var(--amber-m),var(--amber));color:#fff;font-size:8.5px;font-weight:800;padding:4px 14px 4px 10px;text-transform:uppercase;letter-spacing:.5px;border-radius:4px 0 0 4px;display:flex;align-items:center;gap:4px;white-space:nowrap}
-.popular-badge svg{width:10px;height:10px}
+        .ocard-inner {
+            padding: 16px 15px 16px;
+            background: var(--white);
+        }
 
-.ocard-header{display:flex;align-items:flex-start;gap:11px;margin-bottom:14px}
-.ocard-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ocard-ico svg{width:22px;height:22px}
-.ocard-ico.amber{background:var(--amber-l);color:var(--amber-d)}
-.ocard-ico.green{background:var(--green-l);color:var(--green-d)}
-.ocard-ico.coral{background:#FFF1EE;color:var(--coral)}
-.ocard h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:2px}
-.ocard-sub{font-size:10.5px;color:var(--ink3);font-weight:500}
+        .ribbon {
+            height: 5px;
+            width: 100%;
+        }
+        .ribbon-amber {
+            background: linear-gradient(90deg, #D97706, #F59E0B, #FCD34D);
+        }
+        .ribbon-green {
+            background: linear-gradient(90deg, var(--green-d), var(--green), #34D399);
+        }
+        .ribbon-coral {
+            background: linear-gradient(90deg, var(--coral), var(--coral-m), var(--coral-bright), #FB923C);
+        }
 
-.savings-badge{display:inline-flex;align-items:center;gap:4px;background:#FEF2F2;color:#B91C1C;border:1px solid #FECACA;border-radius:6px;padding:3px 8px;font-size:10px;font-weight:700;margin-bottom:10px}
-.savings-badge svg{width:10px;height:10px;flex-shrink:0}
+        .popular-wrap {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            z-index: 3;
+        }
+        .popular-badge {
+            background: linear-gradient(90deg, #D4A853, #F59E0B, #FCD34D);
+            color: #5C3D0A;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 5px 14px 5px 10px;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            border-radius: 4px 0 0 4px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+            box-shadow: 0 3px 12px rgba(180, 83, 9, .3);
+        }
+        .popular-badge svg {
+            width: 11px;
+            height: 11px;
+        }
 
-.price-block{background:var(--offwhite);border-radius:14px;padding:14px 14px 10px;margin-bottom:14px;border:1px solid rgba(0,0,0,.05);position:relative}
-.price-from{font-size:10.5px;color:var(--ink4);font-weight:500;margin-bottom:1px}
-.price-was{font-size:13px;color:var(--ink4);text-decoration:line-through;font-weight:500;margin-bottom:4px}
-.price-now{display:flex;align-items:baseline;gap:3px;margin-bottom:3px}
-.price-currency{font-size:15px;font-weight:800;color:var(--green-d);line-height:1}
-.price-big{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--green-d);line-height:1}
-.price-cents{font-size:20px;font-weight:800;color:var(--green-d);line-height:1;align-self:flex-start;margin-top:6px}
-.price-install{font-size:10px;color:var(--ink4);font-weight:500}
-.price-tag-off{position:absolute;top:-10px;right:12px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:20px;white-space:nowrap;box-shadow:0 3px 10px rgba(220,38,38,.3)}
+        .ocard-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            margin-bottom: 12px;
+        }
+        .ocard-ico {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .ocard-ico svg {
+            width: 21px;
+            height: 21px;
+        }
+        .ocard-ico.amber {
+            background: var(--amber-l);
+            color: var(--amber-d);
+        }
+        .ocard-ico.green {
+            background: var(--green-l);
+            color: var(--green-d);
+        }
+        .ocard-ico.coral {
+            background: #FFF1EE;
+            color: var(--coral);
+        }
+        .ocard h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.15;
+            margin-bottom: 2px;
+        }
+        .ocard-sub {
+            font-size: 10.5px;
+            color: var(--ink3);
+            font-weight: 500;
+        }
 
-.feat-list{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-.feat-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--ink2);font-weight:500;line-height:1.35}
-.feat-ck{width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.5px}
-.feat-ck svg{width:9px;height:9px}
-.feat-ck.green{background:var(--green-l);color:var(--green-d)}
-.feat-ck.amber{background:var(--amber-l);color:var(--amber-d)}
-.feat-ck.coral{background:#FFF1EE;color:var(--coral-m)}
-.feat-strong{font-weight:700;color:var(--ink)}
+        .savings-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #FEF2F2;
+            color: #B91C1C;
+            border: 1px solid #FECACA;
+            border-radius: 6px;
+            padding: 4px 9px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .savings-badge svg {
+            width: 10px;
+            height: 10px;
+            flex-shrink: 0;
+        }
 
-.ocard-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:14px 16px;border-radius:50px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:#fff;border:none;cursor:pointer;text-decoration:none;min-height:48px;transition:opacity .2s,transform .15s;position:relative;overflow:hidden}
-.ocard-btn:active{transform:scale(.96)}
-.ocard-btn .btn-icon{font-size:16px;flex-shrink:0}
-.ocard-btn .btn-arr{display:inline-block;transition:transform .25s;font-size:15px}
-.ocard-btn:active .btn-arr{transform:translateX(4px)}
-.btn-amber{background:linear-gradient(135deg,#B45309 0%,#D97706 50%,#F59E0B 100%);box-shadow:0 6px 20px rgba(180,83,9,.28)}
-.btn-green{background:linear-gradient(135deg,var(--green-d) 0%,var(--green) 100%);box-shadow:0 6px 20px rgba(4,120,87,.28)}
-.btn-coral{background:linear-gradient(135deg,var(--coral) 0%,var(--coral-m) 40%,var(--coral-bright) 100%);box-shadow:0 8px 28px rgba(146,41,10,.35);animation:coralpulse 2s ease-in-out infinite}
-@keyframes coralpulse{0%,100%{box-shadow:0 8px 28px rgba(146,41,10,.35)}50%{box-shadow:0 10px 36px rgba(146,41,10,.55),0 0 0 7px rgba(194,65,12,.09)}}
+        .price-block {
+            background: var(--offwhite);
+            border-radius: 14px;
+            padding: 14px 14px 10px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(0, 0, 0, .05);
+            position: relative;
+        }
+        .price-from {
+            font-size: 10.5px;
+            color: var(--ink4);
+            font-weight: 500;
+            margin-bottom: 1px;
+        }
+        .price-was {
+            font-size: 13px;
+            color: var(--ink4);
+            text-decoration: line-through;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .price-now {
+            display: flex;
+            align-items: baseline;
+            gap: 3px;
+            margin-bottom: 3px;
+        }
+        .price-currency {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--green-d);
+            line-height: 1;
+        }
+        .price-big {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--green-d);
+            line-height: 1;
+        }
+        .price-cents {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--green-d);
+            line-height: 1;
+            align-self: flex-start;
+            margin-top: 6px;
+        }
+        .price-install {
+            font-size: 10px;
+            color: var(--ink4);
+            font-weight: 500;
+        }
+        .price-tag-off {
+            position: absolute;
+            top: -10px;
+            right: 12px;
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(220, 38, 38, .3);
+        }
 
-.ocard.combo{border-color:transparent;box-shadow:0 0 0 2px var(--amber-m),0 16px 40px rgba(146,41,10,.18)}
-.ocard.combo .ocard-inner{background:linear-gradient(180deg,#FFFDF7 0%,var(--white) 100%)}
-.combo-crown{display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(90deg,var(--amber-l),#FEF3C7);border:1px solid var(--amber);border-radius:8px;padding:5px 10px;margin-bottom:12px;font-size:11px;font-weight:700;color:var(--amber-d)}
-.combo-crown svg{width:13px;height:13px;flex-shrink:0}
+        .feat-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .feat-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 11.5px;
+            color: var(--ink2);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .feat-ck {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .feat-ck svg {
+            width: 9px;
+            height: 9px;
+        }
+        .feat-ck.green {
+            background: var(--green-l);
+            color: var(--green-d);
+        }
+        .feat-ck.amber {
+            background: var(--amber-l);
+            color: var(--amber-d);
+        }
+        .feat-ck.coral {
+            background: #FFF1EE;
+            color: var(--coral-m);
+        }
+        .feat-strong {
+            font-weight: 700;
+            color: var(--ink);
+        }
 
-.mini-guar{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:8px;font-size:10.5px;color:var(--ink3);font-weight:600}
-.mini-guar svg{width:12px;height:12px;color:var(--green);flex-shrink:0}
+        .ocard-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            min-height: 48px;
+            transition: opacity .2s, transform .15s, box-shadow .2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .ocard-btn:hover {
+            opacity: .92;
+        }
+        .ocard-btn:active {
+            transform: scale(.96);
+        }
+        .ocard-btn .btn-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .ocard-btn .btn-arr {
+            display: inline-block;
+            transition: transform .25s;
+            font-size: 15px;
+        }
+        .ocard-btn:active .btn-arr {
+            transform: translateX(4px);
+        }
+        .btn-amber {
+            background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #F59E0B 100%);
+            box-shadow: 0 6px 20px rgba(180, 83, 9, .28);
+        }
+        .btn-green {
+            background: linear-gradient(135deg, var(--green-d) 0%, var(--green) 100%);
+            box-shadow: 0 6px 20px rgba(4, 120, 87, .28);
+        }
+        .btn-coral {
+            background: linear-gradient(135deg, var(--coral) 0%, var(--coral-m) 40%, var(--coral-bright) 100%);
+            box-shadow: 0 8px 28px rgba(139, 46, 15, .4);
+            animation: coralpulse 2s ease-in-out infinite;
+        }
+        @keyframes coralpulse {
+            0%,
+            100% {
+                box-shadow: 0 8px 28px rgba(139, 46, 15, .4);
+            }
+            50% {
+                box-shadow: 0 12px 38px rgba(139, 46, 15, .6), 0 0 0 8px rgba(184, 67, 26, .1);
+            }
+        }
 
-.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px}
-.content-item{background:var(--offwhite);border-radius:10px;padding:8px 9px;display:flex;align-items:center;gap:6px;border:1px solid rgba(0,0,0,.05)}
-.content-item .ci-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ink);line-height:1}
-.content-item .ci-lbl{font-size:9.5px;color:var(--ink3);font-weight:600;line-height:1.25}
+        .ocard.combo {
+            border-color: transparent;
+            box-shadow: 0 0 0 2.5px var(--amber-m), 0 18px 44px rgba(139, 46, 15, .22);
+            background: linear-gradient(180deg, #FFFDF7 0%, var(--white) 100%);
+        }
+        .combo-crown {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: linear-gradient(90deg, #FFF8E7, #FEF3C7);
+            border: 1.5px solid var(--amber);
+            border-radius: 8px;
+            padding: 6px 10px;
+            margin-bottom: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--amber-d);
+        }
+        .combo-crown svg {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+        }
 
-/* ─── COUNTDOWN ─── */
-.countdown-bar{background:linear-gradient(135deg,#7F1D1D,var(--coral),#C2410C);color:#fff;padding:16px 14px;text-align:center}
-.cd-label{font-size:11.5px;font-weight:600;margin-bottom:8px;opacity:.9;display:flex;align-items:center;justify-content:center;gap:5px}
-.cd-label svg{width:14px;height:14px;color:#FCD34D;flex-shrink:0}
-.cd-digits{display:flex;justify-content:center;gap:7px}
-.cd-block{background:rgba(255,255,255,.16);border-radius:10px;padding:8px 12px;min-width:48px;text-align:center;backdrop-filter:blur(4px)}
-.cd-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1;letter-spacing:1px;font-variant-numeric:tabular-nums}
-.cd-lbl{font-size:8.5px;text-transform:uppercase;font-weight:700;opacity:.7;letter-spacing:.5px;margin-top:1px}
+        .mini-guar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 8px;
+            font-size: 10.5px;
+            color: var(--ink3);
+            font-weight: 600;
+        }
+        .mini-guar svg {
+            width: 12px;
+            height: 12px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
 
-/* ─── LIVE BUYERS BAR ─── */
-.live-bar{background:var(--white);border-bottom:1px solid rgba(0,0,0,.07);padding:8px 14px;display:flex;align-items:center;gap:8px;overflow:hidden}
-.live-dot{width:8px;height:8px;background:var(--green);border-radius:50%;flex-shrink:0;animation:livepulse 1.4s infinite}
-@keyframes livepulse{0%,100%{box-shadow:0 0 0 0 rgba(4,120,87,.6)}50%{box-shadow:0 0 0 9px rgba(4,120,87,0)}}
-.live-bar-text{font-size:11.5px;color:var(--ink2);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.live-bar-text span{color:var(--coral-m);font-weight:800}
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .content-item {
+            background: var(--offwhite);
+            border-radius: 10px;
+            padding: 8px 9px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+        .content-item .ci-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1;
+        }
+        .content-item .ci-lbl {
+            font-size: 9.5px;
+            color: var(--ink3);
+            font-weight: 600;
+            line-height: 1.25;
+        }
 
-/* ─── PREVIEW ─── */
-.preview-sec{padding:20px 0 24px;background:var(--white)}
-.preview-title{text-align:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:14px;padding:0 14px}
-.preview-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 14px 4px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.preview-scroll::-webkit-scrollbar{display:none}
-.prev-card{flex-shrink:0;width:128px;scroll-snap-align:start}
-@media(min-width:400px){.prev-card{width:140px}}
-.prev-card img{width:100%;border-radius:12px;display:block;aspect-ratio:1;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.1)}
-.prev-card span{display:block;font-size:9.5px;font-weight:700;color:var(--ink3);margin-top:6px;text-align:center;text-transform:uppercase;letter-spacing:.4px}
+        /* ─── COUNTDOWN ─── */
+        .countdown-bar {
+            background: linear-gradient(135deg, #5C1A0A, var(--coral), #B8431A);
+            color: #fff;
+            padding: 16px 14px;
+            text-align: center;
+        }
+        .cd-label {
+            font-size: 11.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            opacity: .9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .cd-label svg {
+            width: 14px;
+            height: 14px;
+            color: #FCD34D;
+            flex-shrink: 0;
+        }
+        .cd-digits {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+        }
+        .cd-block {
+            background: rgba(255, 255, 255, .16);
+            border-radius: 10px;
+            padding: 8px 12px;
+            min-width: 48px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+        .cd-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: 1px;
+            font-variant-numeric: tabular-nums;
+        }
+        .cd-lbl {
+            font-size: 8.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: .7;
+            letter-spacing: .5px;
+            margin-top: 1px;
+        }
 
-/* ─── FEATURES ─── */
-.features{padding:24px 14px;background:var(--cream)}
-.feat-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:16px}
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin:0 auto}
-.feat-card{background:var(--white);border-radius:14px;padding:14px 12px;border:1px solid rgba(0,0,0,.06)}
-.feat-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.feat-icon svg{width:17px;height:17px}
-.feat-icon.f1{background:#EDE9FE;color:#5B21B6}
-.feat-icon.f2{background:#FFF1EE;color:var(--coral-m)}
-.feat-icon.f3{background:var(--green-l);color:var(--green-d)}
-.feat-icon.f4{background:var(--amber-l);color:var(--amber-d)}
-.feat-card h4{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.2}
-.feat-card p{font-size:10.5px;color:var(--ink3);line-height:1.4;font-weight:500}
+        /* ─── LIVE BUYERS BAR ─── */
+        .live-bar {
+            background: var(--white);
+            border-bottom: 1px solid rgba(0, 0, 0, .07);
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow: hidden;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: livepulse 1.4s infinite;
+        }
+        .live-bar-text {
+            font-size: 11.5px;
+            color: var(--ink2);
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .live-bar-text span {
+            color: var(--coral-m);
+            font-weight: 800;
+        }
 
-/* ─── TESTIMONIALS ─── */
-.testi{padding:24px 14px;background:var(--white)}
-.testi-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:14px}
-.testi-card{background:var(--cream);border-radius:14px;padding:14px;margin-bottom:10px;max-width:420px;margin-left:auto;margin-right:auto;border:1px solid rgba(0,0,0,.05)}
-.testi-card:last-of-type{margin-bottom:0}
-.stars{color:var(--amber);font-size:12px;letter-spacing:2px;margin-bottom:6px}
-.testi-text{font-size:12.5px;color:var(--ink2);font-weight:500;line-height:1.65;margin-bottom:10px;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:8px}
-.av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#fff;flex-shrink:0}
-.av1{background:linear-gradient(135deg,#7C3AED,#5B21B6)}
-.av2{background:linear-gradient(135deg,var(--coral-m),var(--coral))}
-.av3{background:linear-gradient(135deg,var(--green),var(--green-d))}
-.author-name{font-size:11.5px;font-weight:700;color:var(--ink)}
-.author-role{font-size:9.5px;color:var(--ink3)}
+        /* ─── PREVIEW ─── */
+        .preview-sec {
+            padding: 22px 0 26px;
+            background: var(--white);
+        }
+        .preview-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 14px;
+            padding: 0 14px;
+        }
+        .preview-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 0 14px 4px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .preview-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .prev-card {
+            flex-shrink: 0;
+            width: 128px;
+            scroll-snap-align: start;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+            transition: transform .2s;
+            background: #f5ece3;
+        }
+        .prev-card:hover {
+            transform: translateY(-3px);
+        }
+        @media(min-width:400px) {
+            .prev-card {
+                width: 140px;
+            }
+        }
+        .prev-card img {
+            width: 100%;
+            border-radius: 0;
+            display: block;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        .prev-card span {
+            display: block;
+            font-size: 9.5px;
+            font-weight: 700;
+            color: var(--ink3);
+            margin-top: 0;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            padding: 8px 6px;
+            background: #fff;
+        }
 
-/* ─── GUARANTEE ─── */
-.guarantee{padding:24px 14px;background:var(--cream)}
-.guar-card{background:linear-gradient(135deg,#F0FDF4,#D1FAE5);border:2px solid var(--green);border-radius:18px;padding:20px 16px;text-align:center;max-width:420px;margin:0 auto}
-.guar-ico{width:50px;height:50px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff}
-.guar-ico svg{width:24px;height:24px}
-.guar-card h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--green-d);margin-bottom:5px}
-.guar-card p{font-size:12px;color:var(--green-d);font-weight:500;line-height:1.6;opacity:.85}
+        /* ─── FEATURES ─── */
+        .features {
+            padding: 26px 14px;
+            background: var(--cream);
+        }
+        .feat-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .feat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        .feat-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 14px 12px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            transition: transform .2s;
+        }
+        .feat-card:hover {
+            transform: translateY(-2px);
+        }
+        .feat-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .feat-icon svg {
+            width: 17px;
+            height: 17px;
+        }
+        .feat-icon.f1 {
+            background: #EDE9FE;
+            color: #5B21B6;
+        }
+        .feat-icon.f2 {
+            background: #FFF1EE;
+            color: var(--coral-m);
+        }
+        .feat-icon.f3 {
+            background: var(--green-l);
+            color: var(--green-d);
+        }
+        .feat-icon.f4 {
+            background: var(--amber-l);
+            color: var(--amber-d);
+        }
+        .feat-card h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+        .feat-card p {
+            font-size: 10.5px;
+            color: var(--ink3);
+            line-height: 1.4;
+            font-weight: 500;
+        }
 
-/* ─── FAQ ─── */
-.faq{padding:24px 14px 28px;background:var(--white)}
-.faq-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);text-align:center;margin-bottom:14px}
-.faq-list{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
-.faq-item{background:var(--cream);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,.06)}
-.faq-btn{width:100%;padding:13px 14px;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px}
-.faq-chev{transition:transform .3s;color:var(--coral-m);flex-shrink:0;width:14px;height:14px}
-.faq-item.open .faq-chev{transform:rotate(180deg)}
-.faq-panel{max-height:0;overflow:hidden;transition:max-height .32s ease}
-.faq-item.open .faq-panel{max-height:200px}
-.faq-panel p{padding:0 14px 14px;font-size:12px;color:var(--ink3);font-weight:500;line-height:1.65}
+        /* ─── TESTIMONIALS ─── */
+        .testi {
+            padding: 26px 14px;
+            background: var(--white);
+        }
+        .testi-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 14px;
+        }
+        .testi-card {
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 10px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+        .testi-card:last-of-type {
+            margin-bottom: 0;
+        }
+        .stars {
+            color: var(--amber);
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .testi-text {
+            font-size: 12.5px;
+            color: var(--ink2);
+            font-weight: 500;
+            line-height: 1.65;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .av {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .av1 {
+            background: linear-gradient(135deg, #7C3AED, #5B21B6);
+        }
+        .av2 {
+            background: linear-gradient(135deg, var(--coral-m), var(--coral));
+        }
+        .av3 {
+            background: linear-gradient(135deg, var(--green), var(--green-d));
+        }
+        .author-name {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+        .author-role {
+            font-size: 9.5px;
+            color: var(--ink3);
+        }
 
-/* ─── FINAL CTA ─── */
-.final-cta{padding:36px 16px;background:linear-gradient(150deg,#7C1D1D 0%,var(--coral) 40%,#C2410C 100%);text-align:center;position:relative;overflow:hidden}
-.final-cta::before,.final-cta::after{content:'';position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.04)}
-.final-cta::before{top:-60px;left:-50px;width:220px;height:220px}
-.final-cta::after{bottom:-70px;right:-40px;width:200px;height:200px}
-.final-inner{position:relative;z-index:1;max-width:340px;margin:0 auto}
-.final-cta h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:5px}
-.final-cta .sub{font-size:13px;color:rgba(255,255,255,.8);font-weight:500;margin-bottom:14px}
-.final-old{font-size:12.5px;color:rgba(255,255,255,.45);text-decoration:line-through;margin-bottom:2px}
-.final-price{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#fff;line-height:1;margin-bottom:3px}
-.final-price sup{font-size:22px;vertical-align:super;font-family:'DM Sans',sans-serif;font-weight:800}
-.final-note{font-size:11px;color:rgba(255,255,255,.6);margin-bottom:18px}
-.btn-final{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--coral);padding:14px 26px;border-radius:50px;font-size:13.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;text-decoration:none;box-shadow:0 10px 32px rgba(0,0,0,.25);transition:transform .2s;border:none;cursor:pointer;min-height:50px}
-.btn-final:active{transform:scale(.95)}
+        /* ─── GUARANTEE ─── */
+        .guarantee {
+            padding: 26px 14px;
+            background: var(--cream);
+        }
+        .guar-card {
+            background: linear-gradient(135deg, #F0FDF4, #D1FAE5);
+            border: 2px solid var(--green);
+            border-radius: 18px;
+            padding: 20px 16px;
+            text-align: center;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        .guar-ico {
+            width: 50px;
+            height: 50px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            color: #fff;
+        }
+        .guar-ico svg {
+            width: 24px;
+            height: 24px;
+        }
+        .guar-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--green-d);
+            margin-bottom: 5px;
+        }
+        .guar-card p {
+            font-size: 12px;
+            color: var(--green-d);
+            font-weight: 500;
+            line-height: 1.6;
+            opacity: .85;
+        }
 
-/* ─── STICKY ─── */
-.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:10px 14px;padding-bottom:calc(10px + var(--safe-b));box-shadow:0 -4px 20px rgba(0,0,0,.12);z-index:800;display:flex;align-items:center;gap:10px;border-top:1.5px solid rgba(0,0,0,.07)}
-.sticky-prices .s-old{font-size:9.5px;color:#9CA3AF;text-decoration:line-through;font-weight:600}
-.sticky-prices .s-new{font-family:'Playfair Display',serif;font-size:19px;font-weight:900;color:var(--green-d);line-height:1}
-.btn-sticky{flex:1;background:linear-gradient(135deg,var(--coral),var(--coral-m));color:#fff;padding:12px;border-radius:50px;text-align:center;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;text-decoration:none;border:none;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:center;gap:5px;animation:coralpulse 2s ease-in-out infinite}
-.btn-sticky:active{transform:scale(.96)}
+        /* ─── FAQ ─── */
+        .faq {
+            padding: 26px 14px 30px;
+            background: var(--white);
+        }
+        .faq-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            text-align: center;
+            margin-bottom: 14px;
+        }
+        .faq-list {
+            max-width: 420px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .faq-item {
+            background: var(--cream);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, .06);
+        }
+        .faq-btn {
+            width: 100%;
+            padding: 13px 14px;
+            background: none;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--ink);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            min-height: 46px;
+        }
+        .faq-chev {
+            transition: transform .3s;
+            color: var(--coral-m);
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+        }
+        .faq-item.open .faq-chev {
+            transform: rotate(180deg);
+        }
+        .faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .32s ease;
+        }
+        .faq-item.open .faq-panel {
+            max-height: 200px;
+        }
+        .faq-panel p {
+            padding: 0 14px 14px;
+            font-size: 12px;
+            color: var(--ink3);
+            font-weight: 500;
+            line-height: 1.65;
+        }
 
-/* ─── TOAST ─── */
-.toast{position:fixed;bottom:76px;left:12px;right:12px;max-width:330px;background:var(--white);border-radius:14px;padding:11px 12px;box-shadow:0 8px 28px rgba(0,0,0,.15);z-index:700;display:flex;align-items:center;gap:9px;transform:translateX(-120%);transition:transform .5s cubic-bezier(.22,.61,.36,1);border-left:3px solid var(--green)}
-@media(min-width:420px){.toast{right:auto;max-width:310px}}
-.toast.show{transform:translateX(0)}
-.livepulse-dot{width:9px;height:9px;background:var(--green);border-radius:50%;flex-shrink:0;animation:livepulse 1.3s infinite}
-.toast-name{font-weight:700;font-size:11.5px;color:var(--ink)}
-.toast-act{font-size:10px;color:var(--green-d);font-weight:600}
-.toast-time{font-size:9.5px;color:var(--ink3)}
+        /* ─── FINAL CTA ─── */
+        .final-cta {
+            padding: 38px 16px;
+            background: linear-gradient(150deg, #5C1A0A 0%, var(--coral) 35%, #B8431A 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .final-cta::before,
+        .final-cta::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background: rgba(255, 255, 255, .04);
+        }
+        .final-cta::before {
+            top: -60px;
+            left: -50px;
+            width: 240px;
+            height: 240px;
+        }
+        .final-cta::after {
+            bottom: -70px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+        }
+        .final-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .final-cta .sub {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .8);
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+        .final-old {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, .45);
+            text-decoration: line-through;
+            margin-bottom: 2px;
+        }
+        .final-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+        .final-price sup {
+            font-size: 22px;
+            vertical-align: super;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 800;
+        }
+        .final-note {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 18px;
+        }
+        .btn-final {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #fff;
+            color: var(--coral);
+            padding: 15px 28px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            text-decoration: none;
+            box-shadow: 0 10px 32px rgba(0, 0, 0, .28);
+            transition: transform .2s;
+            border: none;
+            cursor: pointer;
+            min-height: 50px;
+        }
+        .btn-final:active {
+            transform: scale(.95);
+        }
 
-footer{padding:18px 14px 88px;text-align:center;font-size:11px;color:var(--ink3);background:var(--cream)}
-footer a{color:var(--coral-m);font-weight:600;text-decoration:none}
-</style>
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1866970273982797');fbq('track','PageView');</script>
+        /* ─── STICKY ─── */
+        .sticky {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 10px 14px;
+            padding-bottom: calc(10px + var(--safe-b));
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, .14);
+            z-index: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-top: 1.5px solid rgba(0, 0, 0, .07);
+        }
+        .sticky-prices .s-old {
+            font-size: 9.5px;
+            color: #9CA3AF;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+        .sticky-prices .s-new {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-weight: 900;
+            color: var(--green-d);
+            line-height: 1;
+        }
+        .btn-sticky {
+            flex: 1;
+            background: linear-gradient(135deg, var(--coral), var(--coral-m));
+            color: #fff;
+            padding: 12px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            animation: coralpulse 2s ease-in-out infinite;
+        }
+        .btn-sticky:active {
+            transform: scale(.96);
+        }
+
+        /* ─── TOAST ─── */
+        .toast {
+            position: fixed;
+            bottom: 76px;
+            left: 12px;
+            right: 12px;
+            max-width: 330px;
+            background: var(--white);
+            border-radius: 14px;
+            padding: 11px 12px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .16);
+            z-index: 700;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            transform: translateX(-120%);
+            transition: transform .5s cubic-bezier(.22, .61, .36, 1);
+            border-left: 3px solid #22c55e;
+        }
+        @media(min-width:420px) {
+            .toast {
+                right: auto;
+                max-width: 310px;
+            }
+        }
+        .toast.show {
+            transform: translateX(0);
+        }
+        .livepulse-dot {
+            width: 9px;
+            height: 9px;
+            background: #22c55e;
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: livepulse 1.3s infinite;
+        }
+        .toast-name {
+            font-weight: 700;
+            font-size: 11.5px;
+            color: var(--ink);
+        }
+        .toast-act {
+            font-size: 10px;
+            color: var(--green-d);
+            font-weight: 600;
+        }
+        .toast-time {
+            font-size: 9.5px;
+            color: var(--ink3);
+        }
+
+        footer {
+            padding: 18px 14px 88px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--ink3);
+            background: var(--cream);
+        }
+        footer a {
+            color: var(--coral-m);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* ─── IMAGE FALLBACK ─── */
+        .ocard-img {
+            background: linear-gradient(135deg, #f5ece3, #fdf3e8, #fef9f2);
+        }
+        .ocard-img.fallback-amber {
+            background: linear-gradient(135deg, #FFF7ED, #FFFBEB, #FEF3C7);
+        }
+        .ocard-img.fallback-green {
+            background: linear-gradient(135deg, #ECFDF5, #F0FDF4, #D1FAE5);
+        }
+        .ocard-img.fallback-coral {
+            background: linear-gradient(135deg, #FFF1EE, #FFF5F3, #FFEDE8);
+        }
+    </style>
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1866970273982797');
+        fbq('track', 'PageView');
+    </script>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color:#FCD34D;flex-shrink:0"><path d="M12 2c-3 5-6 8.5-6 13a6 6 0 0 0 12 0c0-4.5-3-8-6-13z"/></svg>
-  <strong>OFERTA RELÂMPAGO</strong> — expira em
-  <span class="cd-pill" id="cd-inline">02:47:33</span>
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="color:#FCD34D;flex-shrink:0"><path d="M12 2c-3 5-6 8.5-6 13a6 6 0 0 0 12 0c0-4.5-3-8-6-13z"/></svg>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-glow1"></div><div class="hero-glow2"></div>
-  <div class="badge-pill">
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
-    +2.000 famílias abençoadas
-  </div>
-  <h1>Booby <em>Goodies</em><br>Cristão</h1>
-  <p class="hero-sub">Atividades bíblicas divertidas para seus filhos crescerem na fé com alegria!</p>
-  <div class="hero-img-wrap">
-    <div class="float-tag tl">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantia 7 dias
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <span class="icon-fire">🔥</span>
+        <strong>OFERTA RELÂMPAGO</strong> — expira em
+        <span class="cd-pill" id="cd-inline">02:47:33</span>
+        <span class="icon-fire">🔥</span>
     </div>
-    <div class="float-tag br">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Acesso imediato!
-    </div>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFhUVFxUZFRgYFxYXFxoWFhkYFxcYGRgYHyggGBolHRkXITEiJSktLjAxFx8zODMsNygtLisBCgoKDg0OGxAQGy8mICUrLTUwLy8tLS8tNi8vLS4tLS0tLy0vLy0rLS01LS8tLS8tLS0vLS0tLS0tLS0tLS0tLf/AABEIARQAtgMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAABQQGAQIDB//EAE0QAAIBAgQDBAUGDAMFCAMAAAECAwARBBIhMQVBUQYTImEycYGR0hQWQlJTkgcXIzNUYnKClKGxwaLR8IOTsrPCFSQ0Q2Nzo+EmdPH/xAAaAQACAwEBAAAAAAAAAAAAAAAAAQIDBAUG/8QAMhEAAgEDAgIIBAcBAQAAAAAAAAECAxESITEEUQUUIkFSYXHwEzKBkSMzobHB0fHhQv/aAAwDAQACEQMRAD8Av/zS4f8AoGE/h4fho+aXD/0DCfw8Pw05orhZy5s34rkJvmlw/wDQMJ/Dw/DR80uH/oGE/h4fhppDiEe+R1axscpDWPQ22PlXKXiMKq7tNGEQ2di6hVN7WY3spvprTynzYrIX/NPh/wCgYT+Hh+Gs/NLh/wCgYT+Hh+Gm6MCAQQQQCCNQQdiDzFZpZy5seK5Cb5p8P/QMJ/Dw/DR80uH/AKBhP4eH4ack21Nc8NiEkXNG6up5qwYe8aUZy5sMVyFfzS4f+gYT+Hh+GsfNLh/6BhP4eH4abYidUUu7KqqCWZiAoA3JJ0AogmV1DowZWAKspBUg6ggjQijOXNhiuQq+aXD/ANAwn8PD8NHzS4f+gYT+Hh+GnFFGcubDFchP80uH/oGE/h4fho+aXD/0DCfw8Pw04JtqdhvUfC8QhkJWOWNyNwjqxHrAOlPOfNixQv8Amlw/9Awn8PD8NHzS4f8AoGE/h4fhpzXDB42KVc0UiSKCVJRgwzDcXHMUZz5seK5C35pcP/QMJ/Dw/DR80uH/AKBhP4eH4ac1q7hQSSAALkk2AA3JJ2pZy5sMVyFHzS4f+gYT+Hh+Gj5pcP8A0DCfw8Pw0zixcbZcsiNnuVsynMBuVsdfZXannPmxYrkJvmlw/wDQMJ/Dw/DR80uH/oGE/h4fhpzRRnLmwxXITfNLh/6BhP4eH4aKc0U85cwxXIKBRRVZI8s7HdpPknypPkmKmzYqVs0EWdR6Iyk3Fm0v6iKjcKxS/IOKStCrg4lX7qUMPTlGjZSCGXNyOhFXvsbwKTBriBIyN3uIeVchY2VgoAOYDXTlScdjZ/k2PhzxZsVN3kZu+VV7wPZ/DcGw5A1oyjd/QLmnEO1ssTYbDQJhYs+GilzYhnjh8QsIo8u1rWFz5euN22xmOz8POWJC0kJASRyDiC35tiLZorZNfM60y4z2exskUUKfIpI1hjjKzo5KOq5WkjdRe50tcC2Uab31x3Y6YYPCQwTIZsHIsimQMEYhi2XwgkKCRbyW2m4LxVgR049xvEfksAMPFJisRExlUs4gRPEGuQcxU5WG4253ArlwntDLCmJwsuHiinwmHeWNY79y6ItxYXuBcrfW5udiK78S7P413gxiSQJjYkZJBaQ4d1JYhb2zADMeXPlYGtcF2XxDfKp8VLE2JxEDwqEDCKNWWwAJGYi4XlpY73pdmwiEvHMVisDPiJ8NB8m+TuQpL5pJUIubBrrHo1vpXUG9S241LDgcG8C4KESRJczymKJPCpCot8zbn6VxbW971Og7PyjhZwJZO8MLx5gWyXYtY3y3tr0pViux+JAwTxHDPJhYRE0c4doW0tmWwvfXmBsvShOO3mBiHt5IMLi5XhRpsK0asI2LRMJGKq4bXw6Nz5DUX0c9kuK4nEBmmOEdLDK+GkdvEd0ZW1Ugefs3sp4N2UxmGGLKS4VXxDQsmWNu6AQyF0MZHgVs4XQtpfnY1I7J9l5oMTJipvk0bPHk7rCq6xekrZyHA8WnIfSNEsLOwyJ2+zYjF4LAFisMxZpbaZwuoW/7re1geQp1F2LwKSRSxwCN4WzKUZhfQiza+LrrrpvYkHPa3s38sEbxyGKeBs0MgF7HQkEdLgHytzFwY3DsFxZpYzicThljja7LCrFpRYjK+dQFGvL3aCo37Ks7AR+A9osbisRJGsMIihxMkcshLX7tSVUIubWTQknbUaUk4R2n+S8O72HCwxl8WYrLnEKkqD3khJZjtawOwAG1jbOyXBJMK2KMjIRPiJJkyliQrEmzXA122vSrhXZnG4fBtBHJhS5neRlkV5IXjZAoRrgFdRfQHYedSvG9hHHjPE8dJw2aQ/JG5GTDyuymLKS7JzDhsgAv9bQWF+3DmxEnCf8AvMUDqYYe7DzMivFlQh5pCfC3M7XtbS9Y4N2LkSDGJI8SNi1ACQK3cREBgCoaxNywuNNFrnL2Vx0+A+RzyYcGLuRhzH3hBEQK2mzAbjLsNCL2NO8e7mMhdlOJRpjljbD4DPOjlJsEcwuoZmQ9CQh2ty3vpO7K9rcXjZVIXBrGWIaIySDFRqL3YqRZtuQ9dtbYwHZTF/LcPjJBgo+6VwyYdHUaxyIpFx4zdxe5WwFh54XsljJcVDNiHwg7mRXM0MbpiJcpBtILZddjY8zTbgwL3RRRWcQUUUUAFFFFIZWeO9rvk+JGFXDSzSNGHAjsTYlhtvplJqR2d7UR4t5Iu7khmj1eKUWa2mo8tRvY6jTUVWO0Mk68biOGRHl+TCyuSq2vNe5HlUmPCz4Q4viuMaITGLJHHHcoL5FQEnclljHPmb62F2KsA1wfbSCTGtggrBgzqHuMrOgJYAbjZh+75137T9qBg3hj7mSVp84QJa91KC1juTnFrdK8sWdYcLhpUjm+UxTtM7tGwRlYi35TmDki+83WrZ29xTS4jhUuGyszlnhzXyksYGTNbW216eCuh2LFwbtgk8/yWSCbDzEZlWVQMwAJNud7Ana1gddK37XdrY8B3eeNpGkzWVSAQFtqb9SQB7elVvsyZcXxR5cYyJPg1KrCikAg5lLAkklR3l/POp0GlLuKcRhxHEcS8ySvEkUmGi7uNpLPYoz6aDUykHncUsFkB6lhp1kRZEN1dVZT1VhcH3GoPH+Nw4OIzTMQL2UDVmbU5VHXQ72AtqaQfgt4kZMH3Lenh2KEHcKbsmnK3iX9yoH4TCFxPDpJPzCynP8AVHjiY3HPwqx9StUVHtWC2thphO2jM0YkwGKiSVlVJClxdjZbiwsDptepvaHtXFhXWEJJNO+qxRDM1tbE9L2OgudL2trTqXFIqq7OoVyoViwAYuQFAPMkkWt1qkcBdY+NYxZrCSRV7ktpmSymyk7+ELp/6Z6UJJ62ENOF9tEeZcPPBNhpX9ASiysTsAdDc8tLE6XvpU6DtCrY58D3bBkj7wvcZSLRm1t7/lB7qrn4UpFb5JChBxBnUoB6QUi3rAL5PXl8q6YM/wD5BiP/ANYf0w9PFNX8gLTx3jMODiM0zWUGwA1ZmNyFUczofLQk2qufP7IA82BxUULEWlK3GuxIsNPUTfleov4SCFn4fLJrh1mIk+qDmjbXr4Vc26K1WXtXi4VwU7yMpR4nC6izllIQKeZJta3rpJKy0A4doO1UeFihmVDMs7AJkI1uuYEX3vUfh3bNXnTDTYafDySfm+9Wysel97nW2luV72Bo/EI5F4Vw6/pHEMyA7WZnaO/6puD6jTfBPiMVxaOPHmOOTCgvGkasFc+FvCzE3+i3qQiw1qeEbDsW3C9o1efFQCNgcKoLG4s1wTp0250ji/CKDH3/AMhxPc3sZAFZRrbfQb6biuPCf/H8W/8AbH/AaqOG4hjI+FqgES4SZ3jaTKzSLmYl8wBsF0bYX0tvahQQW/g9mwWKSWNJYzmR1DKdrgi40O3qrtUHgeBWDDxQo2ZURQG+tpfNp139tTqqe5EKKzRSAxRRRSGLZOCQnFLjCG75UyA5jly+L6O1/EdaOPcFixkXczZsmYNZWK3IBAuRy1/pTKinkwI2NwSSxNA4/JuhQgaeEi2nS3L1UrTsnhh8m0c/JCxhu5NszByD9YXUb8qe0UKTQCqfgEDYlcXZlmVcuZWIBFiPEuzaG3sHQVtwHgcODjMcAYBmLtmYsxYgDUnyAplRRk7WAWYDgUMM8uIjDB5/zgzeEm975eRvc/vHrUriOAinjMUyB0bcHy2II1BHUa1JrDEAXOgGpJ2AG5NF3cCr4T8H2AjcP3TNlN1V3ZkB/Z5+o3pnx/s3hsYB8ojzFfRYEqwB5XG48jcUl4n2/iUlcPGZrfTLZIz+ybFn9dgpuLE0s/GHPf8A8PGRz8bC3+E3PuqV3fVlipTeqRZOB9jsHhH7yKMmTWzuxYi+htyBtpcC9acZ7E4PFStNMrl2y3s5A8ICjT1AUih/CHID48MrLzySEMPUGFmPrZat/BuNQ4pC8LXtoykWdD0ZeXkdjyJpXe6YpQlH5kROHdk8JDBJhlizRSNndXJbxWUXB3BGUWI1FqX4b8HXDkcP3TNY3Cs7FfaPpDyNwedWus0ZvmQFnGOBw4oRiUG0Th0ynLZhoNuXlWvEuz8E80WIcMJYfQZWKmwNwD9YanQ/WPWmtFLJgLIOAwpLPMobPiBaXxGxFraDlXGDsxhlwpwQUmE30LEm5bNcNuCG1HqpzRRkwIvDMAmHiSGMtkQWXMcxC8hfoNh5AVKoooEFFFFABRRRSGFFFFAGKKKKACiiigArz78IfGS0nyRD4FAaa30mbVEPkFsxHPOnSvQa8mKNPxCayK5E+I8DmyN3LNEmY2PhusZOh0FrG9SSLaSWV33EXhnBp8RYxrZD/wCY9wluq83/AHdNLEipXaDs+2GGdSzxWGdjurAWJYD0UNgQdhqDbS9z4euKBPyh4WBAy92joQehDM2YW53Hq6bcSbEjL8nSFt8xld0A2sAERr316WtzvULK+Jp+JJ9o8xqTwviTYWZMQt/B6YGuaL6aW56aj9ZVptxPg7FJZO47iSEZnRGzwSpYktEbDK4yt4bDXceINVfFJrB3LlJVYtM9yBB1BuDsfKtqUdkZS2CwxJuRDGpPmgCH23U03qbVmcsKKKKQBRRRQAUUUUxBRRRQMKKKKQBWKVcW7QQQBgzZnWw7tbFyWFwLHQaa3JAFxfcXqGM7V4uT0WWEcggV2HkXkBB9irQ+zuThTlP5UeiUV5gON4vlipAfVE38mQj+VNuGdspENsSFdObopV1HVlFw45nLlI5BqSlF7Mslw9SKvYvNFYVgQCCCCLgjUEHYg8xWaZQc8ViFjRpHNlRWZj0VQST7hXlnYqYtj3dhZmhldhyDyzRsw94Nejdo8MZcJiI19J4ZQvrKG3868e4ZxF4ZmlisWyADNtZw+vnY2a3PLbS9xJbff3+pfRV7/Q9A4Fw9oFWAyGQq0srsdPzrPkW1+ZLG/WM9a7dpuHyYiAxRSmJiyHMLg5VYEgEa3t/S2xqscOw3E3/KwM8jSIptnw5YxjMUbJLYKLs3ojnblYZmbiWHBd3tksZI3aKQgMwUZgl7XJ2zKdDbapShO+RJOHy3LPx6XLhp2/8ASksOpKkAe0kCvNYoXRELLZWzd2dwVUkW9dht0setrBx7tEJ4ljRSt8plvyKm4RT9IZgDm2sAOZy1j5a8ywKQAsKAKL8yLFj5nTTkPbeuMew0y9NqV0ej/gzx945cOf8Ay2Dp+zMWLD76s3+0FXWqR+DHAkJNOfplY1HlHdifaXt+5V3psxVLZu3MKKh8U4nHAuZ7km+VVsWYjkASB0uSQBcXNVPiHaqW5BmigHIAoXHraXQ/cHtq6lw86mqWhnqVoQ3LzRVDw/F8T6QxTOOWZMOV/wAEan3Gm2A7UW0xKqo+1S4QebqSTGPO7AaklanPgqsFff0IQ4qnJ2uWaiiispoCiiimIKicWmdIZHjKBlUkGTNkFtSzZQTYC5t5VLpX2ngd8LMkYJYroBuQCCwA5kqCLedEdxnmUjl2Mj6yPqxNrnUm2gA5nYVqZlF7kCxsSdBe17XOhNjWsEmZQ3WrN2WicwylGyF5LK1r2ChFZgDpcHOBfS663GlUfM25HWk8IrES4PAzS3MceZQNDcLc9FLWVvXfT+u68LnLhCqxM3o95JHrbcBUYsT7NP5VZ+EY6FpJoI3kZ4WHe94zsbuNCGcnTQ6CwFtAL68+NY4qqZMP3150ilW1yiNu5FjcC6nXSz62qaisrWKHVla9xz2OR1wcIksGAYWBvlXO2RNOarlX92nNK+zhtEyc0mnv+/I0y/4JEppVktzAIu2fFTh8MxX05D3aHoWDEt7FViPMAc68gAyyaDTKL21ygGyk9Bc2uebAV6vxjDJjiqMD3Eb5gwJDSOFZDlI1WMZmFxqx1FgAW7pwyFY2iWJBGwIZQos19Dm+tfzqMpqOjNFGVlex5xDxO0QhkiimRWLR94pJQn0spBBAN/5nlYDbHcUzxLDHFHDEuuSPYtvc6DnrbrqSdLTeJdl2idssiiPdDJmC2+q0uoBB0GYC4tqxvbnB2euR3mKhUHkjB2P7JPP9007ya30L06V8u8r+KLZTlBNyFJGtswYjbW5Ctb9knkaiYeQA+Wx8qtnGSisuHiQqkXibMLM0jqPEwPiBCWHisbPtYClHcI4uyg3vY87E6WI1GlqfZSsaadKVRZp/4XL8F+La88P0fBIPJjdG9hCp7j1q/Xqhfg7UQhnbUTvkR+hiLARv0JYtZuZspscua1dpJsuFm1sWXID0aUiNT72FSxvJI5VZ2nI854zxCbGTkRZ/EAfDoRGdUTMbd2tiGY3BLMRcWsesXY9xExzKJN1VdE8wxtqSOdrA9d6kYN4owgaWRHxM8yrksLlWYLc2JsoAFtrvqNdLRe9Li6sozxWy0+2hfwsI4X73qeYr3kLm145BbMCPdmX6S7/1B2NWjh+KEsauBa9wRvZgbMPMX58xY13+SDFKM0kc8TBgkyBVkjcXuQVOV0JFrdQLhgbqn7PAo08TekkmvS9sht5XjNbej6rzcL6GHpOlGVP4ltV+qL52OxV42gJ/MkZOvcuCY/VYh0HlGKsFVDspJbEsv14ST/snUD/mn31b6o4uCjVaRDh5OVNNhRRRWcvCiisUAUHGcDiSaVQt80otckMqSIGXu3HormDgXBuRlJ0p7g8OsaLGuyAAX3NuZ6k7nzNNcfw2OWxa4ZfRZTZgOnRhzswIvrvSniCNhipu0kbtlHORWys529NLKxsNRsAwICk05rQvpVEtGbRYWNXZ1RQ8ls7AAM2XQZiNWte2vWubRHvQwFgFIZr+lr4Vy87am52vYeka4y4vDSWzSR3Gou+SRSdNNQ6H3GjDlCf+73mc6A948irtfNIxYRrsSNzbQMRVajLzuWykkM+B/nJzyDRg/tBAx/wslduNTHKsSkhpSVuNCsY1kYEag2soPJpEqRw7B90gS+Y3JZtszsbsbchfYcgAOVLoH7yR5uX5uL9hCczD9p7m43VYzVreKvyMvzSOhsuRQAB6KgaAAKSAB0stq3qJjW/KQDrI38oZf86lmsz7mXoxUbiGMWCJ5W2UbDQsToqjzLEAeupNUbtbxXvpO6Q/k4icxB9KXUH2ILj9ot9UU4K712LKdN1JKKEWJlZszMbu5JJ/Xc8ugudByAHSsqOVczqwHTX2nQfyv7xRkLjKpsZCFX1uQin3kGrrXOzdQWmyX7F97Lwq+BjUqcriQkag3aR2Oo1BuSQRqDW3GseWgSGQ3kE6I5+sFV5o5bC2jd2L20DBgNql8GQLEVGyy4gD1CeWlvaVF72E28WWY38gYxYjn6enTXqau4V34jHzPM8V+S5eRywcC/J45e7DuiNIgtciRwWcLpcEkkadaYYeMZLXzAg3P1ixJY6bXJOnKq52d4kLSYd3KEyTd0+n0pG8IvpmBNwDob25az8NhcaWAknXICLsoXO4B2sUst+dtRyvvVHEUpRnJSdtb68vI2cPUjOClHlb6k3g/C48LEsMV8q3tmNzqSTc+2qvgpb4zE25n/gd1/vTztDx5cOhy+OS+UAaqrEEjORtoL5dz6tRUuzbnvdSSWia5PMhkNz56tV3R6kqylLv/plPHpPh5Jdy/lF37NH/AL2h6xTD3tE3/TV0qhdnpbYjD+byp92Ob+6Cr7Wnj1+LfyOfwf5dvMKKKKxGoxRRUTjGN7iCSWwJRSVB2L7IvtYge2hK4MTdoe0/csYoQrSD02a+RCRcCw1dtjluLA6nkasvFJjKssrtLlJ8JNlswKnKi2QMATY2udidbiCi2GpJOpLHdmJuzG3MkknzJrIa9Ny5bGN1ZZXRZjxLDEXzsPIo9/YMuvsvSvBccxERPdyHuy7ssciqygM7NyswOu2awvztUGCFnbKm+5J2UdT/AGGl7HUAMRtxDBPFkOYtmLZwRay5WYEab6eiSWYa2WxFOEHbsl861WrG/ItOE45Ni1dEMcDAWYWaR8raZ0YMgF9bGxsd+V2sAsoXKFCgBQvogDQAdLDl/WvPsHjDE6zD6BbMBuUvlkXz0FwOqr0q/vMAoIIIO3nfY+qqqzdi7hpKS8yLiWvND5M3/Lep9JExF8REunpOCb6l+6dsqjnZSC3TOn1tOfaHtGsOaOEhptjzWM/r9W/U32vYEXhhJpen8s0xWUrR1Ne1fGzEvcxNaZxqR/5aH6X7R1C+/UCxo7EKug8gOp5Csu1szOxJJLOzG5JO5J/1bQCwAFaRqScxFvqjoOp8z/IadasVreR1qFH4St/6fv3zAiy2v4id/M7n2DX1LTfszhs+JjHJMznpZRYD7zKf3aUDVieS6e06n+w9pq49hcL4ZJj9IhF/ZjJufLxFwf2RQ3Ze+8XEyxpu3fp/Y14PJow6y4i3+/lpf2lf8qn6sb/42T4KkQ4fukilGkc+VzyyTS+LXoHLD9++5cVX+1uKLThBpeGMsdrLnmvY9ToPeeVaeDg1xS+p53jJJ8M36FcS73sBYlrlttSSQB9LfyHnVn4AsRitLP4gz5leRwMuY5bIz5SuW3K243BpIASDkAOVWPRQqDW5ANhy0H8gbMhwWUoHVlYlQcmUqbg2cAtYixNsrKCp0bQ5h1+NhSnFU5Ts+aObwM60JOpCF1yDtDNh5USCHVUbMWSwQWVlAU7N6V9LjTrSbARtDIrXzIL5vrAEHkPS1seXqNdw19f63B9x1BovV1HgKVOKS1a7+8ordJV6knfRPSxYOET2mRuQxEQX1S5FJ9V5Gr0ivGsFMY2kJPhVVkQdDEzM3svlPttsK9mNczpGNpo38FK8XYxRRRXONpiq727kthgv15Yx9y8o/nHViqvdueHtNhsyuE7hu+bS90RHV1HQ5WJB11A9YlHcjJXRRia4Yd7u6gFmzaKoLNbKvJdbedXNeBQjQIAOdvTb9qT0v538ztU3DYaOJcsaKijkoCj12FVZxSHHgH3sX9nuHtHGTIoDyG5GhsoACqSNDzPS7HeueGdZcS1jmSISoRe95bxF2PmAcnllYDSl3GePGT8nhnsv05V5/qxn/rHs60qwUpwziSO+UWDoPpJ6uZG4917E1NJ633ZN16cGoLZGkWFkhPcvG4bMRHpcON/Cw8JO5te/UVY+ziTSp3Cqyd0xjeRlsEQAMioDo7hGVQNQLXbkrOEaOaO4yvG49YI9R/0LVM7PgAz2vbvV94hhvqd9MvuoUlO91qN0VS7UXuU/tpgxFNEqAqqwjIQTmzF5e9Obcs2YZjzvrVaZwvhA15KOnq5CrV+EVg2IRCL5IQR/tHcH/lj3VV1QDYAeoWom9dTs8DF/BTSXfr9TmsZJu3sHIf5n/XnWZ5LCw9I6L6+p8hv7K3ZgBc7CuUK3Oc7nYdF/zO/uqO+rNbVtFuzNsi6akbdWYnT2lj/Om0HE5zGMNG17KFKwp42BFjmuWIvqSwy26ipPZThQmlMkiBo49AGAIaQjodDlU+9xzWrnhYwjMFUKLIbAADmNh6qeSitd9zmcXVTnitkSeERh8HCstnDQRh82oYGMZs2bcHW968txGIDMzgsVYnu8xLP3Yv3a33JC6m9zckkk3Neg4qU/9mz20yR4pPUsTSR3H7q155l1vXa6Mp3lKZ5fpKo1GMB52Y4eDhGZ1uZpirA2P5Pv8hQ9Qfyn3yKbcBmSVGIOYxu8Zvrcx3RJD1LRFCTzBqoHisyoMNGcoZmYsPSVTuBp4bnMQwN9dLWvWsGMkw15ISFsoDLa6Mq7AqOmuoIOtU1eAqz+JK+t9PQ1U+kKMPhxtutfUmdo4xHiXABysFk0FwC9ww01uWUsTb6dLcK4YEg38T/yYj+1ScRimmZpWABexsDmAAAAAPPQDXmSTzriYxe+x6jn6+o9ddbhoTjSipbpHG4mcJ1ZuOzZ0gw7SOsaC7S54h5Z1JufIZbnyBr2Y15l2LjzY2K30BI59WQx/wBZFr02uT0pK9VR8jp9HR/CuFFFFcw6BisML6HUHes0UAUztJiXwCJlKyIxKoGzBkVRfxML5wNBmNjqLknU03Gcann/ADxvGdkj8KnfcE3bluxGlwBVp7a4jNiQvKKMD96Q5nH3ViPtqtSYGM65QDzI0PvFSuk/MhLiVrCV7epyXHrb82//AMfx0HHdIz+8VA/lmrZeGISABISTYAPKSTvYKGuTYE+w9KsvCuxSOmeYMjXOVbKzAA2BYuG3tcAW0PXZdnd+/wBSEI0pfLF/cl9hOHRy4XOGZWMkgYxucpsdBlN1uBYE2vcH1VbsJhUiQIgsovzJNybkknVmJJJJ1JJJpJw7gKQoQkkoc6l1dl8dgubuwe7NgAAGU6AXvU/vJksxbvBpnUKFP7Sa8jqQSdNjcWLclJ6Mus0tikdumvjG8o4l/wCNv+qq+TTbtViVkxUrIbj8mNiCCEW4IOqsDcEHUGkzJc67DYcvb1qE12tT0HB/kRsc1Uubn0RsOvmfL/W28zC4Z5XWOO2dtidQoHpOfIXHrJA0vWkUbOwRFzO2w/qSeSjS59XMgG+cA4MuHQ38UjWzt6tgOii5sPMncmouVtfsRr1lTVl8z9/4S+HYNYUWJB4QD6ybgknqSSSfM1JA1J8gPcT/AJ1qT4x+y/8AVP8AOtcZilijaRzZUBJ5n1AcyToBzJFVav6nKO3CyvdzK9sqyShs3o5Xs5vflZ/515biJ4BKyRiRkQkC88TEjl440cEeYcnqb13nmnxsr22LCTIWtHH4VRSdNWIQa2JuGtYXqLj8LJCQJF31BU5lNt7EgG4uNCBWuPEyp3VN6vz/AIIrgoTd6upAw0BAsxJPMhmFz1NrH335a111XUM3tJYe46+6xrZWBFxzrVpVBsWUHoSL1WuJrZXyZqfC0HHFxVvRGqlt1XITuMwtfnpYg+vQmto8WxuAVJHK1vVsxH8638rXvoABck9ABqT5CifCFbFkZCdiVK69LkWPXKem1b6PSlRS7e3kc2v0RRcbU9/NnqfY7hMUUKyoxdp0jcuRbwkZlVVHoqMx5k3OpOln9VX8HnEhJhhCx/KQkhh1RmYxsPK3h8ip8ibVWSrJym23cUYYLG1rBRRRUCRiiisFgNTsNT6hQB5hxWXPiJ36yuP93+RHvEYqNXOByyhmHiYBm/abVv5k064PwCScByckZ1Dbsw6qNgP1j6wCDeiWrZhxc5aEjsbhS0zS6ZUUp55nytp0so3/AF/Xa2DEJnMeYZwoYrfxZSSAbdLqfdSDiWOiggaLDW3CsytomZgrM0nOTWwF73y7CtOLdzBBJJJH3ioC5DflCSNBrJfXYeVRktv0OlRpNRsOI+MQFnUSC6GxvoDbcqfpAG6kjQFSNxWn/bcNrjOd8oCOS3QppZlPJttd6g8NnjnhimVAFdVZQQLi42ttcbaVG7R8Tkw8aNHH3haaJCNTZXNidOfIebCoJJyxS19S509L3EfamAd6+JTxRSZC0i6oJAgQrmGh0RderW30qPw/gM8xHhMa82cWa3kmh+9b21YMFjnjaWNSsgWSTNGx9HvGLizAEqCrjQgg8ra3Y4OcZkVVZA17xNbwqBcSLYkql7LY2GosBY3tlbW3v39i2PEVacFHu5meE8Ijw62Qan0mOrE+Z9+mgHICmFCm4B6/3orK229Su9zk3pr+y/8AWOk/bOZFwxDrmLsqoMzL4x4gxyEEhQpa17HKBzpyw8a/sv8A1Sqh+EMSXgKqSgEuY/RBZoVUk9dW0GvpdCRbD5lYSSvrzEHDpUVHibUNkKg6lyuYZNfSYkqQDub08wOGgBEMrxPKPEsRZWEYte0cZ2sCfFa+p2FgE3BI808d+RLe5Tb+dj7KdYDGQDETYdI8rRgSu5tYl7MxzHW4zjfqRsKz1pNppXva+n2923Nb0dtLXNz2fgzl8pCnXuxpHm62GuvMXsdbjU0ySNVAVQAOSgAC3kByrelOKXCyztAwHfFA5Kgq4UGykSDUEXBAv51ijKVR2m3ZLu1+pOSUdjbF4IQ5poUVWykNpoFvdnVR9IbkD0rdbVGmzGGYSOXQRMbkJcOtihXKBrfXbdRa1OoFKqoZsxAALEAFiBYsQNBfeqRi5HuYmc93G7hUAAHgYqhYgXYgAbnkDuK00JOe72e/fYTitrbjzsCp+WKe8C2R/DlJ7xSPEobN4SCEcaG+Q7Wr1GvGODzFMRA43E0XuZgrD2qWHtr2euhF3ijBxMbVAooopmcxS/tDIVwuIYbiGW3ryG387VOkkCgsxAAFySQAANySdhSWaJsUr5nZYWLKqplBZQbZ2YgnUi4C2FiL3vo46asT10RQZEuCuoBBH9qbScXjk1lidmsAVUo0QIFvCsjDLte1tOp3q0pwHCgAfJ4ja2pQMxt1drs3tOtdpuGQOAGhjYDa6L7ttvKoqaXv/pGnSnTd00VHCM2JeRMoGSJmhjv6TEMhLHQaXUAWsC99bAiwOElSxAdJF2IuGVhzB3BBphhcBDESYokQtYNkULe17XA9Z99K8Rh3w5LKpeEkmygs8d9TZRq6XvYDUaAAjaErS+XuNlKbv22do41RQqgKqgAACwCgWAAGwArSDFRvlKSI2YXXKwNx1FjqNRr5iuPyrvBeCSNiD4lJuD5EjxIwPOx53B5Qu8eOUsywoZCgARmklky3NlTIt2NyL3NgAbcwo0777l0p29AwWEjkx2Kzor2iwpGZQSGbvw1idRdUT3U+w2HSPREVATchQFBPU23NQOGYNo5ZWcDvJFhaS2oBvLlW/PKhRb88pPOp+IeyMeisfcKdVvLG/L9jPGzV/Uxg/wA2l98i39wrrWEWwA6AD3Vmqpbk1sc3HiX97+3+VVzt8T3EXQzi/wDupj/W1WVtx6/7GlfafhPyrDtFmKm+YEC50BBA6EqWF+V7604Wy1He2pR+A3+URBRe5b3ZH/8A77Kskkad818ikZQ58Id2ADIGO+VQQR5kbWN672cxNplYbujhP2mXMvvy2/eFOu0XZ6KdflCPlYRjW2ZWRQSLgkWIF9b+sGwtCcE5K7tpb9S+c9RlK9hf9ZB95gP71wXhsQmOIy/lSmQtc+je+219Br5Vx4F2Qiwz94T3kg2OXKo8wtz4vMk+VqbSMrDMu1yL8jbS46jTesVSKgvw3dd7237icZZPtI4MwAuTYDUk7AdaoUkmdmf67M3mA7FgD560x4vxgzXRDaLrzkH9kPTnpfQkUsY6E1poUnTWu7J3u7jDs9EjYyDvGKqHBvbw5lZWQN0BYBb9WHWvYq8i7LQiR2cgFe7sQRcHvbG2u/hU3H64q1RSyoAI8RKoGwukg98qsQPIGr5cTCDwl3GSrQlUllEulFVH/tHFj0Z1b/3Ig3u7to6KfWqPi/R/0U9Wq8hxxSQM6J9GJhLMT6IULJ3YPVs4V7DbuwTa63mUm43KsLvmYKsndSKWOUNJCy548x0BZESynU+Ii9jZtDKHVWGzAEX0NiLjTlV1RaIqgbGisM2l+laxuGAYbEA++qSw3rBoBB1FFFgF+N4TFL6caN5OiuP8Q0rnwTApFiJRGiIBFFcIqrfO0hBIA2GU6+Z6VKxGMVSFGrG2g5LfUnoNCBfc6UswPHIQ8sjB8zHuwAjaJCzgXY2Uks0jaG1mA5XqynpfUhUloTs15p/JkX/4kb/rrOIF0Yfqt/Q1H4biBKZpFBGaXUG1xaONRcAm1woPqIqZUKj7ZZT+UyaxRRVRMwRRRRQM8t4/hBBiGhvYE5orGxyNdky22ylWX/Z3p52Y4hDIvdzhO/BJJZVHeXJYONLM2uvQi+gtT3jEeFMmXEqSJISFZUd3Qo2hXIpIP5QkaWuvlXnOORVcxSEGxABKsgYH0WCuAQDoLcjprudM4ZQ0vry5jhOMnjLdHo88EKLmkbKgGueVxHboVZsuXytaqxx/tCsw7mD83s72IuNsqDpbTN0Om4Ira4NAb5dq6CRb5Rytf97Yes9Kzxprm2zQoW30Old8BhTNIIxtoX8l6H9q1rdM3Su+F4FJLZmJQA3AtraxF25A66DW25BOi2fAYFIVyoPMnmT1J5mq6teMFo7v9izV+htg8IkS5UFhck87k7kk+weQAGwFSKxWM2oHUH+Vv865rbk7vcnokZorNYqIxhiO09wQmHJ5flHVAR+5nPsIFd+zjMcNHntcAhbX9BWKx3J3OQLc8zfaq5Tzsy5MTpf0JGVfIFEe3qBc+y1duFVzTRwacnka8bxwLjDIbkhmmUMAe7Fly67Fiw6GwOouL8JuNmIWeOQEkhAoVgxsWsGvZTYH0rbHcalDw3Kq4ZlUBQ0ZAAAH5Ve72/2lMeJj8sCdu7GXyOZs5A+57hTlJY7bXLFPsOQ77PYvvIiLW7tigGl7BVZQ1tLgMBvrYHS9hrxviGUpCh/KyMpF7gBVJYksBpcIygbm/QEhf2da07D60RJ6HIyC5HMjPv51A7QSkyYhm17sAAcgEQSqAOt3JvvqOgpqSfa5/wCEc+ymTOIKYoiTJ+XmeMAqADkVl7zIpvlRULam+r73YVBjQKAoFgAAB5CmvapPykD+Uyfe7t/6Rmqj2ixjxmPwlogWMo2zaeFSbGyXvfrYDnrCUXOUYc/f8aEanalY48X49EhtEM0hFg4JQW8nGr77DTfWmfBOOQysI1knhlIAXPK0isfIsSpb9pRflej52YWUESlsgAAiMWYP4RdmsGG5IC5raX1uLU7FxK8zfJA+TMClxqpFjvcgAHYsQdtK1RppRx2+pfFKmrnpGJ4rNCyK7Rsr5gCylWLKAbXU2OmY6KLW86we0L/ViXzLOR67ZR/WqrBhpGk77ESF5NbfVW+mgAA5nQADU771LxEAdWRtmBB9tZpySaS/YoqV+12diww42d4hLJKkKlAzEIFyXAJuZSwNtrkCq9ju1Sq693iJ5B4g5yoo5WYeEG4IOgGzE8gCk4ocUsXcsxkhVgwOtxlBsCdwovfW4FlsRapfZRcFlLYhk70k5RKPySqCLb+Byd979LWJOiMVa+/oasozVojfBY1Hu6Eve12zs7aXsCWuRa58J2udBXU4USSOGVWGSOwYA6gyA7+TAVB4pxyAmMQIpkDC2RbALchwWsM6kC43FjchSoNNMHIDLp9mf+Jf/usnEQcE3fdfUqoLGsluIsVwZ1NkJK31GneKPLNo/tN/2qZ8PbCpYDKrAEDMLPa5JHi8R1JJvuTenEkQb10twS3TqC0h9jOzD+RFZY1HVg8u7l58zdxFVUbNK4xw8ocXG12H3WK/2rqBULhagKygAAO2g0GoDf3qVLIFUsdlBPuF6zVIWqOKL6c8oKXkRcNigUU73F/va/3qLiuIqGU5rlGBYLc2U3Vi9r5QFJbW3o1DwmBVSEJZgIo/CzuygjML5Sba2/w1LxPgjYIALAhABYZjoosPMgVolCEa1t7v03+5GnPOllsv6HFYqDwvwHubkhQDGTvkGhU9cptr0ZdyCTis1SGErEqdRTipIJHsCaXntXLgybRI6PZrkstnHhPi1GqhNLcjTKtDCp5D+n9K30qig7tHAi7O4kwuJeWEEHITfJYaKVY92RfcCykequeFnxjSBp3uFVgPzdvEVOgQA/RGpFPGwy+Y9v8AnWpwg6mrfj76bhk7NHGDjYwsizSB3WzIQuW4D2N9SAdUUb865S8eTEzStErKpCEhwtycuQnQkWsg51IkwKsCDqDuCAQfZXPD8JjS+QAX3IAvptr0oVaGGPf/ANuPLs2FknFca7wxyjMkLgghVFwFaPMWH6rMbab7Xp9GwcaisJh1HK/rrrUKtb4ltBNtkRuGRE3KLfrYH+orc4ZANdB5mwqTRVWbe7EchGgNranlv/r/AOjW+QdB7q0GHW1rXGuh1GvK3QAADplHSutErdwHJsOp5VDl4LCxuUFzubC/tI3pjRQpyWzAUyYWKFWyLZrHULf2m2rW3t5VOwM0aqzRqpUCRiynMzBCVW7/AEmNiSTtcDXeurxg7iocvComNyik9Sqk+etqszjKNp3LqNb4bvYaYrFiJMzkZgNAPpPyVQdSSdKRYWJgscd7myrcmw8K3JJ5Cyk+4c6krwtFN1Cg9covbpetZMK+6kX18xYgqQRpcWJ59KVNQjonv7RKtX+LJXWiJ/DSqIozEmQswOUjMPrZdSq2y79RzIrbjBHcSD6ylB65PAP5sKXx4nEKQciGy5SbtrtqBl056XPLpRP30hGfYG4VQQL8ixJuxHLYc7XAIg6X4im357mx8VTjTxjy0ImFxYXR2CsWGfMLAnLmZsx3FxkFjYADfQV2xGKDlVTUBgzNbwjL4lsToxzBTpfQG/K8hcIeZAobCHkRVknBzz7zL1yfw8EiXwaJ3YSsR+b8K21CyFWBZvrEIPDbS+p1FYqJhTiIhljZbaemue1lVAAQym2VVGtzpWarq08pXUlb35F1LiacI2JtYtWaKiYCLLhL2F/CLELuMwIt+7a/h89LWFu0SEXuxbXS9vLTQf6vXSsVOVSTVmIKKKKgAGii1FAGaKxWaACiiigDFR5cSVt4G532JtbQi2h1sLaHWpFFSi0t1cDhDM2gYeK7XsPCLE2FzvpbX32uBXeis0SabukAUVis1EArFFFAESVpARpcg/R0VgSAbg+iR0vzBvoQJEOaxzW3NrdPeedz6iNBW9FWSqXVrAFFZoqsDyj8ZOL+zg+7J8dZ/GVi/s4PuyfHRRXquqUPAijJh+MrF/Zwfdk+Oj8ZWL+zg+7J8dFFHU6HgQZMPxlYv7OD7snx0fjKxf2cH3ZPjooo6nQ8CDJh+MrF/Zwfdk+Oj8ZWL+zg+7J8dFFHVKHgQZMPxlYv7OD7snx0fjKxf2cH3ZPjooo6pQ8CDJh+MrF/Zwfdk+Oj8ZWL+zg+7J8dFFHU6HgQZMPxlYv7OD7snx0fjKxf2cH3ZPjooo6nQ8CDJh+MrF/Zwfdk+Oj8ZWL+zg+7J8dFFHVKHgQZMPxlYv7OD7snx0fjKxf2cH3ZPjooo6pQ8CDJh+MrF/Zwfdk+Oj8ZWL+zg+7J8dFFHU6HgQZMPxlYv7OD7snx0fjKxf2cH3ZPjooo6nQ8CDJh+MrF/Zwfdk+OiiijqlDwIMmf/9k=" alt="Crianças com atividades bíblicas" loading="eager" width="280" height="280">
-  </div>
-  <div class="social-proof">
-    <div class="faces">
-      <div class="face" style="background:#7C3AED">M</div>
-      <div class="face" style="background:#C2410C">R</div>
-      <div class="face" style="background:#059669">J</div>
-      <div class="face" style="background:#B45309">A</div>
-    </div>
-    <span>Aprovado por milhares de famílias</span>
-  </div>
-</section>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="trust-item">
-    <div class="trust-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    Compra<br>Segura
-  </div>
-  <div class="trust-item">
-    <div class="trust-ico a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-    Acesso<br>Imediato
-  </div>
-  <div class="trust-item">
-    <div class="trust-ico c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    7 Dias de<br>Garantia
-  </div>
-</div>
-
-<!-- LIVE BUYERS BAR -->
-<div class="live-bar">
-  <div class="live-dot"></div>
-  <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
-</div>
-
-<!-- OFFERS -->
-<section class="offers" id="ofertas">
-  <div class="sec-label">
-    <div class="sec-pill">Escolha seu pacote</div>
-    <h2>Abençoe seus filhos<br>com a Palavra de Deus</h2>
-    <p>Selecione a melhor opção para sua família 👇</p>
-  </div>
-
-  <div class="offers-list">
-
-    <!-- OFERTA 1 -->
-    <div class="ocard" id="offer1">
-      <div class="ribbon ribbon-amber"></div>
-      <div class="ocard-inner">
-        <div class="ocard-header">
-          <div class="ocard-ico amber">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <div>
-            <h3>35 Livros Bíblicos<br>Infantis</h3>
-            <div class="ocard-sub">Histórias cristãs ilustradas</div>
-          </div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-top-visual">
+            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=600&fit=crop&q=80"
+            alt="Família cristã lendo a Bíblia juntos - momento de fé e conexão"
+            loading="eager" width="420" height="315"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#f5e6d8,#ffe4cc,#fef0e3)';this.style.display='none';">
+            <div class="hero-overlay-badge">
+                <span class="hb-dot"></span> +2.000 famílias já abençoadas
+            </div>
         </div>
-        <div class="content-grid">
-          <div class="content-item"><div><div class="ci-num">35</div><div class="ci-lbl">Livros<br>cristãos</div></div></div>
-          <div class="content-item"><div><div class="ci-num">∞</div><div class="ci-lbl">Impressões<br>ilimitadas</div></div></div>
+        <div class="hero-glow1"></div>
+        <div class="hero-glow2"></div>
+        <div class="hero-content">
+            <div class="badge-pill">
+                ⭐ Material Cristão Exclusivo
+            </div>
+            <h1>O presente que une<br>sua família <em>na fé</em></h1>
+            <p class="hero-sub">Transforme o tempo em tela em momentos de conexão com Deus — atividades bíblicas que seus filhos vão amar!</p>
+            <div class="hero-emotion-tag">
+                <span class="het-icon">💒</span> Perfeito para culto doméstico e escola dominical
+            </div>
+            <div class="social-proof">
+                <div class="faces">
+                    <div class="face" style="background:#7C3AED">M</div>
+                    <div class="face" style="background:#C2410C">R</div>
+                    <div class="face" style="background:#059669">J</div>
+                    <div class="face" style="background:#B45309">A</div>
+                </div>
+                <span>Aprovado por milhares de pais cristãos</span>
+            </div>
         </div>
-        <div class="savings-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          Você economiza R$ 57,10!
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust">
+        <div class="trust-item">
+            <div class="trust-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            Compra<br>Segura
         </div>
-        <div class="price-block">
-          <div class="price-tag-off">-85% OFF</div>
-          <div class="price-from">Preço normal</div>
-          <div class="price-was">R$ 67,00</div>
-          <div class="price-now">
-            <span class="price-currency">R$</span>
-            <span class="price-big">10</span>
-            <span class="price-cents">,00</span>
-          </div>
-          <div class="price-install">ou 2x no cartão sem juros</div>
+        <div class="trust-item">
+            <div class="trust-ico a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            Acesso<br>Imediato
         </div>
-        <ul class="feat-list">
-          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>35 livros cristãos com ilustrações coloridas</span></li>
-          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Histórias da Bíblia completas e adaptadas</span></li>
-          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>PDF de alta qualidade — imprima à vontade</span></li>
-          <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
-        </ul>
-        <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-amber">
-          <span class="btn-icon">📚</span> QUERO ESTE <span class="btn-arr">→</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- OFERTA 2 -->
-    <div class="ocard" id="offer2">
-      <div class="ribbon ribbon-green"></div>
-      <div class="ocard-inner">
-        <div class="ocard-header">
-          <div class="ocard-ico green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4M9 15h2"/></svg>
-          </div>
-          <div>
-            <h3>Livro de<br>Atividades</h3>
-            <div class="ocard-sub">50+ páginas interativas</div>
-          </div>
+        <div class="trust-item">
+            <div class="trust-ico c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            7 Dias de<br>Garantia
         </div>
-        <div class="content-grid">
-          <div class="content-item"><div><div class="ci-num">50+</div><div class="ci-lbl">Páginas de<br>atividades</div></div></div>
-          <div class="content-item"><div><div class="ci-num">3+</div><div class="ci-lbl">Tipos de<br>atividade</div></div></div>
+    </div>
+
+    <!-- LIVE BUYERS BAR -->
+    <div class="live-bar">
+        <div class="live-dot"></div>
+        <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
+    </div>
+
+    <!-- EMOTIONAL BRIDGE -->
+    <div class="emotional-bridge">
+        <div class="eb-inner">
+            <span class="eb-emoji">🙏</span>
+            <p class="eb-quote">"Ensina a criança no caminho em que deve andar, e ainda quando for velho não se desviará dele."</p>
+            <p class="eb-sub">— Provérbios 22:6</p>
         </div>
-        <div class="savings-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          Você economiza R$ 32,10!
+    </div>
+
+    <!-- OFFERS -->
+    <section class="offers" id="ofertas">
+        <div class="sec-label">
+            <div class="sec-pill">✨ Escolha seu pacote</div>
+            <h2>Abençoe seus filhos<br>com a Palavra de Deus</h2>
+            <p>Selecione a melhor opção para sua família 👇</p>
         </div>
-        <div class="price-block">
-          <div class="price-tag-off">-68% OFF</div>
-          <div class="price-from">Preço normal</div>
-          <div class="price-was">R$ 47,00</div>
-          <div class="price-now">
-            <span class="price-currency">R$</span>
-            <span class="price-big">9</span>
-            <span class="price-cents">,90</span>
-          </div>
-          <div class="price-install">ou 2x no cartão sem juros</div>
+
+        <div class="offers-list">
+
+            <!-- OFERTA 1: 35 Livros -->
+            <div class="ocard" id="offer1">
+                <div class="ribbon ribbon-amber"></div>
+                <div class="ocard-img fallback-amber">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=200&fit=crop&q=80"
+                    alt="Coleção de livros bíblicos infantis ilustrados"
+                    loading="lazy" width="400" height="200"
+                    onerror="this.parentElement.classList.add('fallback-amber');this.style.opacity='0.3';">
+                    <div class="ocard-img-badge">📚 35 LIVROS</div>
+                </div>
+                <div class="ocard-inner">
+                    <div class="ocard-header">
+                        <div class="ocard-ico amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3>35 Livros Bíblicos Infantis</h3>
+                            <div class="ocard-sub">Histórias cristãs ricamente ilustradas</div>
+                        </div>
+                    </div>
+                    <div class="content-grid">
+                        <div class="content-item"><div><div class="ci-num">35</div><div class="ci-lbl">Livros<br>cristãos</div></div></div>
+                        <div class="content-item"><div><div class="ci-num">∞</div><div class="ci-lbl">Impressões<br>ilimitadas</div></div></div>
+                    </div>
+                    <div class="savings-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        Você economiza R$ 57,00!
+                    </div>
+                    <div class="price-block">
+                        <div class="price-tag-off">-85% OFF</div>
+                        <div class="price-from">Preço normal</div>
+                        <div class="price-was">R$ 67,00</div>
+                        <div class="price-now">
+                            <span class="price-currency">R$</span>
+                            <span class="price-big">10</span>
+                            <span class="price-cents">,00</span>
+                        </div>
+                        <div class="price-install">ou 2x no cartão sem juros</div>
+                    </div>
+                    <ul class="feat-list">
+                        <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>35 livros com ilustrações <span class="feat-strong">coloridas e vibrantes</span></span></li>
+                        <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Histórias da Bíblia <span class="feat-strong">completas e adaptadas</span></span></li>
+                        <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>PDF de alta qualidade — <span class="feat-strong">imprima à vontade</span></span></li>
+                        <li><span class="feat-ck amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use para sempre</span></li>
+                    </ul>
+                    <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-amber">
+                        <span class="btn-icon">📚</span> QUERO ESTE PACOTE <span class="btn-arr">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- OFERTA 2: Livro de Atividades -->
+            <div class="ocard" id="offer2">
+                <div class="ribbon ribbon-green"></div>
+                <div class="ocard-img fallback-green">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&h=200&fit=crop&q=80"
+                    alt="Criança se divertindo com atividades de colorir e labirintos"
+                    loading="lazy" width="400" height="200"
+                    onerror="this.parentElement.classList.add('fallback-green');this.style.opacity='0.3';">
+                    <div class="ocard-img-badge">✏️ 50+ ATIVIDADES</div>
+                </div>
+                <div class="ocard-inner">
+                    <div class="ocard-header">
+                        <div class="ocard-ico green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h4M9 15h2"/></svg>
+                        </div>
+                        <div>
+                            <h3>Livro de Atividades Bíblicas</h3>
+                            <div class="ocard-sub">50+ páginas interativas de fé</div>
+                        </div>
+                    </div>
+                    <div class="content-grid">
+                        <div class="content-item"><div><div class="ci-num">50+</div><div class="ci-lbl">Páginas de<br>atividades</div></div></div>
+                        <div class="content-item"><div><div class="ci-num">3+</div><div class="ci-lbl">Tipos de<br>atividade</div></div></div>
+                    </div>
+                    <div class="savings-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        Você economiza R$ 37,10!
+                    </div>
+                    <div class="price-block">
+                        <div class="price-tag-off">-79% OFF</div>
+                        <div class="price-from">Preço normal</div>
+                        <div class="price-was">R$ 47,00</div>
+                        <div class="price-now">
+                            <span class="price-currency">R$</span>
+                            <span class="price-big">9</span>
+                            <span class="price-cents">,90</span>
+                        </div>
+                        <div class="price-install">ou 2x no cartão sem juros</div>
+                    </div>
+                    <ul class="feat-list">
+                        <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Labirintos, caça-palavras, colorir e <span class="feat-strong">muito mais</span></span></li>
+                        <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Para crianças de <span class="feat-strong">3 a 10 anos</span></span></li>
+                        <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Imprima <span class="feat-strong">quantas vezes quiser</span> — sem limite</span></li>
+                        <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Perfeito</span> para escola dominical e EBD</span></li>
+                    </ul>
+                    <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">
+                        <span class="btn-icon">✏️</span> QUERO ESTE PACOTE <span class="btn-arr">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- OFERTA 3: COMBO -->
+            <div class="ocard combo" id="offer3">
+                <div class="ribbon ribbon-coral"></div>
+                <div class="popular-wrap">
+                    <div class="popular-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
+                        MAIS POPULAR
+                    </div>
+                </div>
+                <div class="ocard-img fallback-coral">
+                    <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400&h=200&fit=crop&q=80"
+                    alt="Combo completo com livros e atividades bíblicas para toda a família"
+                    loading="lazy" width="400" height="200"
+                    onerror="this.parentElement.classList.add('fallback-coral');this.style.opacity='0.3';">
+                    <div class="ocard-img-badge">🎁 COMBO COMPLETO</div>
+                </div>
+                <div class="ocard-inner">
+                    <div class="combo-crown">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1h18v1z"/></svg>
+                        COMBO COMPLETO — A escolha das famílias abençoadas
+                    </div>
+                    <div class="ocard-header">
+                        <div class="ocard-ico coral">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 3.5 2 6L12 14l-5 3.5 2-6L4 8h6z"/></svg>
+                        </div>
+                        <div>
+                            <h3>35 Livros + Livro de Atividades</h3>
+                            <div class="ocard-sub">Tudo que sua família precisa em um só lugar</div>
+                        </div>
+                    </div>
+                    <div class="content-grid">
+                        <div class="content-item"><div><div class="ci-num">85+</div><div class="ci-lbl">Conteúdos<br>no total</div></div></div>
+                        <div class="content-item"><div><div class="ci-num">🏆</div><div class="ci-lbl">Melhor<br>custo-benefício</div></div></div>
+                    </div>
+                    <div class="savings-badge" style="background:#FEF2F2;color:#B91C1C;border-color:#FECACA">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        Você economiza R$ 94,10 hoje!
+                    </div>
+                    <div class="price-block" style="background:#FFF8F6;border-color:rgba(184,67,26,.12)">
+                        <div class="price-tag-off" style="background:linear-gradient(135deg,var(--coral),var(--coral-m))">-82% OFF</div>
+                        <div class="price-from">Separado custaria</div>
+                        <div class="price-was">R$ 114,00</div>
+                        <div class="price-now">
+                            <span class="price-currency" style="color:var(--coral-m)">R$</span>
+                            <span class="price-big" style="color:var(--coral)">19</span>
+                            <span class="price-cents" style="color:var(--coral-m)">,90</span>
+                        </div>
+                        <div class="price-install">ou 3x de R$ 6,63 no cartão</div>
+                    </div>
+                    <ul class="feat-list">
+                        <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 1: 35 livros bíblicos ilustrados</span></li>
+                        <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 2: 50+ páginas de atividades</span></li>
+                        <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>85+ conteúdos — <span class="feat-strong">diversão para meses!</span></span></li>
+                        <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
+                        <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Ideal para <span class="feat-strong">múltiplos filhos</span> e escola dominical</span></li>
+                    </ul>
+                    <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-coral">
+                        <span class="btn-icon">🎁</span> SIM, QUERO O COMBO! <span class="btn-arr">→</span>
+                    </a>
+                    <div class="mini-guar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        7 dias de garantia — risco zero para sua família
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <ul class="feat-list">
-          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Labirintos, caça-palavras e colorir</span></li>
-          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Atividades para crianças de 3 a 10 anos</span></li>
-          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Imprima quantas vezes quiser — sem limite</span></li>
-          <li><span class="feat-ck green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Perfeito</span> para escola dominical e EBD</span></li>
-        </ul>
-        <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">
-          <span class="btn-icon">✏️</span> QUERO ESTE <span class="btn-arr">→</span>
-        </a>
-      </div>
-    </div>
+    </section>
 
-    <!-- OFERTA 3: COMBO -->
-    <div class="ocard combo" id="offer3">
-      <div class="ribbon ribbon-coral"></div>
-      <div class="popular-wrap">
-        <div class="popular-badge">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6 4.8 2.4 7.4-6-4.8-6 4.8 2.4-7.4-6-4.8h7.6z"/></svg>
-          MAIS POPULAR
+    <!-- COUNTDOWN -->
+    <div class="countdown-bar">
+        <div class="cd-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ⏳ Oferta especial expira em:
         </div>
-      </div>
-      <div class="ocard-inner">
-        <div class="combo-crown">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1h18v1z"/></svg>
-          COMBO COMPLETO — A escolha das famílias
+        <div class="cd-digits">
+            <div class="cd-block"><div class="cd-num" id="cdH">02</div><div class="cd-lbl">Horas</div></div>
+            <div class="cd-block"><div class="cd-num" id="cdM">47</div><div class="cd-lbl">Min</div></div>
+            <div class="cd-block"><div class="cd-num" id="cdS">33</div><div class="cd-lbl">Seg</div></div>
         </div>
-        <div class="ocard-header">
-          <div class="ocard-ico coral">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 6h6l-5 3.5 2 6L12 14l-5 3.5 2-6L4 8h6z"/></svg>
-          </div>
-          <div>
-            <h3>35 Livros +<br>Livro de Atividades</h3>
-            <div class="ocard-sub">Tudo que sua família precisa</div>
-          </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-sec">
+        <h2 class="preview-title">📖 Veja o que está incluído nos pacotes</h2>
+        <div class="preview-scroll">
+            <div class="prev-card">
+                <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80" alt="História da Arca de Noé ilustrada" loading="lazy" width="140" height="140">
+                <span>Arca de Noé</span>
+            </div>
+            <div class="prev-card">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80" alt="Atividade de caça-palavras bíblico" loading="lazy" width="140" height="140">
+                <span>Caça-Palavras</span>
+            </div>
+            <div class="prev-card">
+                <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80" alt="Labirinto bíblico para crianças" loading="lazy" width="140" height="140">
+                <span>Labirintos</span>
+            </div>
+            <div class="prev-card">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80" alt="Desenhos bíblicos para colorir" loading="lazy" width="140" height="140">
+                <span>Colorir</span>
+            </div>
+            <div class="prev-card">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=300&h=300&fit=crop&q=80" alt="Criança aprendendo a Palavra de Deus" loading="lazy" width="140" height="140">
+                <span>Aprender Brincando</span>
+            </div>
         </div>
-        <div class="content-grid">
-          <div class="content-item"><div><div class="ci-num">85+</div><div class="ci-lbl">Conteúdos<br>no total</div></div></div>
-          <div class="content-item"><div><div class="ci-num">🏆</div><div class="ci-lbl">Melhor<br>custo-benefício</div></div></div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2 class="feat-title">✨ Por que os pais cristãos amam?</h2>
+        <div class="feat-grid">
+            <div class="feat-card">
+                <div class="feat-icon f1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                <h4>Histórias Bíblicas Ilustradas</h4>
+                <p>Linguagem simples e cativante que toca o coração das crianças.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon f2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                <h4>Valores do Reino</h4>
+                <p>Amor, bondade, gratidão e perdão ensinados de forma lúdica.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon f3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+                <h4>Diversão com Propósito</h4>
+                <p>Seus filhos vão pedir para fazer as atividades todos os dias!</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon f4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+                <h4>Imprima Sem Limites</h4>
+                <p>PDF de alta qualidade. Perfeito para todos os filhos e para a igreja.</p>
+            </div>
         </div>
-        <div class="savings-badge" style="background:#FEF2F2;color:#B91C1C;border-color:#FECACA">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          Você economiza R$ 94,10 hoje!
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testi">
+        <h2 class="testi-title">💬 O que outras famílias estão dizendo</h2>
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Meus filhos amaram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando. Super recomendo!"</p>
+            <div class="testi-author"><div class="av av1">A</div><div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos — São Paulo</div></div></div>
         </div>
-        <div class="price-block" style="background:#FFF8F6;border-color:rgba(194,65,12,.1)">
-          <div class="price-tag-off" style="background:linear-gradient(135deg,var(--coral),var(--coral-m))">-82% OFF</div>
-          <div class="price-from">Separado custaria</div>
-          <div class="price-was">R$ 114,00</div>
-          <div class="price-now">
-            <span class="price-currency" style="color:var(--coral-m)">R$</span>
-            <span class="price-big" style="color:var(--coral)">19</span>
-            <span class="price-cents" style="color:var(--coral-m)">,90</span>
-          </div>
-          <div class="price-install">ou 3x de R$ 6,63 no cartão</div>
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento que fiz este ano para o culto doméstico!"</p>
+            <div class="testi-author"><div class="av av2">R</div><div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos — Rio de Janeiro</div></div></div>
         </div>
-        <ul class="feat-list">
-          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 1: 35 livros bíblicos</span></li>
-          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">TUDO</span> do pacote 2: 50+ páginas de atividades</span></li>
-          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>85+ conteúdos — diversão para meses!</span></li>
-          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
-          <li><span class="feat-ck coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Ideal para <span class="feat-strong">escola dominical</span> e múltiplos filhos</span></li>
-        </ul>
-        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-coral">
-          <span class="btn-icon">🎁</span> SIM, QUERO O COMBO! <span class="btn-arr">→</span>
-        </a>
-        <div class="mini-guar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          7 dias de garantia — sem risco nenhum
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Comprei o combo e vale cada centavo! Meu filho de 5 anos ama os labirintos. Já imprimimos várias vezes. Muito melhor que tablet!"</p>
+            <div class="testi-author"><div class="av av3">J</div><div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho — Belo Horizonte</div></div></div>
         </div>
-      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="guarantee">
+        <div class="guar-card">
+            <div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Garantia Incondicional de 7 Dias</h3>
+            <p>Se você não ficar 100% satisfeito, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. <strong>Risco zero</strong> para sua família!</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="faq-title">❓ Perguntas Frequentes</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-btn">Como recebo o material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-panel"><p>Após confirmar o pagamento, você recebe o acesso por e-mail <strong>imediatamente</strong>. É um PDF pronto para baixar e imprimir quantas vezes quiser!</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">Para qual idade é indicado? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-panel"><p>De <strong>3 a 10 anos</strong>. As atividades têm diferentes níveis de dificuldade, crescendo junto com seu filho. Perfeito para irmãos de idades diferentes!</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">Posso usar na igreja ou escola dominical? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-panel"><p>Com certeza! Você pode imprimir <strong>sem limites</strong>. Ideal para famílias numerosas, igrejas, células e escola dominical. O material é uma bênção para o ministério infantil!</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">O pagamento é seguro? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-panel"><p><strong>Totalmente seguro!</strong> Utilizamos a plataforma Cakto, com criptografia de ponta e proteção de dados. Seus dados estão 100% protegidos.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn">E se eu não gostar do material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+                <div class="faq-panel"><p>Você tem <strong>7 dias de garantia incondicional</strong>. Se não ficar satisfeito por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem complicações.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="final-inner">
+            <h2>🙏 Não perca essa bênção!</h2>
+            <p class="sub">Invista na educação cristã dos seus filhos agora mesmo</p>
+            <div class="final-old">De R$ 114,00</div>
+            <div class="final-price"><sup>R$</sup>19,90</div>
+            <p class="final-note">Combo Completo — 35 Livros + Livro de Atividades</p>
+            <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">🎁 QUERO ABENÇOAR MEUS FILHOS AGORA</a>
+        </div>
+    </section>
+
+    <!-- STICKY BAR -->
+    <div class="sticky" id="stickyBar">
+        <div class="sticky-prices">
+            <div class="s-old">R$ 114,00</div>
+            <div class="s-new">R$ 19,90</div>
+        </div>
+        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">🎁 LEVAR COMBO →</a>
     </div>
 
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<div class="countdown-bar">
-  <div class="cd-label">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    Oferta especial expira em:
-  </div>
-  <div class="cd-digits">
-    <div class="cd-block"><div class="cd-num" id="cdH">02</div><div class="cd-lbl">Horas</div></div>
-    <div class="cd-block"><div class="cd-num" id="cdM">47</div><div class="cd-lbl">Min</div></div>
-    <div class="cd-block"><div class="cd-num" id="cdS">33</div><div class="cd-lbl">Seg</div></div>
-  </div>
-</div>
-
-<!-- PREVIEW -->
-<div class="preview-sec">
-  <h2 class="preview-title">📖 Veja o que está incluído</h2>
-  <div class="preview-scroll">
-    <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80" alt="Arca de Noé" loading="lazy" width="140" height="140">
-      <span>Arca de Noé</span>
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <div class="livepulse-dot"></div>
+        <div>
+            <div class="toast-name" id="tName">Maria S. de São Paulo</div>
+            <div class="toast-act">✓ Acabou de comprar o Combo!</div>
+            <div class="toast-time" id="tTime">Agora mesmo</div>
+        </div>
     </div>
-    <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80" alt="Caça-Palavras" loading="lazy" width="140" height="140">
-      <span>Caça-Palavras</span>
-    </div>
-    <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80" alt="Labirintos" loading="lazy" width="140" height="140">
-      <span>Labirintos</span>
-    </div>
-    <div class="prev-card">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80" alt="Colorir" loading="lazy" width="140" height="140">
-      <span>Colorir</span>
-    </div>
-  </div>
-</div>
 
-<!-- FEATURES -->
-<section class="features">
-  <h2 class="feat-title">✨ Por que os pais amam?</h2>
-  <div class="feat-grid">
-    <div class="feat-card">
-      <div class="feat-icon f1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-      <h4>Histórias Bíblicas Ilustradas</h4>
-      <p>Simples e cativantes para todas as idades.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon f2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <h4>Valores Cristãos</h4>
-      <p>Amor, bondade e gratidão de forma lúdica.</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon f3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-      <h4>Diversão Garantida</h4>
-      <p>Atividades que entretêm por horas!</p>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon f4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
-      <h4>Imprima Sem Limites</h4>
-      <p>PDF de alta qualidade para todos os filhos.</p>
-    </div>
-  </div>
-</section>
+    <footer>
+        <p>Booby Goodies © 2024 — Todos os direitos reservados</p>
+        <p style="margin-top:6px"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+        <p style="margin-top:8px;font-size:10px;color:var(--ink4)">Ensina a criança no caminho em que deve andar. 🙏</p>
+    </footer>
 
-<!-- TESTIMONIALS -->
-<section class="testi">
-  <h2 class="testi-title">💬 O que os pais dizem</h2>
-  <div class="testi-card">
-    <div class="stars">★★★★★</div>
-    <p class="testi-text">"Meus filhos adoraram! Agora pedem para fazer as atividades todos os dias. Uma forma maravilhosa de ensinar a Palavra brincando."</p>
-    <div class="testi-author"><div class="av av1">A</div><div><div class="author-name">Ana Paula M.</div><div class="author-role">Mãe de 2 filhos</div></div></div>
-  </div>
-  <div class="testi-card">
-    <div class="stars">★★★★★</div>
-    <p class="testi-text">"Incrível! Minhas crianças estão aprendendo sobre a Bíblia enquanto se divertem. O melhor investimento do ano!"</p>
-    <div class="testi-author"><div class="av av2">R</div><div><div class="author-name">Roberto S.</div><div class="author-role">Pai de 3 filhos</div></div></div>
-  </div>
-  <div class="testi-card">
-    <div class="stars">★★★★★</div>
-    <p class="testi-text">"Meu filho de 5 anos ama os labirintos! Já imprimimos várias vezes. Vale muito mais que R$19,90 do combo."</p>
-    <div class="testi-author"><div class="av av3">J</div><div><div class="author-name">Julia Costa</div><div class="author-role">Mãe de 1 filho</div></div></div>
-  </div>
-</section>
+    <script>
+        // COUNTDOWN
+        let secs = 2 * 3600 + 47 * 60 + 33;
+        const cdH = document.getElementById('cdH'),
+            cdM = document.getElementById('cdM'),
+            cdS = document.getElementById('cdS'),
+            cdI = document.getElementById('cd-inline');
 
-<!-- GUARANTEE -->
-<section class="guarantee">
-  <div class="guar-card">
-    <div class="guar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    <h3>Garantia Incondicional de 7 Dias</h3>
-    <p>Se você não ficar 100% satisfeito, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia. Risco zero para você!</p>
-  </div>
-</section>
+        function tick() {
+            if (secs <= 0) secs = 2 * 3600 + 47 * 60 + 33;
+            const h = Math.floor(secs / 3600),
+                m = Math.floor((secs % 3600) / 60),
+                s = secs % 60;
+            const hh = String(h).padStart(2, '0'),
+                mm = String(m).padStart(2, '0'),
+                ss = String(s).padStart(2, '0');
+            cdH.textContent = hh;
+            cdM.textContent = mm;
+            cdS.textContent = ss;
+            cdI.textContent = `${hh}:${mm}:${ss}`;
+            secs--;
+        }
+        tick();
+        setInterval(tick, 1000);
 
-<!-- FAQ -->
-<section class="faq">
-  <h2 class="faq-title">Perguntas Frequentes</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-btn">Como recebo o material? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>Após confirmar o pagamento, você recebe o acesso por e-mail imediatamente. É um PDF pronto para baixar e imprimir!</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-btn">Para qual idade é indicado? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>De 3 a 10 anos. As atividades têm diferentes níveis de dificuldade para todas as idades.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-btn">Posso imprimir mais de uma vez? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>Sim! Sem limites. Ideal para famílias numerosas ou para usar na igreja e escola dominical.</p></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-btn">O pagamento é seguro? <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
-      <div class="faq-panel"><p>Totalmente! Utilizamos a plataforma Cakto, 100% segura e criptografada.</p></div>
-    </div>
-  </div>
-</section>
+        // OFFER CARD CLICK
+        document.querySelectorAll('.ocard').forEach(c => {
+            c.addEventListener('click', e => {
+                if (!e.target.closest('a')) {
+                    const a = c.querySelector('a');
+                    if (a) a.click();
+                }
+            });
+        });
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="final-inner">
-    <h2>🙏 Não perca essa bênção!</h2>
-    <p class="sub">Invista na educação cristã dos seus filhos agora</p>
-    <div class="final-old">De R$ 114,00</div>
-    <div class="final-price"><sup>R$</sup>19,90</div>
-    <p class="final-note">Combo Completo — 35 Livros + Livro de Atividades</p>
-    <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">🎁 GARANTIR COMBO AGORA</a>
-  </div>
-</section>
+        // TOAST
+        const buyers = [
+            { n: 'Maria S. de São Paulo', t: 'Agora mesmo' },
+            { n: 'João P. do Rio de Janeiro', t: 'Há 2 min' },
+            { n: 'Fernanda L. de Belo Horizonte', t: 'Há 4 min' },
+            { n: 'Carlos A. de Curitiba', t: 'Há 6 min' },
+            { n: 'Patrícia M. de Salvador', t: 'Há 9 min' },
+            { n: 'Amanda C. de Fortaleza', t: 'Há 11 min' },
+            { n: 'Lucas R. de Porto Alegre', t: 'Há 14 min' },
+        ];
+        let bi = 0;
+        const toast = document.getElementById('toast'),
+            tN = document.getElementById('tName'),
+            tT = document.getElementById('tTime');
 
-<!-- STICKY BAR -->
-<div class="sticky" id="stickyBar">
-  <div class="sticky-prices">
-    <div class="s-old">R$ 114,00</div>
-    <div class="s-new">R$ 19,90</div>
-  </div>
-  <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">🎁 LEVAR COMBO →</a>
-</div>
+        function showToast() {
+            tN.textContent = buyers[bi].n;
+            tT.textContent = buyers[bi].t;
+            toast.classList.add('show');
+            bi = (bi + 1) % buyers.length;
+            setTimeout(() => toast.classList.remove('show'), 4200);
+        }
+        setTimeout(showToast, 3500);
+        setInterval(showToast, 14000);
 
-<!-- TOAST -->
-<div class="toast" id="toast">
-  <div class="livepulse-dot"></div>
-  <div>
-    <div class="toast-name" id="tName">Maria S. de São Paulo</div>
-    <div class="toast-act">✓ Acabou de comprar o Combo!</div>
-    <div class="toast-time" id="tTime">Agora mesmo</div>
-  </div>
-</div>
+        // LIVE BAR
+        const liveTexts = [
+            '<span>37 pessoas</span> estão vendo esta oferta agora',
+            '<span>12 famílias</span> compraram nas últimas 2 horas',
+            '<span>89%</span> dos compradores escolhem o Combo',
+            '<span>Apenas hoje</span> com 82% de desconto',
+        ];
+        let li = 0;
+        const lb = document.getElementById('liveBarText');
+        setInterval(() => {
+            li = (li + 1) % liveTexts.length;
+            lb.style.opacity = '0';
+            setTimeout(() => {
+                lb.innerHTML = liveTexts[li];
+                lb.style.opacity = '1';
+            }, 300);
+        }, 5000);
+        lb.style.transition = 'opacity .3s';
 
-<footer>
-  <p>Booby Goodies © 2024 — Todos os direitos reservados</p>
-  <p style="margin-top:6px"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
-</footer>
+        // FAQ
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement,
+                    was = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove(
+                    'open'));
+                if (!was) item.classList.add('open');
+            });
+        });
 
-<script>
-// COUNTDOWN
-let secs=2*3600+47*60+33;
-const cdH=document.getElementById('cdH'),cdM=document.getElementById('cdM'),cdS=document.getElementById('cdS'),cdI=document.getElementById('cd-inline');
-function tick(){
-  if(secs<=0)secs=2*3600+47*60+33;
-  const h=Math.floor(secs/3600),m=Math.floor((secs%3600)/60),s=secs%60;
-  const hh=String(h).padStart(2,'0'),mm=String(m).padStart(2,'0'),ss=String(s).padStart(2,'0');
-  cdH.textContent=hh;cdM.textContent=mm;cdS.textContent=ss;
-  cdI.textContent=`${hh}:${mm}:${ss}`;
-  secs--;
-}
-tick();setInterval(tick,1000);
+        // VH fix iOS
+        function setVH() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight*.01}px`);
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => setTimeout(setVH, 200));
 
-// Sticky sempre visível
+        // STICKY show/hide
+        const stickyBar = document.getElementById('stickyBar');
+        const offersSection = document.getElementById('ofertas');
+        let stickyVisible = false;
 
-// OFFER CARD CLICK
-document.querySelectorAll('.ocard').forEach(c=>{
-  c.addEventListener('click',e=>{if(!e.target.closest('a')){const a=c.querySelector('a');if(a)a.click();}});
-});
-
-// TOAST
-const buyers=[
-  {n:'Maria S. de São Paulo',t:'Agora mesmo'},
-  {n:'João P. do Rio de Janeiro',t:'Há 2 min'},
-  {n:'Fernanda L. de Belo Horizonte',t:'Há 4 min'},
-  {n:'Carlos A. de Curitiba',t:'Há 6 min'},
-  {n:'Patrícia M. de Salvador',t:'Há 9 min'},
-  {n:'Amanda C. de Fortaleza',t:'Há 11 min'},
-  {n:'Lucas R. de Porto Alegre',t:'Há 14 min'},
-];
-let bi=0;const toast=document.getElementById('toast'),tN=document.getElementById('tName'),tT=document.getElementById('tTime');
-function showToast(){
-  tN.textContent=buyers[bi].n;tT.textContent=buyers[bi].t;
-  toast.classList.add('show');bi=(bi+1)%buyers.length;
-  setTimeout(()=>toast.classList.remove('show'),4200);
-}
-setTimeout(showToast,3500);setInterval(showToast,14000);
-
-// LIVE BAR
-const liveTexts=[
-  '<span>37 pessoas</span> estão vendo esta oferta agora',
-  '<span>12 famílias</span> compraram nas últimas 2 horas',
-  '<span>89%</span> dos compradores escolhem o Combo',
-  '<span>Apenas hoje</span> com 82% de desconto',
-];
-let li=0;const lb=document.getElementById('liveBarText');
-setInterval(()=>{li=(li+1)%liveTexts.length;lb.style.opacity='0';setTimeout(()=>{lb.innerHTML=liveTexts[li];lb.style.opacity='1';},300);},5000);
-lb.style.transition='opacity .3s';
-
-// FAQ
-document.querySelectorAll('.faq-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const item=btn.parentElement,was=item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
-    if(!was)item.classList.add('open');
-  });
-});
-
-// VH fix iOS
-function setVH(){document.documentElement.style.setProperty('--vh',`${window.innerHeight*.01}px`)}
-setVH();window.addEventListener('resize',setVH);window.addEventListener('orientationchange',()=>setTimeout(setVH,200));
-</script>
+        function checkSticky() {
+            const offersRect = offersSection.getBoundingClientRect();
+            const shouldShow = offersRect.top < -100;
+            if (shouldShow && !stickyVisible) {
+                stickyBar.style.transform = 'translateY(0)';
+                stickyBar.style.opacity = '1';
+                stickyVisible = true;
+            } else if (!shouldShow && stickyVisible) {
+                stickyBar.style.transform = 'translateY(120%)';
+                stickyBar.style.opacity = '0';
+                stickyVisible = false;
+            }
+        }
+        stickyBar.style.transition = 'transform .35s ease, opacity .35s ease';
+        stickyBar.style.transform = 'translateY(120%)';
+        stickyBar.style.opacity = '0';
+        window.addEventListener('scroll', checkSticky, { passive: true });
+        checkSticky();
+    </script>
 </body>
 </html>
