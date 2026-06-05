@@ -6,11 +6,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#1a365d">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.facebook.com; connect-src 'self' https://www.facebook.com;">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Booby Goodies Cristão - Livros Bíblicos Infantis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        /* ... (mantenha TODO o CSS original exatamente igual, sem alterações) ... */
         * {
             margin: 0;
             padding: 0;
@@ -60,7 +66,6 @@
             -webkit-overflow-scrolling: touch;
             line-height: 1.5;
         }
-
         /* ─── TOP BAR ─── */
         .topbar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
@@ -96,7 +101,6 @@
             flex-shrink: 0;
             color: var(--gold);
         }
-
         /* ─── HERO ─── */
         .hero {
             padding: 20px 16px 28px;
@@ -253,7 +257,6 @@
         .face:first-child {
             margin-left: 0;
         }
-
         /* ─── TRUST BAR ─── */
         .trust-bar {
             display: flex;
@@ -305,7 +308,6 @@
             background: #ede9fe;
             color: #5b21b6;
         }
-
         /* ─── LIVE BAR ─── */
         .live-bar {
             background: var(--white);
@@ -345,7 +347,6 @@
             color: var(--coral);
             font-weight: 800;
         }
-
         /* ─── OFFERS SECTION ─── */
         .offers {
             padding: 24px 14px 28px;
@@ -380,7 +381,6 @@
             color: var(--ink3);
             font-weight: 600;
         }
-
         .offers-list {
             display: flex;
             flex-direction: column;
@@ -396,7 +396,6 @@
                 gap: 10px;
             }
         }
-
         .ocard {
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -432,7 +431,6 @@
         .rib-gold {
             background: linear-gradient(90deg, #b45309, #f59e0b, #fbbf24);
         }
-
         .popular-wrap {
             position: absolute;
             top: 12px;
@@ -457,7 +455,6 @@
             width: 10px;
             height: 10px;
         }
-
         .ocard-header {
             display: flex;
             align-items: flex-start;
@@ -503,7 +500,6 @@
             color: var(--ink3);
             font-weight: 600;
         }
-
         .savings-badge {
             display: inline-flex;
             align-items: center;
@@ -522,7 +518,6 @@
             height: 10px;
             flex-shrink: 0;
         }
-
         .price-block {
             background: #f8fafc;
             border-radius: 14px;
@@ -589,7 +584,6 @@
             color: var(--ink4);
             font-weight: 600;
         }
-
         .feat-list {
             list-style: none;
             display: flex;
@@ -636,7 +630,6 @@
             font-weight: 800;
             color: var(--ink);
         }
-
         .ocard-btn {
             display: flex;
             align-items: center;
@@ -691,7 +684,6 @@
                 box-shadow: 0 10px 36px rgba(180, 83, 9, 0.55), 0 0 0 6px rgba(245, 158, 11, 0.08);
             }
         }
-
         .ocard.combo {
             border-color: transparent;
             box-shadow: 0 0 0 2px var(--gold), 0 14px 36px rgba(180, 83, 9, 0.15);
@@ -734,7 +726,6 @@
             color: var(--green);
             flex-shrink: 0;
         }
-
         /* ─── COUNTDOWN ─── */
         .countdown-bar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
@@ -787,7 +778,6 @@
             letter-spacing: 0.5px;
             margin-top: 1px;
         }
-
         /* ─── PREVIEW ─── */
         .preview-sec {
             padding: 20px 0 22px;
@@ -843,7 +833,6 @@
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
-
         /* ─── TESTIMONIALS ─── */
         .testi {
             padding: 22px 14px;
@@ -920,7 +909,6 @@
             font-size: 9px;
             color: var(--ink3);
         }
-
         /* ─── GUARANTEE ─── */
         .guarantee {
             padding: 22px 14px;
@@ -964,7 +952,6 @@
             line-height: 1.5;
             opacity: 0.85;
         }
-
         /* ─── FAQ ─── */
         .faq {
             padding: 22px 14px 26px;
@@ -1034,7 +1021,6 @@
             font-weight: 600;
             line-height: 1.6;
         }
-
         /* ─── FINAL CTA ─── */
         .final-cta {
             padding: 32px 16px;
@@ -1129,7 +1115,6 @@
         .btn-final:active {
             transform: scale(0.95);
         }
-
         /* ─── STICKY ─── */
         .sticky {
             position: fixed;
@@ -1182,7 +1167,6 @@
         .btn-sticky:active {
             transform: scale(0.96);
         }
-
         /* ─── TOAST ─── */
         .toast {
             position: fixed;
@@ -1233,7 +1217,6 @@
             font-size: 9px;
             color: var(--ink3);
         }
-
         footer {
             padding: 16px 14px 80px;
             text-align: center;
@@ -1248,23 +1231,23 @@
         }
     </style>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1866970273982797');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1866970273982797');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     
 </head>
 <body>
@@ -1328,7 +1311,7 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
         <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
     </div>
 
-    <!-- OFFERS -->
+    <!-- OFERTAS (os links agora são protegidos e montados dinamicamente) -->
     <section class="offers" id="ofertas">
         <div class="sec-label">
             <div class="sec-pill">Escolha seu pacote</div>
@@ -1338,8 +1321,8 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
 
         <div class="offers-list">
 
-            <!-- OFERTA 1: 35 Livros (imagem.png) -->
-            <div class="ocard" id="offer1">
+            <!-- OFERTA 1: 35 Livros -->
+            <div class="ocard" data-offer="1">
                 <div class="ribbon-top rib-sky"></div>
                 <div class="ocard-inner">
                     <div class="ocard-header">
@@ -1372,14 +1355,14 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
                         <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>PDF de alta qualidade — imprima à vontade</span></li>
                         <li><span class="feat-ck ck-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
                     </ul>
-                    <a href="https://pay.cakto.com.br/znuzn2x_909512" class="ocard-btn btn-sky">
+                    <a href="#" class="ocard-btn btn-sky" data-link="1">
                         📚 QUERO ESTE <span class="btn-arr">→</span>
                     </a>
                 </div>
             </div>
 
-            <!-- OFERTA 2: Atividades (atv.png) -->
-            <div class="ocard" id="offer2">
+            <!-- OFERTA 2: Atividades -->
+            <div class="ocard" data-offer="2">
                 <div class="ribbon-top rib-green"></div>
                 <div class="ocard-inner">
                     <div class="ocard-header">
@@ -1412,14 +1395,14 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
                         <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Imprima quantas vezes quiser — sem limite</span></li>
                         <li><span class="feat-ck ck-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Perfeito</span> para escola dominical e EBD</span></li>
                     </ul>
-                    <a href="https://pay.cakto.com.br/36caw43_910833" class="ocard-btn btn-green">
+                    <a href="#" class="ocard-btn btn-green" data-link="2">
                         ✏️ QUERO ESTE <span class="btn-arr">→</span>
                     </a>
                 </div>
             </div>
 
-            <!-- OFERTA 3: COMBO (combo.png) -->
-            <div class="ocard combo" id="offer3">
+            <!-- OFERTA 3: COMBO -->
+            <div class="ocard combo" data-offer="3">
                 <div class="ribbon-top rib-gold"></div>
                 <div class="popular-wrap">
                     <div class="popular-badge">
@@ -1463,7 +1446,7 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
                         <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span><span class="feat-strong">Acesso vitalício</span> — pague uma vez, use sempre</span></li>
                         <li><span class="feat-ck ck-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span><span>Ideal para <span class="feat-strong">escola dominical</span> e múltiplos filhos</span></li>
                     </ul>
-                    <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="ocard-btn btn-gold">
+                    <a href="#" class="ocard-btn btn-gold" data-link="3">
                         🎁 SIM, QUERO O COMBO! <span class="btn-arr">→</span>
                     </a>
                     <div class="mini-guar">
@@ -1571,7 +1554,7 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
             <div class="final-old">De R$ 114,00</div>
             <div class="final-price"><sup>R$</sup>19,90</div>
             <p class="final-note">Combo Completo — 35 Livros + Livro de Atividades</p>
-            <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-final">🎁 GARANTIR COMBO AGORA</a>
+            <a href="#" id="finalCtaBtn" class="btn-final">🎁 GARANTIR COMBO AGORA</a>
         </div>
     </section>
 
@@ -1581,7 +1564,7 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
             <div class="s-old">R$ 114,00</div>
             <div class="s-new">R$ 19,90</div>
         </div>
-        <a href="https://pay.cakto.com.br/dn9a5eo_913126" class="btn-sticky">🎁 LEVAR COMBO →</a>
+        <a href="#" id="stickyBtn" class="btn-sticky">🎁 LEVAR COMBO →</a>
     </div>
 
     <!-- TOAST -->
@@ -1599,43 +1582,121 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
         <p style="margin-top:5px"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
     </footer>
 
+    <!-- 🔒 SCRIPTS PROTEGIDOS E OFUSCADOS -->
     <script>
-        // COUNTDOWN
-        let secs = 2 * 3600 + 47 * 60 + 33;
-        const cdH = document.getElementById('cdH'),
-            cdM = document.getElementById('cdM'),
-            cdS = document.getElementById('cdS'),
-            cdI = document.getElementById('cd-inline');
+    (function(){
+        'use strict';
 
-        function tick() {
-            if (secs <= 0) secs = 2 * 3600 + 47 * 60 + 33;
-            const h = Math.floor(secs / 3600),
-                m = Math.floor((secs % 3600) / 60),
-                s = secs % 60;
-            const hh = String(h).padStart(2, '0'),
-                mm = String(m).padStart(2, '0'),
-                ss = String(s).padStart(2, '0');
-            cdH.textContent = hh;
-            cdM.textContent = mm;
-            cdS.textContent = ss;
-            cdI.textContent = `${hh}:${mm}:${ss}`;
-            secs--;
+        // ─── DESATIVAR INSPEÇÃO E ATALHOS ───
+        document.oncontextmenu = () => false;
+        document.onkeydown = function(e) {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+        };
+
+        // ─── DETECÇÃO DE DEVTOOLS ───
+        setInterval(function(){
+            const threshold = 160;
+            if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+                debugger; // Trava o console
+            }
+        }, 1000);
+
+        // ─── LIMPAR CONSOLE E EXIBIR AVISO SUTIL ───
+        console.clear();
+        console.log("%c⚠️ Console reservado. Atividades suspeitas são monitoradas.", "color: #f59e0b; font-size: 14px;");
+
+        // ─── OFUSCAÇÃO DAS URLS DE CHECKOUT ───
+        const _0x1a2b = [
+            "cG", "F5L", "mN", "vY", "a2", "Ux", "dD", "R3", "bE", "eT", 
+            "ZnV6bm4yeF85MDk1MTI=",  // oferta 1
+            "MzZjd2F3NDNfOTEwODMz",  // oferta 2
+            "ZG45YTVlb185MTMxMjY="   // oferta 3 (combo)
+        ];
+        
+        function gL(i) {
+            const base = "aHR0cHM6Ly9wYXkuY2FrdG8uY29tLmJyLw==";
+            return atob(base) + atob(_0x1a2b[i]);
         }
-        tick();
-        setInterval(tick, 1000);
 
-        // OFFER CARD CLICK
-        document.querySelectorAll('.ocard').forEach(c => {
-            c.addEventListener('click', e => {
-                if (!e.target.closest('a')) {
-                    const a = c.querySelector('a');
-                    if (a) a.click();
+        // Mapeamento oferta -> índice da URL
+        const linkMap = { 1: 10, 2: 11, 3: 12 }; // índices no array acima
+
+        // ─── ATRIBUIR LINKS DINAMICAMENTE ───
+        document.querySelectorAll('[data-link]').forEach(el => {
+            const offer = el.getAttribute('data-link');
+            const urlIndex = linkMap[offer];
+            el.href = gL(urlIndex);
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = this.href;
+            });
+        });
+
+        // Configurar links dos cards inteiros
+        document.querySelectorAll('.ocard').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('a')) return;
+                const btn = card.querySelector('[data-link]');
+                if (btn && btn.href) {
+                    window.location.href = btn.href;
                 }
             });
         });
 
-        // TOAST
-        const buyers = [
+        // Configurar CTA final e sticky
+        const finalBtn = document.getElementById('finalCtaBtn');
+        const stickyBtn = document.getElementById('stickyBtn');
+        if (finalBtn) {
+            finalBtn.href = gL(12); // combo
+            finalBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = this.href;
+            });
+        }
+        if (stickyBtn) {
+            stickyBtn.href = gL(12); // combo
+            stickyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = this.href;
+            });
+        }
+
+        // ─── VERIFICAÇÃO DE INTEGRIDADE ───
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                    console.warn("Alteração suspeita no DOM detectada.");
+                }
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // ─── COUNTDOWN (código ofuscado) ───
+        let _s = 2*3600 + 47*60 + 33;
+        const _h = document.getElementById('cdH'),
+              _m = document.getElementById('cdM'),
+              _sEl = document.getElementById('cdS'),
+              _i = document.getElementById('cd-inline');
+
+        function _tick() {
+            if (_s <= 0) _s = 2*3600 + 47*60 + 33;
+            const h = Math.floor(_s/3600),
+                  m = Math.floor((_s%3600)/60),
+                  s = _s%60;
+            _h.textContent = String(h).padStart(2,'0');
+            _m.textContent = String(m).padStart(2,'0');
+            _sEl.textContent = String(s).padStart(2,'0');
+            _i.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+            _s--;
+        }
+        _tick();
+        setInterval(_tick, 1000);
+
+        // ─── TOAST ───
+        const _buyers = [
             { n: 'Maria S. de São Paulo', t: 'Agora mesmo' },
             { n: 'João P. do Rio de Janeiro', t: 'Há 2 min' },
             { n: 'Fernanda L. de Belo Horizonte', t: 'Há 4 min' },
@@ -1644,56 +1705,62 @@ src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
             { n: 'Amanda C. de Fortaleza', t: 'Há 11 min' },
             { n: 'Lucas R. de Porto Alegre', t: 'Há 14 min' },
         ];
-        let bi = 0;
-        const toast = document.getElementById('toast'),
-            tN = document.getElementById('tName'),
-            tT = document.getElementById('tTime');
+        let _bi = 0;
+        const _toast = document.getElementById('toast'),
+              _tN = document.getElementById('tName'),
+              _tT = document.getElementById('tTime');
 
-        function showToast() {
-            tN.textContent = buyers[bi].n;
-            tT.textContent = buyers[bi].t;
-            toast.classList.add('show');
-            bi = (bi + 1) % buyers.length;
-            setTimeout(() => toast.classList.remove('show'), 4200);
+        function _showToast() {
+            _tN.textContent = _buyers[_bi].n;
+            _tT.textContent = _buyers[_bi].t;
+            _toast.classList.add('show');
+            _bi = (_bi+1) % _buyers.length;
+            setTimeout(() => _toast.classList.remove('show'), 4200);
         }
-        setTimeout(showToast, 3500);
-        setInterval(showToast, 14000);
+        setTimeout(_showToast, 3500);
+        setInterval(_showToast, 14000);
 
-        // LIVE BAR
-        const liveTexts = [
+        // ─── LIVE BAR ───
+        const _liveTexts = [
             '<span>37 pessoas</span> estão vendo esta oferta agora',
             '<span>12 famílias</span> compraram nas últimas 2 horas',
             '<span>89%</span> dos compradores escolhem o Combo',
             '<span>Apenas hoje</span> com 82% de desconto',
         ];
-        let li = 0;
-        const lb = document.getElementById('liveBarText');
+        let _li = 0;
+        const _lb = document.getElementById('liveBarText');
         setInterval(() => {
-            li = (li + 1) % liveTexts.length;
-            lb.style.opacity = '0';
+            _li = (_li+1) % _liveTexts.length;
+            _lb.style.opacity = '0';
             setTimeout(() => {
-                lb.innerHTML = liveTexts[li];
-                lb.style.opacity = '1';
+                _lb.innerHTML = _liveTexts[_li];
+                _lb.style.opacity = '1';
             }, 300);
         }, 5000);
-        lb.style.transition = 'opacity .3s';
+        _lb.style.transition = 'opacity .3s';
 
-        // FAQ
+        // ─── FAQ ───
         document.querySelectorAll('.faq-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement,
-                    was = item.classList.contains('open');
-                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove(
-                    'open'));
+                      was = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
                 if (!was) item.classList.add('open');
             });
         });
 
-        // VH fix iOS
-        function setVH() { document.documentElement.style.setProperty('--vh', `${window.innerHeight*.01}px`) }
-        setVH();
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', () => setTimeout(setVH, 200));
+        // ─── PROTEÇÃO CONTRA IFRAME ───
+        if (window.top !== window.self) {
+            document.body.innerHTML = '<div style="padding:40px;text-align:center;font-size:18px;">Este conteúdo não pode ser exibido em iframes.</div>';
+        }
+
+        // ─── FIX iOS VH ───
+        function _setVH() { document.documentElement.style.setProperty('--vh', `${window.innerHeight*.01}px`); }
+        _setVH();
+        window.addEventListener('resize', _setVH);
+        window.addEventListener('orientationchange', () => setTimeout(_setVH, 200));
+
+    })();
     </script>
 </body>
 </html>
