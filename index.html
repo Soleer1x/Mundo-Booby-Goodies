@@ -1608,21 +1608,20 @@
         console.clear();
         console.log("%c⚠️ Console reservado. Atividades suspeitas são monitoradas.", "color: #f59e0b; font-size: 14px;");
 
-        // ─── OFUSCAÇÃO DAS URLS DE CHECKOUT ───
-        const _0x1a2b = [
-            "cG", "F5L", "mN", "vY", "a2", "Ux", "dD", "R3", "bE", "eT", 
-            "ZnV6bm4yeF85MDk1MTI=",  // oferta 1
-            "MzZjd2F3NDNfOTEwODMz",  // oferta 2
-            "ZG45YTVlb185MTMxMjY="   // oferta 3 (combo)
-        ];
-        
-        function gL(i) {
-            const base = "aHR0cHM6Ly9wYXkuY2FrdG8uY29tLmJyLw==";
-            return atob(base) + atob(_0x1a2b[i]);
-        }
+// ─── OFUSCAÇÃO DAS URLS DE CHECKOUT (CORRIGIDO) ───
+const _0x1a2b = [
+    "cG", "F5L", "mN", "vY", "a2", "Ux", "dD", "R3", "bE", "eT",
+    "em51em4yeF85MDk1MTI=",   // oferta 1: "znuzn2x_909512"
+    "MzZjd2F3NDNfOTEwODMz",   // oferta 2: "36caw43_910833"
+    "ZG45YTVlb185MTMxMjY="    // oferta 3: "dn9a5eo_913126"
+];
 
-        // Mapeamento oferta -> índice da URL
-        const linkMap = { 1: 10, 2: 11, 3: 12 }; // índices no array acima
+function gL(i) {
+    const base = "aHR0cHM6Ly9wYXkuY2FrdG8uY29tLmJyLw=="; // https://pay.cakto.com.br/
+    return atob(base) + atob(_0x1a2b[i]);
+}
+
+const linkMap = { 1: 10, 2: 11, 3: 12 };
 
         // ─── ATRIBUIR LINKS DINAMICAMENTE ───
         document.querySelectorAll('[data-link]').forEach(el => {
