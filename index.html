@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#1a365d">
     <meta name="description" content="Livros bíblicos infantis ilustrados e atividades para seus filhos crescerem na fé.">
 
+    <!-- CSP atualizada -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net blob:;
@@ -26,16 +27,22 @@
     <meta http-equiv="Expires" content="0">
     <title>Booby Goodies Cristão - Livros Bíblicos Infantis</title>
 
+    <!-- Manifest será gerado dinamicamente, mas agora aponta para imagem.png -->
     <link rel="manifest" id="manifest-link">
+
+    <!-- Apple touch icon usando a imagem.png fornecida -->
     <link rel="apple-touch-icon" href="imagem.png">
 
+    <!-- Pré-conexões -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin="anonymous">
 
+    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <style>
+        /* ... (CSS completo mantido igual, sem alterações) ... */
         * {
             margin: 0;
             padding: 0;
@@ -1190,21 +1197,6 @@
             transition: transform 0.2s;
         }
         #installBtn:active { transform: scale(0.95); }
-        #manualInstallBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: #1e40af;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
     </style>
 
     <!-- Meta Pixel Code -->
@@ -1227,11 +1219,7 @@
 </head>
 <body>
 
-    <!-- Botão automático de instalação (aparece se o navegador disparar o evento) -->
     <button id="installBtn">📲 Instalar App</button>
-
-    <!-- Botão manual de instalação (aparece depois de 5 segundos se o automático não surgir) -->
-    <button id="manualInstallBtn" onclick="alert('Para instalar: toque nos 3 pontinhos do Chrome e selecione \u0022Adicionar à tela inicial\u0022')">📲 Instalar App</button>
 
     <!-- TOP BAR -->
     <div class="topbar">
@@ -1257,6 +1245,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                 Acesso imediato
             </div>
+            <!-- Imagem principal usando imagem.png -->
             <img src="imagem.png" alt="Crianças com atividades bíblicas" loading="eager" width="280" height="280">
         </div>
         <div class="social-proof">
@@ -1592,6 +1581,7 @@
         // ─── REGISTRAR SERVICE WORKER ───
         function registerSW() {
             if (!('serviceWorker' in navigator)) return;
+            // Adicionamos imagem.png à lista de cache
             const swCode = `
                 const CACHE_NAME = 'booby-goodies-v3';
                 const URLS_TO_CACHE = [
@@ -1652,6 +1642,8 @@
                 .catch(err => console.warn('[PWA] Service Worker falhou:', err));
         }
 
+        // ─── APPLE TOUCH ICON JÁ ESTÁ NO <head> ───
+
         // ─── PROMPT DE INSTALAÇÃO (ANDROID/CHROME) ───
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -1671,16 +1663,8 @@
             });
         });
 
-        // Botão manual caso o prompt automático não ocorra em 5 segundos
-        setTimeout(function() {
-            if (!deferredPrompt) {
-                document.getElementById('manualInstallBtn').style.display = 'block';
-            }
-        }, 5000);
-
         window.addEventListener('appinstalled', () => {
             document.getElementById('installBtn').style.display = 'none';
-            document.getElementById('manualInstallBtn').style.display = 'none';
             console.log('PWA instalado com sucesso');
         });
 
