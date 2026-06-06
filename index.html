@@ -5,18 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Booby Goodies">
     <meta name="theme-color" content="#1a365d">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.facebook.com; connect-src 'self' https://www.facebook.com;">
+    <meta name="description" content="Livros bíblicos infantis ilustrados e atividades para seus filhos crescerem na fé.">
+
+    <!-- CSP atualizada para permitir Service Worker e Manifest -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net blob:;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com data:;
+        img-src 'self' data: https://images.unsplash.com https://www.facebook.com blob:;
+        connect-src 'self' https://www.facebook.com;
+        worker-src 'self' blob:;
+        manifest-src 'self' data:;
+    ">
+
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Booby Goodies Cristão - Livros Bíblicos Infantis</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Manifest será gerado dinamicamente -->
+    <link rel="manifest" id="manifest-link">
+
+    <!-- Pré-conexões -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin="anonymous">
+
+    <!-- Fontes com crossorigin para o Service Worker -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" crossorigin="anonymous">
+
     <style>
-        /* ... (mantenha TODO o CSS original exatamente igual, sem alterações) ... */
+        /* CSS completo (inalterado) */
         * {
             margin: 0;
             padding: 0;
@@ -66,7 +89,6 @@
             -webkit-overflow-scrolling: touch;
             line-height: 1.5;
         }
-        /* ─── TOP BAR ─── */
         .topbar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
             color: #fff;
@@ -101,7 +123,6 @@
             flex-shrink: 0;
             color: var(--gold);
         }
-        /* ─── HERO ─── */
         .hero {
             padding: 20px 16px 28px;
             text-align: center;
@@ -257,7 +278,6 @@
         .face:first-child {
             margin-left: 0;
         }
-        /* ─── TRUST BAR ─── */
         .trust-bar {
             display: flex;
             justify-content: center;
@@ -308,7 +328,6 @@
             background: #ede9fe;
             color: #5b21b6;
         }
-        /* ─── LIVE BAR ─── */
         .live-bar {
             background: var(--white);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -327,13 +346,8 @@
             animation: livepulse 1.4s infinite;
         }
         @keyframes livepulse {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
         }
         .live-bar-text {
             font-size: 11px;
@@ -347,7 +361,6 @@
             color: var(--coral);
             font-weight: 800;
         }
-        /* ─── OFFERS SECTION ─── */
         .offers {
             padding: 24px 14px 28px;
             background: var(--offwhite);
@@ -411,9 +424,7 @@
             transform: scale(0.985);
         }
         @media(min-width:640px) {
-            .ocard {
-                flex: 1;
-            }
+            .ocard { flex: 1; }
         }
         .ocard-inner {
             padding: 16px 14px 14px;
@@ -422,15 +433,9 @@
             height: 5px;
             width: 100%;
         }
-        .rib-sky {
-            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
-        }
-        .rib-green {
-            background: linear-gradient(90deg, #065f46, #10b981, #34d399);
-        }
-        .rib-gold {
-            background: linear-gradient(90deg, #b45309, #f59e0b, #fbbf24);
-        }
+        .rib-sky { background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa); }
+        .rib-green { background: linear-gradient(90deg, #065f46, #10b981, #34d399); }
+        .rib-gold { background: linear-gradient(90deg, #b45309, #f59e0b, #fbbf24); }
         .popular-wrap {
             position: absolute;
             top: 12px;
@@ -478,15 +483,9 @@
             object-fit: cover;
             display: block;
         }
-        .ocard-ico.sky {
-            background: var(--sky-light);
-        }
-        .ocard-ico.green {
-            background: var(--green-light);
-        }
-        .ocard-ico.gold {
-            background: var(--gold-light);
-        }
+        .ocard-ico.sky { background: var(--sky-light); }
+        .ocard-ico.green { background: var(--green-light); }
+        .ocard-ico.gold { background: var(--gold-light); }
         .ocard h3 {
             font-family: 'Fredoka', sans-serif;
             font-size: 15px;
@@ -614,18 +613,9 @@
             width: 8px;
             height: 8px;
         }
-        .feat-ck.ck-sky {
-            background: var(--sky-light);
-            color: var(--sky-dark);
-        }
-        .feat-ck.ck-green {
-            background: var(--green-light);
-            color: var(--green-dark);
-        }
-        .feat-ck.ck-gold {
-            background: var(--gold-light);
-            color: var(--gold-dark);
-        }
+        .feat-ck.ck-sky { background: var(--sky-light); color: var(--sky-dark); }
+        .feat-ck.ck-green { background: var(--green-light); color: var(--green-dark); }
+        .feat-ck.ck-gold { background: var(--gold-light); color: var(--gold-dark); }
         .feat-strong {
             font-weight: 800;
             color: var(--ink);
@@ -651,17 +641,13 @@
             position: relative;
             overflow: hidden;
         }
-        .ocard-btn:active {
-            transform: scale(0.96);
-        }
+        .ocard-btn:active { transform: scale(0.96); }
         .ocard-btn .btn-arr {
             display: inline-block;
             transition: transform 0.25s;
             font-size: 14px;
         }
-        .ocard-btn:active .btn-arr {
-            transform: translateX(4px);
-        }
+        .ocard-btn:active .btn-arr { transform: translateX(4px); }
         .btn-sky {
             background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             box-shadow: 0 6px 20px rgba(30, 64, 175, 0.25);
@@ -676,21 +662,14 @@
             animation: goldpulse 2s ease-in-out infinite;
         }
         @keyframes goldpulse {
-            0%,
-            100% {
-                box-shadow: 0 8px 28px rgba(180, 83, 9, 0.35);
-            }
-            50% {
-                box-shadow: 0 10px 36px rgba(180, 83, 9, 0.55), 0 0 0 6px rgba(245, 158, 11, 0.08);
-            }
+            0%, 100% { box-shadow: 0 8px 28px rgba(180, 83, 9, 0.35); }
+            50% { box-shadow: 0 10px 36px rgba(180, 83, 9, 0.55), 0 0 0 6px rgba(245, 158, 11, 0.08); }
         }
         .ocard.combo {
             border-color: transparent;
             box-shadow: 0 0 0 2px var(--gold), 0 14px 36px rgba(180, 83, 9, 0.15);
         }
-        .ocard.combo .ocard-inner {
-            background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
-        }
+        .ocard.combo .ocard-inner { background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%); }
         .combo-crown {
             display: flex;
             align-items: center;
@@ -726,7 +705,6 @@
             color: var(--green);
             flex-shrink: 0;
         }
-        /* ─── COUNTDOWN ─── */
         .countdown-bar {
             background: linear-gradient(135deg, #1a365d, #1e40af);
             color: #fff;
@@ -778,7 +756,6 @@
             letter-spacing: 0.5px;
             margin-top: 1px;
         }
-        /* ─── PREVIEW ─── */
         .preview-sec {
             padding: 20px 0 22px;
             background: var(--white);
@@ -801,19 +778,13 @@
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
         }
-        .preview-scroll::-webkit-scrollbar {
-            display: none;
-        }
+        .preview-scroll::-webkit-scrollbar { display: none; }
         .prev-card {
             flex-shrink: 0;
             width: 120px;
             scroll-snap-align: start;
         }
-        @media(min-width:400px) {
-            .prev-card {
-                width: 135px;
-            }
-        }
+        @media(min-width:400px) { .prev-card { width: 135px; } }
         .prev-card img {
             width: 100%;
             border-radius: 12px;
@@ -833,7 +804,6 @@
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
-        /* ─── TESTIMONIALS ─── */
         .testi {
             padding: 22px 14px;
             background: var(--offwhite);
@@ -857,9 +827,7 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
-        .testi-card:last-of-type {
-            margin-bottom: 0;
-        }
+        .testi-card:last-of-type { margin-bottom: 0; }
         .stars {
             color: var(--gold);
             font-size: 12px;
@@ -891,15 +859,9 @@
             color: #fff;
             flex-shrink: 0;
         }
-        .av1 {
-            background: linear-gradient(135deg, #7c3aed, #5b21b6);
-        }
-        .av2 {
-            background: linear-gradient(135deg, #ea580c, #c2410c);
-        }
-        .av3 {
-            background: linear-gradient(135deg, #059669, #047857);
-        }
+        .av1 { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+        .av2 { background: linear-gradient(135deg, #ea580c, #c2410c); }
+        .av3 { background: linear-gradient(135deg, #059669, #047857); }
         .author-name {
             font-size: 11px;
             font-weight: 700;
@@ -909,7 +871,6 @@
             font-size: 9px;
             color: var(--ink3);
         }
-        /* ─── GUARANTEE ─── */
         .guarantee {
             padding: 22px 14px;
             background: var(--white);
@@ -952,7 +913,6 @@
             line-height: 1.5;
             opacity: 0.85;
         }
-        /* ─── FAQ ─── */
         .faq {
             padding: 22px 14px 26px;
             background: var(--offwhite);
@@ -1003,17 +963,13 @@
             width: 13px;
             height: 13px;
         }
-        .faq-item.open .faq-chev {
-            transform: rotate(180deg);
-        }
+        .faq-item.open .faq-chev { transform: rotate(180deg); }
         .faq-panel {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.32s ease;
         }
-        .faq-item.open .faq-panel {
-            max-height: 200px;
-        }
+        .faq-item.open .faq-panel { max-height: 200px; }
         .faq-panel p {
             padding: 0 13px 13px;
             font-size: 11.5px;
@@ -1021,7 +977,6 @@
             font-weight: 600;
             line-height: 1.6;
         }
-        /* ─── FINAL CTA ─── */
         .final-cta {
             padding: 32px 16px;
             background: linear-gradient(150deg, #1a365d 0%, #1e40af 40%, #3b82f6 100%);
@@ -1112,10 +1067,7 @@
             cursor: pointer;
             min-height: 48px;
         }
-        .btn-final:active {
-            transform: scale(0.95);
-        }
-        /* ─── STICKY ─── */
+        .btn-final:active { transform: scale(0.95); }
         .sticky {
             position: fixed;
             bottom: 0;
@@ -1164,10 +1116,7 @@
             justify-content: center;
             gap: 5px;
         }
-        .btn-sticky:active {
-            transform: scale(0.96);
-        }
-        /* ─── TOAST ─── */
+        .btn-sticky:active { transform: scale(0.96); }
         .toast {
             position: fixed;
             bottom: 72px;
@@ -1192,9 +1141,7 @@
                 max-width: 290px;
             }
         }
-        .toast.show {
-            transform: translateX(0);
-        }
+        .toast.show { transform: translateX(0); }
         .toast-dot {
             width: 8px;
             height: 8px;
@@ -1229,6 +1176,25 @@
             font-weight: 700;
             text-decoration: none;
         }
+        /* Botão de instalação nativo (exibido quando disponível) */
+        #installBtn {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 9999;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        #installBtn:active { transform: scale(0.95); }
     </style>
 
     <!-- Meta Pixel Code -->
@@ -1248,9 +1214,11 @@
     src="https://www.facebook.com/tr?id=1866970273982797&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-    
 </head>
 <body>
+
+    <!-- Botão de instalação (aparece quando o PWA pode ser instalado) -->
+    <button id="installBtn">📲 Instalar App</button>
 
     <!-- TOP BAR -->
     <div class="topbar">
@@ -1311,7 +1279,7 @@
         <div class="live-bar-text" id="liveBarText"><span>37 pessoas</span> estão vendo esta oferta agora mesmo</div>
     </div>
 
-    <!-- OFERTAS (os links agora são protegidos e montados dinamicamente) -->
+    <!-- OFERTAS -->
     <section class="offers" id="ofertas">
         <div class="sec-label">
             <div class="sec-pill">Escolha seu pacote</div>
@@ -1582,10 +1550,179 @@
         <p style="margin-top:5px"><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
     </footer>
 
-    <!-- 🔒 SCRIPTS PROTEGIDOS E OFUSCADOS -->
+    <!-- SCRIPTS PROTEGIDOS E OFUSCADOS + PWA + SERVICE WORKER -->
     <script>
     (function(){
         'use strict';
+
+        // ─── GERAR ÍCONE DO PWA (CANVAS → DATA URI) ───
+        function generateIcon(size, callback) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            // Fundo azul escuro
+            ctx.fillStyle = '#1a365d';
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, size*0.15);
+            ctx.fill();
+            // Livro aberto estilizado
+            ctx.fillStyle = '#f59e0b';
+            const cx = size/2, cy = size/2;
+            const w = size*0.5, h = size*0.4;
+            // Páginas do livro
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.moveTo(cx - w*0.9, cy - h*0.8);
+            ctx.lineTo(cx, cy - h*0.3);
+            ctx.lineTo(cx, cy + h*0.9);
+            ctx.lineTo(cx - w*0.9, cy + h*0.6);
+            ctx.closePath();
+            ctx.fill();
+            ctx.fillStyle = '#e0e7ff';
+            ctx.beginPath();
+            ctx.moveTo(cx, cy - h*0.3);
+            ctx.lineTo(cx + w*0.9, cy - h*0.8);
+            ctx.lineTo(cx + w*0.9, cy + h*0.6);
+            ctx.lineTo(cx, cy + h*0.9);
+            ctx.closePath();
+            ctx.fill();
+            // Cruz no centro
+            ctx.fillStyle = '#f59e0b';
+            ctx.fillRect(cx - size*0.04, cy - size*0.15, size*0.08, size*0.35);
+            ctx.fillRect(cx - size*0.13, cy - size*0.02, size*0.26, size*0.08);
+            const dataUrl = canvas.toDataURL('image/png');
+            callback(dataUrl);
+        }
+
+        // ─── CRIAR MANIFEST E INJETAR ───
+        function setupManifest(icon192, icon512) {
+            const manifest = {
+                name: "Booby Goodies Cristão",
+                short_name: "Booby Goodies",
+                description: "Livros bíblicos infantis ilustrados e atividades",
+                start_url: location.href.split('?')[0],
+                display: "standalone",
+                orientation: "portrait",
+                background_color: "#1a365d",
+                theme_color: "#1a365d",
+                icons: [
+                    { src: icon192, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+                    { src: icon512, sizes: "512x512", type: "image/png", purpose: "any maskable" }
+                ]
+            };
+            const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            document.getElementById('manifest-link').href = url;
+        }
+
+        // ─── APPLE TOUCH ICON ───
+        function setAppleIcon(icon192) {
+            let link = document.querySelector('link[rel="apple-touch-icon"]');
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'apple-touch-icon';
+                document.head.appendChild(link);
+            }
+            link.href = icon192;
+        }
+
+        // ─── REGISTRAR SERVICE WORKER ───
+        function registerSW() {
+            if (!('serviceWorker' in navigator)) return;
+            const swCode = `
+                const CACHE_NAME = 'booby-goodies-v2';
+                const URLS_TO_CACHE = [
+                    location.href.split('?')[0],
+                    'https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap',
+                    'https://fonts.gstatic.com/s/fredoka/v14/X7nP4b87HvSqjb_WIi2yDCRoQEnk1L7S.woff2',
+                    'https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2',
+                    'https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=300&h=300&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=300&h=300&fit=crop&q=80'
+                ];
+
+                self.addEventListener('install', event => {
+                    event.waitUntil(
+                        caches.open(CACHE_NAME).then(cache => {
+                            console.log('[SW] Cacheando recursos essenciais');
+                            return cache.addAll(URLS_TO_CACHE).catch(err => {
+                                console.warn('[SW] Alguns recursos não puderam ser cacheados:', err);
+                            });
+                        })
+                    );
+                    self.skipWaiting();
+                });
+
+                self.addEventListener('activate', event => {
+                    event.waitUntil(
+                        caches.keys().then(keys => {
+                            return Promise.all(
+                                keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+                            );
+                        })
+                    );
+                    self.clients.claim();
+                });
+
+                self.addEventListener('fetch', event => {
+                    if (event.request.method !== 'GET') return;
+                    // Estratégia: Cache First, falling back to network
+                    event.respondWith(
+                        caches.match(event.request).then(cached => {
+                            const fetchPromise = fetch(event.request).then(response => {
+                                if (response && response.status === 200 && response.type === 'basic') {
+                                    const clone = response.clone();
+                                    caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+                                }
+                                return response;
+                            }).catch(() => cached);
+                            return cached || fetchPromise;
+                        })
+                    );
+                });
+            `;
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            const swUrl = URL.createObjectURL(blob);
+            navigator.serviceWorker.register(swUrl, { scope: '/' })
+                .then(reg => console.log('[PWA] Service Worker registrado com sucesso'))
+                .catch(err => console.warn('[PWA] Service Worker falhou:', err));
+        }
+
+        // ─── PROMPT DE INSTALAÇÃO (ANDROID/CHROME) ───
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            const installBtn = document.getElementById('installBtn');
+            installBtn.style.display = 'block';
+            installBtn.addEventListener('click', () => {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(choice => {
+                    if (choice.outcome === 'accepted') {
+                        console.log('Usuário instalou o PWA');
+                    }
+                    deferredPrompt = null;
+                    installBtn.style.display = 'none';
+                });
+            });
+        });
+
+        window.addEventListener('appinstalled', () => {
+            document.getElementById('installBtn').style.display = 'none';
+            console.log('PWA instalado com sucesso');
+        });
+
+        // ─── INICIALIZAÇÃO DO PWA ───
+        generateIcon(192, (icon192) => {
+            generateIcon(512, (icon512) => {
+                setupManifest(icon192, icon512);
+                setAppleIcon(icon192);
+                // Registrar SW após ter os ícones
+                registerSW();
+            });
+        });
 
         // ─── DESATIVAR INSPEÇÃO E ATALHOS ───
         document.oncontextmenu = () => false;
@@ -1600,30 +1737,28 @@
         setInterval(function(){
             const threshold = 160;
             if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
-                debugger; // Trava o console
+                debugger;
             }
         }, 1000);
 
-        // ─── LIMPAR CONSOLE E EXIBIR AVISO SUTIL ───
         console.clear();
         console.log("%c⚠️ Console reservado. Atividades suspeitas são monitoradas.", "color: #f59e0b; font-size: 14px;");
 
-// ─── OFUSCAÇÃO DAS URLS DE CHECKOUT (CORRIGIDO V2) ───
-const _0x1a2b = [
-    "cG", "F5L", "mN", "vY", "a2", "Ux", "dD", "R3", "bE", "eT",
-    "em51em4yeF85MDk1MTI=",   // oferta 1: znuzn2x_909512
-    "MzZfY2F3NDNfOTEwODMz",   // oferta 2: 36_caw43_910833 (CORRIGIDO)
-    "ZG45YTVlb185MTMxMjY="    // oferta 3: dn9a5eo_913126
-];
+        // ─── OFUSCAÇÃO DAS URLS DE CHECKOUT ───
+        const _0x1a2b = [
+            "cG", "F5L", "mN", "vY", "a2", "Ux", "dD", "R3", "bE", "eT",
+            "em51em4yeF85MDk1MTI=",
+            "MzZfY2F3NDNfOTEwODMz",
+            "ZG45YTVlb185MTMxMjY="
+        ];
 
-function gL(i) {
-    const base = "aHR0cHM6Ly9wYXkuY2FrdG8uY29tLmJyLw==";
-    return atob(base) + atob(_0x1a2b[i]);
-}
+        function gL(i) {
+            const base = "aHR0cHM6Ly9wYXkuY2FrdG8uY29tLmJyLw==";
+            return atob(base) + atob(_0x1a2b[i]);
+        }
 
-const linkMap = { 1: 10, 2: 11, 3: 12 };
+        const linkMap = { 1: 10, 2: 11, 3: 12 };
 
-        // ─── ATRIBUIR LINKS DINAMICAMENTE ───
         document.querySelectorAll('[data-link]').forEach(el => {
             const offer = el.getAttribute('data-link');
             const urlIndex = linkMap[offer];
@@ -1634,7 +1769,6 @@ const linkMap = { 1: 10, 2: 11, 3: 12 };
             });
         });
 
-        // Configurar links dos cards inteiros
         document.querySelectorAll('.ocard').forEach(card => {
             card.addEventListener('click', function(e) {
                 if (e.target.closest('a')) return;
@@ -1645,25 +1779,23 @@ const linkMap = { 1: 10, 2: 11, 3: 12 };
             });
         });
 
-        // Configurar CTA final e sticky
         const finalBtn = document.getElementById('finalCtaBtn');
         const stickyBtn = document.getElementById('stickyBtn');
         if (finalBtn) {
-            finalBtn.href = gL(12); // combo
+            finalBtn.href = gL(12);
             finalBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.location.href = this.href;
             });
         }
         if (stickyBtn) {
-            stickyBtn.href = gL(12); // combo
+            stickyBtn.href = gL(12);
             stickyBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.location.href = this.href;
             });
         }
 
-        // ─── VERIFICAÇÃO DE INTEGRIDADE ───
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
@@ -1673,7 +1805,7 @@ const linkMap = { 1: 10, 2: 11, 3: 12 };
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
-        // ─── COUNTDOWN (código ofuscado) ───
+        // ─── COUNTDOWN ───
         let _s = 2*3600 + 47*60 + 33;
         const _h = document.getElementById('cdH'),
               _m = document.getElementById('cdM'),
